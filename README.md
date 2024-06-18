@@ -15,5 +15,5 @@ Various FAANG+ interview resources
 
 We welcome contributions and feedback to help improve the quality and accuracy of our question bank.
 
-Check the master branch->
--------------------------
+Check the master branch
+-----------------------
