@@ -9,7 +9,7 @@ Resources Consulted
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 We have consulted a variety of resources to enhance the quality and diversity of our questions, including:
 
-Andrew Ng's course on ChatGPT and prompt engineering: ChatGPT Prompt Engineering for Develope
+Andrew Ng's coursse:- ChatGPT Prompt Engineering for Developers
 
 Various FAANG+ interview resources
 
