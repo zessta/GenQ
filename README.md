@@ -6,7 +6,7 @@ Markdown Files
 The Markdown files are converted from initially generated DOCX files. They are essential for accessing the content in a more flexible format.
 
 -JavaScript
-
+-
 JavascriptFinal.md: 
 -
 Contains tic-tac-toe and to-do list type questions.
