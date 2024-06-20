@@ -4,6 +4,9 @@ Allow users to add, remove, and reorder form fields.
 Support different field types (text input, checkbox, radio button, dropdown).
 Display a preview of the form as fields are added.
 Output the form data as a JSON object upon submission. """ Answer Certainly! Below is a sample code for a dynamic form builder application with intentional mistakes. The application should be able to be tested on platforms like HackerRank or Coderbyte.
+
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,6 +126,9 @@ Output the form data as a JSON object upon submission. """ Answer Certainly! Bel
 
 </body>
 </html>
+
+```
+
 Intentional Mistakes:
 
 The select field type is not recognized correctly in the submit-form event listener.
