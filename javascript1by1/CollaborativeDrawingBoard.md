@@ -5,7 +5,7 @@ Sync drawing actions in real-time using WebSockets.
 Include tools for drawing lines, shapes, and text. """ Certainly! Below is a simplified version of a collaborative drawing board application using HTML, CSS, and JavaScript. This code includes some intentional mistakes to test the interviewee's understanding of WebSockets, Canvas API, and event handling.
 index.html
 
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,6 +120,7 @@ function sendDrawData(tool, startX, startY, endX, endY, text) {
     const data = { tool, startX, startY, endX, endY, text };
     socket.send(JSON.stringify(data)); // Intentional mistake: Missing error handling
 }
+```
 
 Intentional Mistakes to Identify and Fix
 WebSocket URL: The WebSocket URL might be incorrect or not configured properly.
@@ -134,7 +135,7 @@ The interviewee should identify and fix these issues to make the application ful
 
 Corrected Code
 ------------------
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -255,3 +256,5 @@ function sendDrawData(tool, startX, startY, endX, endY, text) {
 }
 
 </script>
+
+```
