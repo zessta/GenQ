@@ -5,7 +5,7 @@ Markdown Files
 -
 The Markdown files are converted from initially generated DOCX files. They are essential for accessing the content in a more flexible format.
 
-
+ONE By ONE Questions:-Javascript1by1, Python1by1
 
 -JavaScript
 
