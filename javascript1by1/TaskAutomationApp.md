@@ -7,6 +7,8 @@ Save and load scripts for reuse.
 Display output and error messages. """
 Sure, here's a testable code snippet for a task automation tool in JavaScript that includes some intentional mistakes. This code can be used on coding platforms like HackerRank or Coderbyte. The mistakes are added to test the interviewee's understanding of scripting, data handling, and event handling.
 
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,6 +56,8 @@ Sure, here's a testable code snippet for a task automation tool in JavaScript th
     </script>
 </body>
 </html>
+```
+
 Intentional Mistakes:
 Data Handling Issue: The eval function is used directly without any sanitization, which poses a security risk. This is intentional to see if the interviewee can identify and mitigate potential security vulnerabilities.
 Error Handling Issue: The error handling in the runScript function only captures the error message but does not clear previous error messages when a new script runs successfully.
