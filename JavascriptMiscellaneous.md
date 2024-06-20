@@ -60,7 +60,58 @@ console.log(cloned); // Should be a deep copy of `original`
 console.log(cloned !== original); // true 
 console.log(cloned.b !== original.b); // true 
 console.log(cloned.e[0] !== original.e[0]); // true 
-``` 
+```
+
+Corrected Code
+```
+To create a deep clone of an object in JavaScript, you can use a function that recursively copies all nested objects and arrays. Below is the corrected code with a `deepClone` function implemented:
+
+```javascript
+// Function to perform deep clone
+function deepClone(obj) {
+    // Check if the value is an object
+    if (obj === null || typeof obj !== 'object') {
+        return obj;
+    }
+
+    // Handle Arrays
+    if (Array.isArray(obj)) {
+        let arrCopy = [];
+        for (let i = 0; i < obj.length; i++) {
+            arrCopy[i] = deepClone(obj[i]);
+        }
+        return arrCopy;
+    }
+
+    // Handle Objects
+    let objCopy = {};
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            objCopy[key] = deepClone(obj[key]);
+        }
+    }
+    return objCopy;
+}
+
+// Original object
+const original = { 
+    a: 1, 
+    b: { c: 2, d: [3, 4] }, 
+    e: [{ f: 5 }, { g: 6 }] 
+};
+
+// Create a deep clone
+const cloned = deepClone(original);
+
+// Test the deep clone
+console.log(cloned); // Should be a deep copy of `original`
+console.log(cloned !== original); // true
+console.log(cloned.b !== original.b); // true
+console.log(cloned.e[0] !== original.e[0]); // true
+```
+
+This `deepClone` function checks if the value is an object or an array and recursively clones each nested object or array. The tests at the end verify that the `cloned` object is indeed a deep copy of `original`.
+```
 **Expected Output:** 
 - The function should return a new object that is a deep clone of the input. 
 ### 3. Event Emitter 
