@@ -117,3 +117,150 @@ Sure, here is a JavaScript code snippet for a customizable dashboard application
 
 
 These mistakes will help you test the interviewee's ability to identify and correct errors related to DOM manipulation, event handling, and data handling.
+
+
+###Corrected Code:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .widget {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            cursor: move;
+        }
+        .remove-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .light {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .dark {
+            background-color: #333333;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="addWidgetBtn">Add Widget</button>
+        <select id="themeSelect">
+            <option value="light">Light Theme</option>
+            <option value="dark">Dark Theme</option>
+        </select>
+    </div>
+    <div class="dashboard" id="dashboard"></div>
+
+    <script>
+        const widgets = ['weather', 'news', 'calendar'];
+        const dashboard = document.getElementById('dashboard');
+        const addWidgetBtn = document.getElementById('addWidgetBtn');
+        const themeSelect = document.getElementById('themeSelect');
+
+        addWidgetBtn.addEventListener('click', addWidget);
+        themeSelect.addEventListener('change', changeTheme);
+
+        function addWidget() {
+            const widgetType = widgets[Math.floor(Math.random() * widgets.length)];
+            const widget = document.createElement('div');
+            widget.classList.add('widget');
+            widget.draggable = true;
+            widget.innerHTML = `
+                <button class="remove-btn">X</button>
+                <h3>${widgetType}</h3>
+            `;
+            dashboard.appendChild(widget);
+            widget.querySelector('.remove-btn').addEventListener('click', () => {
+                widget.remove();
+                saveDashboard();
+            });
+            widget.addEventListener('dragstart', handleDragStart);
+            widget.addEventListener('dragover', handleDragOver);
+            widget.addEventListener('drop', handleDrop);
+            saveDashboard();
+        }
+
+        function changeTheme() {
+            const theme = themeSelect.value;
+            document.body.className = theme;
+        }
+
+        function saveDashboard() {
+            const widgets = [];
+            dashboard.querySelectorAll('.widget').forEach(widget => {
+                widgets.push(widget.querySelector('h3').textContent);
+            });
+            localStorage.setItem('dashboard', JSON.stringify(widgets));
+        }
+
+        function loadDashboard() {
+            const savedWidgets = JSON.parse(localStorage.getItem('dashboard'));
+            if (savedWidgets) {
+                savedWidgets.forEach(widgetType => {
+                    const widget = document.createElement('div');
+                    widget.classList.add('widget');
+                    widget.draggable = true;
+                    widget.innerHTML = `
+                        <button class="remove-btn">X</button>
+                        <h3>${widgetType}</h3>
+                    `;
+                    dashboard.appendChild(widget);
+                    widget.querySelector('.remove-btn').addEventListener('click', () => {
+                        widget.remove();
+                        saveDashboard();
+                    });
+                    widget.addEventListener('dragstart', handleDragStart);
+                    widget.addEventListener('dragover', handleDragOver);
+                    widget.addEventListener('drop', handleDrop);
+                });
+            }
+        }
+
+        function handleDragStart(e) {
+            e.dataTransfer.setData('text/plain', e.target.innerHTML);
+            e.target.classList.add('dragging');
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            const dragging = document.querySelector('.dragging');
+            if (e.target.classList.contains('widget') && e.target !== dragging) {
+                dashboard.insertBefore(dragging, e.target.nextSibling);
+            }
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            const dragging = document.querySelector('.dragging');
+            dragging.classList.remove('dragging');
+            saveDashboard();
+        }
+
+        loadDashboard();
+    </script>
+</body>
+</html>
+
