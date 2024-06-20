@@ -153,9 +153,54 @@ const promise3 = new Promise((resolve, reject) => {
 promiseAll([promise1, promise2, promise3]).then((results) => { 
  console.log(results); // [3, 42, "foo"] 
 }); 
-``` 
+```
+
 **Expected Output:** 
 - The function should handle an array of promises and return a promise that resolves with an array of results. 
+
+```
+function promiseAll(promises) {
+    return new Promise((resolve, reject) => {
+        // Check if promises is an array
+        if (!Array.isArray(promises)) {
+            return reject(new TypeError('Input must be an array'));
+        }
+
+        // Create an array to store results
+        const results = [];
+        let completedPromises = 0;
+
+        // Iterate over all promises
+        promises.forEach((promise, index) => {
+            // Use Promise.resolve to handle non-promise values
+            Promise.resolve(promise)
+                .then((value) => {
+                    results[index] = value;
+                    completedPromises += 1;
+
+                    // If all promises are resolved, resolve the main promise
+                    if (completedPromises === promises.length) {
+                        resolve(results);
+                    }
+                })
+                .catch(reject); // If any promise rejects, reject the main promise
+        });
+    });
+}
+
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100, 'foo');
+});
+
+promiseAll([promise1, promise2, promise3]).then((results) => {
+    console.log(results); // [3, 42, "foo"]
+}).catch((error) => {
+    console.error(error);
+});
+
+```
 ### 5. Function Debounce 
 **Question:** 
 Implement a function `debounce` that returns a debounced version of the given function. The debounced function delays the execution until after `wait` milliseconds have elapsed since the last time it was invoked. 
