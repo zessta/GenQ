@@ -5,6 +5,8 @@ Display a list of courses and lessons.
 Include quizzes at the end of each lesson.
 Track user progress through the courses.
 Provide feedback and scores for quizzes. """ Below is a code snippet for an interactive learning platform application. The code is intentionally introduced with some mistakes to test the interviewee's understanding of data management, DOM manipulation, and event handling.
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -133,6 +135,9 @@ Provide feedback and scores for quizzes. """ Below is a code snippet for an inte
     </script>
 </body>
 </html>
+```
+
+
 Mistakes introduced:
 
 All lessons are displayed immediately because of the lesson.style.display = 'block'; line.
