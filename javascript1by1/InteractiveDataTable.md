@@ -5,6 +5,9 @@ Load data from a JSON file or an API.
 Allow users to sort columns by clicking on headers.
 Implement filters to search and narrow down results.
 Add pagination controls to navigate through large datasets. """ Certainly! Below is a testable code snippet for an interactive data table with some intentional mistakes. This code is designed to be used on coding platforms like HackerRank or Coderbyte. The code includes features like sorting, filtering, and pagination, but with some errors that should be identified and fixed by the interviewee.
+
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,6 +141,11 @@ Add pagination controls to navigate through large datasets. """ Certainly! Below
     </script>
 </body>
 </html>
+
+```
+
+
+
 Intentional Mistakes:
 Sorting Issue: The sorting function only sorts in ascending order and does not toggle between ascending and descending.
 Pagination Info: The page info does not update correctly when filtering the data.
