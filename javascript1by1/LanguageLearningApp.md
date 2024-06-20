@@ -4,7 +4,9 @@ Description: Develop an app to help users learn a new language by practicing voc
 Provide vocabulary and phrases with translations.
 Include quizzes and flashcards for practice.
 Track user progress and review performance.
-Integrate with a language API for additional resources. """
+Integrate with a language API for additional resources. 
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,6 +119,9 @@ Integrate with a language API for additional resources. """
   </script>
 </body>
 </html>
+```
+
+
 Intentional Mistakes:
 The vocabulary array does not include sufficient data to cover various cases.
 The checkAnswer function does not clear the input field after checking the answer.
