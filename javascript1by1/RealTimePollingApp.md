@@ -6,6 +6,8 @@ Allow users to vote in real-time.
 Display live results with charts.
 Support multiple polls simultaneously. """ Certainly! Below is a sample code for a real-time polling app that introduces a few intentional mistakes. The code is designed to be testable on coding platforms like HackerRank or Coderbyte and incorporates WebSockets, event handling, and data visualization. The mistakes are included to test the interviewee's debugging skills and understanding of the main concepts.
 Server-Side (Node.js with WebSocket)
+
+```
 const http = require('http');
 const WebSocket = require('ws');
 const server = http.createServer();
@@ -157,6 +159,8 @@ Client-Side (HTML + JavaScript)
     </script>
 </body>
 </html>
+```
+
 Intentional Mistakes
 Server-Side:
 
