@@ -7,6 +7,7 @@ Calculate and display total calories, macronutrients, and micronutrients.
 Save and load recipes for future use. """
 Sure, here's a testable code for a Recipe Nutrition Calculator with some deliberate mistakes to test the interviewee's understanding. This code is designed to be run in a web environment where HTML, CSS, and JavaScript are utilized. You can use this code on platforms like HackerRank or Coderbyte by setting up the appropriate environment.
 
+```
 index.html
 
 <!DOCTYPE html>
@@ -110,6 +111,8 @@ function loadRecipe() {
         alert('No saved recipe found!');
     }
 }
+```
+
 Mistakes Introduced:
 Hardcoded API keys: The code contains placeholders for the API keys (YOUR_APP_ID and YOUR_APP_KEY). The interviewee should replace these with actual values.
 Improper async handling: The use of setTimeout to handle asynchronous operations is incorrect. The interviewee should use proper promise chaining or async/await.
