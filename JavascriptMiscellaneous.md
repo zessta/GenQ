@@ -12,8 +12,37 @@ const memoizedAdd = memoize(add);
 console.log(memoizedAdd(1, 2)); // 3 (calculated) 
 console.log(memoizedAdd(1, 2)); // 3 (cached) 
 console.log(memoizedAdd(2, 3)); // 5 (calculated) 
-console.log(memoizedAdd(2, 3)); // 5 (cached) 
-``` 
+console.log(memoizedAdd(2, 3)); // 5 (cached)
+```
+Correct Code:-
+```
+function add(a, b) { 
+    return a + b; 
+} 
+
+function memoize(fn) {
+    const cache = new Map();
+    return function(...args) {
+        const key = JSON.stringify(args);
+        if (cache.has(key)) {
+            console.log('Fetching from cache:', key);
+            return cache.get(key);
+        } else {
+            console.log('Calculating result for:', key);
+            const result = fn(...args);
+            cache.set(key, result);
+            return result;
+        }
+    };
+}
+
+const memoizedAdd = memoize(add);
+
+console.log(memoizedAdd(1, 2)); // 3 (calculated)
+console.log(memoizedAdd(1, 2)); // 3 (cached)
+console.log(memoizedAdd(2, 3)); // 5 (calculated)
+console.log(memoizedAdd(2, 3)); // 5 (cached)
+```
 **Expected Output:** 
 - The function should calculate and cache results based on the inputs. 
 ### 2. Deep Clone 
