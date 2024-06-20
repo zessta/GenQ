@@ -7,6 +7,7 @@ Edit and delete tasks.
 Store tasks in local storage for persistence. """
 Sure, here's a testable HTML, CSS, and JavaScript code for a basic Kanban board application with some intentional mistakes introduced. The mistakes will help test the interviewee's understanding of the concepts.
 
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,6 +164,8 @@ Sure, here's a testable HTML, CSS, and JavaScript code for a basic Kanban board 
     </script>
 </body>
 </html>
+```
+
 Intentional Mistakes:
 Drag and Drop IDs: The tasks are not assigned unique IDs, which makes event.dataTransfer.setData('text/plain', event.target.id); ineffective since event.target.id is undefined.
 Drop Event Handler: The onDrop event handler tries to append the dragged element directly to the drop zone, which may not work if the target is not a column.
