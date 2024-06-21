@@ -798,7 +798,86 @@ Here's the modified code with intentional mistakes:
 
 This code can be used to test the interviewee's ability to debug and correct the mistakes.
 
+### Correct Code:
 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploader with Preview</title>
+    <style>
+        .file-preview {
+            margin-top: 20px;
+        }
+        .file-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .file-item img, .file-item video {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+        .file-item button {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>File Uploader with Preview</h1>
+    <input type="file" id="fileInput" multiple>
+    <div class="file-preview" id="filePreview"></div>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const files = event.target.files;
+            const previewContainer = document.getElementById('filePreview');
+
+            // Clear previous previews
+            previewContainer.innerHTML = '';
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const fileItem = document.createElement('div');
+                fileItem.classList.add('file-item');
+
+                const fileName = document.createElement('p');
+                fileName.textContent = file.name;
+                fileItem.appendChild(fileName);
+
+                const fileSize = document.createElement('p');
+                fileSize.textContent = (file.size / 1024).toFixed(2) + ' KB';
+                fileItem.appendChild(fileSize);
+
+                if (file.type.startsWith('image/')) {
+                    const img = document.createElement('img');
+                    img.src = URL.createObjectURL(file);
+                    img.onload = () => URL.revokeObjectURL(img.src); // Free memory
+                    fileItem.appendChild(img);
+                } else if (file.type.startsWith('video/')) {
+                    const video = document.createElement('video');
+                    video.src = URL.createObjectURL(file);
+                    video.controls = true;
+                    video.onloadeddata = () => URL.revokeObjectURL(video.src); // Free memory
+                    fileItem.appendChild(video);
+                }
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener('click', function() {
+                    previewContainer.removeChild(fileItem);
+                });
+                fileItem.appendChild(removeButton);
+
+                previewContainer.appendChild(fileItem);
+            }
+        });
+    </script>
+</body>
+</html>
+```
 
 
 
