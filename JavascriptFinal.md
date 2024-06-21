@@ -4047,7 +4047,8 @@ Certainly! Below is a sample code for an interactive resume builder with intenti
 
 These mistakes are designed to test the interviewee's ability to identify and correct issues in form handling, data management, and basic DOM manipulation.
 --------------------------------------------------------------------------------------------------------------
-
+### Comments on resume builder:-
+Please check the pdf downloader and how we can arrange for our interview
 
 
 
