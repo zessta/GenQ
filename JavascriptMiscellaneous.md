@@ -750,7 +750,68 @@ document.getElementById('generate-table').onclick = () => {
 // <input type="text" id="cols" placeholder="Number of columns"> 
 // <button id="generate-table">Generate Table</button> 
 // <div id="table-container"></div> 
-``` 
+```
+
+### Corrected Code
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table Generator</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="rows" placeholder="Number of rows">
+  <input type="text" id="cols" placeholder="Number of columns">
+  <button id="generate-table">Generate Table</button>
+  <div id="table-container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('generate-table').onclick = () => {
+        const rows = parseInt(document.getElementById('rows').value);
+        const cols = parseInt(document.getElementById('cols').value);
+        if (isNaN(rows) || isNaN(cols) || rows <= 0 || cols <= 0) {
+          alert('Please enter valid numbers for rows and columns.');
+          return;
+        }
+        
+        const table = document.createElement('table');
+        let counter = 1;
+        for (let i = 0; i < rows; i++) {
+          const tr = document.createElement('tr');
+          for (let j = 0; j < cols; j++) {
+            const td = document.createElement('td');
+            td.textContent = counter++;
+            tr.appendChild(td);
+          }
+          table.appendChild(tr);
+        }
+        
+        const tableContainer = document.getElementById('table-container');
+        tableContainer.innerHTML = '';
+        tableContainer.appendChild(table);
+      };
+    });
+  </script>
+</body>
+</html>
+
+```
 ### 13. Throttling Function 
 **Question:** 
 Implement a throttling function that limits the number of times a given function can be called within a specified time frame (e.g., once every 100 milliseconds). 
