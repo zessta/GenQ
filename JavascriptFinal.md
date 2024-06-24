@@ -3157,7 +3157,90 @@ Create a testable code that creates the following application and can be used on
    - Recommend movies based on user ratings and preferences.
    - Display movie details and trailers.
 """
+Sure, here is a simplified version of a movie recommendation system. This code includes some intentional mistakes to test the interviewee's understanding of API interaction, data handling, and DOM manipulation.
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+</head>
+<body>
+    <h1>Movie Recommendation System</h1>
+    <div id="movie-list"></div>
+    <div id="recommended-movies"></div>
+
+    <script>
+        // Function to fetch movies from the API
+        async function fetchMovies() {
+            const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=YOUR_API_KEY');
+            const data = await response.json();
+            return data.results;
+        }
+
+        // Function to rate a movie
+        function rateMovie(movieId, rating) {
+            // Assuming we have a global userRatings object to store user ratings
+            userRatings[movieId] = rating;
+        }
+
+        // Function to recommend movies based on user ratings
+        async function recommendMovies() {
+            const movies = await fetchMovies();
+            let recommended = movies.filter(movie => userRatings[movie.id] >= 4); // Mistake: rating filter logic is too simple
+            displayMovies(recommended, 'recommended-movies');
+        }
+
+        // Function to display movies
+        function displayMovies(movies, elementId) {
+            const movieList = document.getElementById(elementId);
+            movieList.innerHTML = ''; // Mistake: Not checking if element exists
+
+            movies.forEach(movie => {
+                const movieElement = document.createElement('div');
+                movieElement.innerHTML = `
+                    <h3>${movie.title}</h3>
+                    <p>${movie.overview}</p>
+                    <button onclick="rateMovie(${movie.id}, 5)">Rate 5</button>
+                    <button onclick="rateMovie(${movie.id}, 4)">Rate 4</button>
+                    <button onclick="rateMovie(${movie.id}, 3)">Rate 3</button>
+                    <button onclick="rateMovie(${movie.id}, 2)">Rate 2</button>
+                    <button onclick="rateMovie(${movie.id}, 1)">Rate 1</button>
+                `;
+                movieList.appendChild(movieElement);
+            });
+        }
+
+        // Fetch and display popular movies on page load
+        async function init() {
+            const movies = await fetchMovies();
+            displayMovies(movies, 'movie-list');
+        }
+
+        // Global user ratings object
+        const userRatings = {};
+
+        // Initialize the application
+        init();
+    </script>
+</body>
+</html>
+```
+
+### Intentional Mistakes:
+1. **API Key Handling**: The API key is not provided and should be replaced with a valid key.
+2. **Rating Filter Logic**: The logic for recommending movies (`userRatings[movie.id] >= 4`) is too simplistic and doesn't account for movies that haven't been rated.
+3. **Element Existence Check**: In `displayMovies`, there's no check to ensure the element with `elementId` exists before trying to manipulate it.
+4. **Global Variable Polluting**: The `userRatings` object is globally defined which might not be ideal for larger applications.
+
+### Testing the Interviewee:
+- **API Interaction**: Ensure they replace the API key and understand how to fetch data.
+- **Data Handling**: Verify they can improve the rating logic to handle unrated movies.
+- **DOM Manipulation**: Check if they add checks for element existence before manipulating the DOM.
+- **Code Structure**: Assess their understanding of better practices for managing global state.
+Done
 
 IPrompt21 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
