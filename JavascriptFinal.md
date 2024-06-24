@@ -151,6 +151,132 @@ Create a testable code that creates the following application and can be used on
    - Track and display the user's score at the end of the quiz.
    - Show feedback for correct and incorrect answers.
    """
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Quiz App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .choices {
+            list-style-type: none;
+            padding: 0;
+        }
+        .choices li {
+            margin-bottom: 10px;
+        }
+        .feedback {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .score {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="question-container" class="question"></div>
+        <ul id="choices-container" class="choices"></ul>
+        <button id="next-button">Next</button>
+        <div id="feedback" class="feedback"></div>
+        <div id="score" class="score"></div>
+    </div>
+    <script>
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                choices: ["Paris", "London", "Rome", "Berlin"],
+                correctAnswer: "Paris"
+            },
+            {
+                question: "What is 2 + 2?",
+                choices: ["3", "4", "5", "6"],
+                correctAnswer: "4"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                choices: ["Earth", "Mars", "Jupiter", "Saturn"],
+                correctAnswer: "Mars"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const questionContainer = document.getElementById('question-container');
+        const choicesContainer = document.getElementById('choices-container');
+        const nextButton = document.getElementById('next-button');
+        const feedbackContainer = document.getElementById('feedback');
+        const scoreContainer = document.getElementById('score');
+
+        function loadQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            questionContainer.textContent = currentQuestion.question;
+            choicesContainer.innerHTML = '';
+
+            currentQuestion.choices.forEach(choice => {
+                const li = document.createElement('li');
+                li.textContent = choice;
+                li.addEventListener('click', () => handleChoiceClick(choice));
+                choicesContainer.appendChild(li);
+            });
+        }
+
+        function handleChoiceClick(choice) {
+            const currentQuestion = questions[currentQuestionIndex];
+            if (choice === currentQuestion.correctAnswer) {
+                score += 1;
+                feedbackContainer.textContent = "Correct!";
+            } else {
+                feedbackContainer.textContent = "Incorrect.";
+            }
+        }
+
+        function showScore() {
+            questionContainer.style.display = 'none';
+            choicesContainer.style.display = 'none';
+            nextButton.style.display = 'none';
+            feedbackContainer.style.display = 'none';
+            scoreContainer.textContent = `Your score is: ${score}/${questions.length}`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentQuestionIndex += 1;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+                feedbackContainer.textContent = '';
+            } else {
+                showScore();
+            }
+        });
+
+        // Load the first question
+        loadQuestion();
+    </script>
+</body>
+</html>
+```
+
+### Intentional Mistakes:
+1. The `score` variable is not correctly incremented in the `handleChoiceClick` function.
+2. The `feedbackContainer` does not clear its content between questions.
+3. The `nextButton` should be disabled until the user selects an answer.
+4. The score display logic does not show the correct score if the user answers the last question incorrectly.
+
+### Testing Instructions:
+- The interviewee should identify and fix the mistakes.
+- They can run the code in their local environment or on online coding platforms like Hackerrank or Coderbyte.
+
+**Note:** This code assumes the questions are hardcoded. For a real-world scenario, questions would be loaded from a JSON file or an API. The interviewee should also be able to adapt the code to handle such cases.
+Done
 
 
 3. IPrompt3 = f"""
