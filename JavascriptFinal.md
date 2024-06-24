@@ -2577,7 +2577,7 @@ Create a testable code that creates the following application and can be used on
 
 IPrompt17 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 28. **Fitness Tracker**
+### 17. **Fitness Tracker**
    **Description:** Build a fitness tracker app to log workouts and monitor progress.
    **Skills Tested:** Data handling, DOM manipulation, event handling.
    **Features:**
@@ -2678,7 +2678,7 @@ Create a testable code that creates the following application and can be used on
 
 IPrompt18 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 29. **Interactive Learning Platform**
+### 18. **Interactive Learning Platform**
    **Description:** Create an interactive learning platform with courses and quizzes.
    **Skills Tested:** Data management, DOM manipulation, event handling.
    **Features:**
@@ -2834,7 +2834,7 @@ These mistakes will help to test the interviewee's ability to identify and corre
 
 IPrompt19 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 30. **Real-time Polling App**
+### 19. **Real-time Polling App**
    **Description:** Develop a real-time polling app where users can create and participate in polls.
    **Skills Tested:** WebSockets, event handling, data visualization.
    **Features:**
@@ -3022,7 +3022,7 @@ These mistakes are intended to test the interviewee's ability to debug and under
 
 IPrompt20 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 31. **Movie Recommendation System**
+### 20. **Movie Recommendation System**
    **Description:** Build a movie recommendation system based on user preferences.
    **Skills Tested:** API interaction, data handling, DOM manipulation.
    **Features:**
@@ -3035,7 +3035,7 @@ Create a testable code that creates the following application and can be used on
 
 IPrompt21 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 32. **Recipe Nutrition Calculator**
+### 21. **Recipe Nutrition Calculator**
    **Description:** Create a nutrition calculator for recipes to analyze the nutritional content.
    **Skills Tested:** API interaction, data handling, DOM manipulation.
    **Features:**
@@ -3184,7 +3184,7 @@ function loadRecipe() {
 
 IPrompt22 = f"""
  Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 33. **Task Automation with Scripting**
+### 22. **Task Automation with Scripting**
    **Description:** Develop a task automation tool where users can write and run simple scripts to automate repetitive tasks.
    **Skills Tested:** Scripting, data handling, event handling.
    **Features:**
@@ -3273,7 +3273,7 @@ These tasks will help test the interviewee's skills in scripting, data handling,
 
 IPrompt23 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 34. **Language Translation App**
+### 23. **Language Translation App**
    **Description:** Build a language translation app using a translation API.
    **Skills Tested:** API interaction, DOM manipulation, event handling.
    **Features:**
@@ -3354,7 +3354,7 @@ Create a testable code that creates the following application and can be used on
 
 IPrompt24 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 35. **Interactive Storybook for Kids**
+### 24. **Interactive Storybook for Kids**
    **Description:** Create an interactive storybook with animations and sound effects for kids.
    **Skills Tested:** DOM manipulation, event handling, animations.
    **Features:**
@@ -3504,7 +3504,7 @@ These mistakes are intentional to test the interviewee's ability to identify and
 
 IPrompt25 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 36. **Smart Home Controller**
+### 25. **Smart Home Controller**
    **Description:** Develop a smart home controller to manage and monitor smart devices.
    **Skills Tested:** API interaction, real-time data handling, DOM manipulation.
    **Features:**
@@ -3622,7 +3622,7 @@ These mistakes should help test an interviewee's ability to identify and correct
 
 IPrompt26 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 37. **Virtual Whiteboard**
+### 26. **Virtual Whiteboard**
    **Description:** Create a virtual whiteboard for collaborative drawing and note-taking.
    **Skills Tested:** Canvas API, WebSockets, event handling.
    **Features:**
@@ -3784,7 +3784,7 @@ These mistakes provide an opportunity to test the interviewee's ability to ident
 
 IPrompt27 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 38. **Health and Wellness Tracker**
+### 27. **Health and Wellness Tracker**
    **Description:** Develop a health and wellness tracker to monitor daily habits and activities.
    **Skills Tested:** Data handling, DOM manipulation, event handling.
    **Features:**
@@ -4022,7 +4022,7 @@ These mistakes should help assess the candidate's ability to identify and correc
 
 IPrompt28 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 39. **Interactive Resume Builder**
+### 28. **Interactive Resume Builder**
    **Description:** Create an interactive resume builder to help users create professional resumes.
    **Skills Tested:** DOM manipulation, form handling, data management.
    **Features:**
@@ -4209,7 +4209,7 @@ Please check the pdf downloader and how we can arrange for our interview
 
 IPrompt29 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 40. **Virtual Classroom**
+### 29. **Virtual Classroom**
    **Description:** Develop a virtual classroom platform for online learning and collaboration.
    **Skills Tested:** WebRTC, WebSockets, DOM manipulation.
    **Features:**
@@ -4351,7 +4351,7 @@ Candidates need to identify and fix these issues to ensure the application works
 
 IPrompt30 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 41. **Interactive Map Application**
+### 30. **Interactive Map Application**
    **Description:** Build an interactive map application with custom markers and routes.
    **Skills Tested:** Map APIs, DOM manipulation, event handling.
    **Features:**
@@ -4464,7 +4464,7 @@ These mistakes will help assess the interviewee's ability to work with map APIs,
 
 IPrompt31 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 42. **Voice Command Application**
+### 31. **Voice Command Application**
    **Description:** Create an application that responds to voice commands to perform tasks.
    **Skills Tested:** Web Speech API, DOM manipulation, event handling.
    **Features:**
@@ -4579,7 +4579,7 @@ This code serves as a good starting point to test an interviewee's understanding
 
 IPrompt32 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 43. **Customizable Dashboard**
+### 32. **Customizable Dashboard**
    **Description:** Develop a customizable dashboard where users can add and arrange widgets.
    **Skills Tested:** DOM manipulation, event handling, data handling.
    **Features:**
@@ -4702,7 +4702,7 @@ These mistakes will help you test the interviewee's ability to identify and corr
 
 IPrompt33 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 44. **Personal Finance Manager**
+### 33. **Personal Finance Manager**
    **Description:** Build a personal finance manager to track income, expenses, and investments.
    **Skills Tested:** Data handling, DOM manipulation, data visualization.
    **Features:**
@@ -4872,7 +4872,7 @@ These mistakes should prompt the candidate to think critically and apply their k
 
 IPrompt34 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 45. **Interactive Story Builder**
+### 34. **Interactive Story Builder**
    **Description:** Create an interactive story builder where users can write and share stories with branching paths.
    **Skills Tested:** DOM manipulation, data management, event handling.
    **Features:**
@@ -5024,7 +5024,7 @@ The interviewee will need to identify and correct these issues to make the appli
 
 IPrompt16 = f"""
 Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
-### 27. **Expense Tracker with Visualization**
+### 35. **Expense Tracker with Visualization**
    **Description:** Develop an expense tracker that visualizes spending habits.
    **Skills Tested:** Data handling, DOM manipulation, data visualization.
    **Features:**
