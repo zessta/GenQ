@@ -29,3 +29,37 @@ PandasDjangoFlask.md: Contains questions related to Pandas, Django and Flask.
 
 
 NOTE:- Some of the solutions added here have intentional mistakes for interviews. From our experimentation with GPT, we are certain that they can be put in GPT for correction and you can get the right code. But the implementation would require only one prompt per question and not add multiple questions with a single prompt in gpt to prevent GPT hallucination. 
+
+
+**Classification of Questions**
+
+We have put questions covering certain concepts, so before we put them in production, you can refer this guide to decide if those questions would fall under easy, medium or hard questions.
+Scenario based questions are mostly medium questions and the SME can take the last call in terms of classification, what kind of level of difficulty would they consider it.
+
+
+### Easy Mistakes/Topics:
+1. **Syntax Errors**: Forgetting semicolons, parentheses, or curly braces.
+2. **Variable Scope**: Misunderstanding var, let, and const and their scoping rules.
+3. **Data Types**: Confusion between different data types such as strings, numbers, and objects.
+4. **Type Coercion**: Unintended type conversions leading to unexpected behavior.
+5. **Equality Operators**: Incorrectly using '==' instead of '===' or vice versa.
+6. **Function Invocation**: Misunderstanding function calls and passing arguments.
+7. **Array Manipulation**: Incorrectly adding, removing, or accessing elements in arrays.
+
+### Medium Mistakes/Topics:
+1. **Asynchronous JavaScript**: Mishandling asynchronous operations with callbacks, promises, or async/await.
+2. **Event Handling**: Improperly binding event listeners or handling event propagation.
+3. **DOM Manipulation**: Inefficient DOM manipulation leading to performance issues.
+4. **Error Handling**: Inadequate error handling strategies leading to uncaught exceptions.
+5. **Scope Chain**: Misunderstanding lexical scoping and closures.
+6. **Memory Leaks**: Not releasing references to unused objects, causing memory leaks.
+7. **Hoisting**: Misunderstanding variable and function hoisting behavior.
+
+### Hard Mistakes/Topics:
+1. **Prototypal Inheritance**: Incorrectly implementing inheritance in JavaScript using prototypes.
+2. **Context and this keyword**: Misunderstanding the context of the 'this' keyword.
+3. **Module Systems**: Managing dependencies and using module systems like CommonJS or ES6 modules.
+4. **Performance Optimization**: Identifying and optimizing performance bottlenecks in JavaScript code.
+5. **Security**: Preventing common security vulnerabilities like cross-site scripting (XSS) or injection attacks.
+6. **Functional Programming**: Understanding and applying functional programming concepts like map, filter, and reduce.
+7. **Browser Compatibility**: Dealing with cross-browser inconsistencies and ensuring compatibility.
