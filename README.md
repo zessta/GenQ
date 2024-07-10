@@ -66,3 +66,8 @@ Scenario based questions are mostly medium questions and the SME can take the la
 7. **Browser Compatibility**: Dealing with cross-browser inconsistencies and ensuring compatibility.
 
 
+### For Python difficulty classification:-
+
+We have done Spark, Numpy, Pandas, Django which are mostly scenario and job based questions.
+The classification for such questions would depend on the level of candidate in terms of job experience.
+So, SME can take the final call to decide whether they want to put it in production based on the level of difficulty.
