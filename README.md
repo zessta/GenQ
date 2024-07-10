@@ -36,6 +36,7 @@ NOTE:- Some of the solutions added here have intentional mistakes for interviews
 We have put questions covering certain concepts, so before we put them in production, you can refer this guide to decide if those questions would fall under easy, medium or hard questions.
 Scenario based questions are mostly medium questions and the SME can take the last call in terms of classification, what kind of level of difficulty would they consider it.
 
+### For Javascript:-
 
 ### Easy Mistakes/Topics:
 1. **Syntax Errors**: Forgetting semicolons, parentheses, or curly braces.
@@ -63,3 +64,5 @@ Scenario based questions are mostly medium questions and the SME can take the la
 5. **Security**: Preventing common security vulnerabilities like cross-site scripting (XSS) or injection attacks.
 6. **Functional Programming**: Understanding and applying functional programming concepts like map, filter, and reduce.
 7. **Browser Compatibility**: Dealing with cross-browser inconsistencies and ensuring compatibility.
+
+
