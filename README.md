@@ -71,3 +71,9 @@ Scenario based questions are mostly medium questions and the SME can take the la
 We have done Spark, Numpy, Pandas, Django which are mostly scenario and job based questions.
 The classification for such questions would depend on the level of candidate in terms of job experience.
 So, SME can take the final call to decide whether they want to put it in production based on the level of difficulty.
+
+
+### Next Goal:-
+
+Our next goal is to create files for correct and incorrect questions with code so we can compare each of them. These would be connected to a single markdown.
+
