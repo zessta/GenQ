@@ -1,7 +1,6 @@
 # Coding Questions
 
 ## Question 1: Customizable Countdown Timer
-Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
    **Description:** Create a customizable countdown timer that users can set for different events.
    **Skills Tested:** DOM manipulation, time management, event handling.
    **Features:**
