@@ -17,8 +17,42 @@
 
 ---
 
-## Question 2: Sum of Array Elements
-Write a function to calculate the sum of all elements in an array.
-
+## Question 2: **Interactive Quiz App**
+   **Description:** Develop an interactive quiz application that presents questions and tracks scores.
+   **Skills Tested:** DOM manipulation, event handling, data handling.
+   **Features:**
+   - Load questions from a JSON file or an API.
+   - Present one question at a time with multiple-choice answers.
+   - Track and display the user's score at the end of the quiz.
+   - Show feedback for correct and incorrect answers.
 **Example:**
+**Links:**
+- [Correct Code](https://github.com/your-repo/correct-reverse-string)
+- [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
 
+## Question 3: **Interactive Quiz App**
+   **Description:** Develop an interactive quiz application that presents questions and tracks scores.
+   **Skills Tested:** DOM manipulation, event handling, data handling.
+   **Features:**
+   - Load questions from a JSON file or an API.
+   - Present one question at a time with multiple-choice answers.
+   - Track and display the user's score at the end of the quiz.
+   - Show feedback for correct and incorrect answers.
+**Example:**
+**Links:**
+- [Correct Code](https://github.com/your-repo/correct-reverse-string)
+- [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
+
+
+## Question 4: **Interactive Quiz App**
+   **Description:** Develop an interactive quiz application that presents questions and tracks scores.
+   **Skills Tested:** DOM manipulation, event handling, data handling.
+   **Features:**
+   - Load questions from a JSON file or an API.
+   - Present one question at a time with multiple-choice answers.
+   - Track and display the user's score at the end of the quiz.
+   - Show feedback for correct and incorrect answers.
+**Example:**
+**Links:**
+- [Correct Code](https://github.com/your-repo/correct-reverse-string)
+- [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
