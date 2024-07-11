@@ -70,9 +70,7 @@ v2InteractiveStoryGame
 Create v2InteractiveStoryGame
 
 
-Understood. Here is the information formatted as per your instructions:
 
-```markdown
 | First Header  | Second Header |
 | ------------- | ------------- |
 | AddManageWidgets  | Update AddManageWidgets  |
@@ -110,4 +108,4 @@ Understood. Here is the information formatted as per your instructions:
 | VoiceCommandApplication  | Create VoiceCommandApplication  |
 | WeatherComparisonApp  | Create WeatherComparisonApp  |
 | v2InteractiveStoryGame  | Create v2InteractiveStoryGame  |
-```
+
