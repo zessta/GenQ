@@ -109,3 +109,22 @@ Create v2InteractiveStoryGame
 | WeatherComparisonApp  | Create WeatherComparisonApp  |
 | v2InteractiveStoryGame  | Create v2InteractiveStoryGame  |
 
+
+# Coding Questions
+
+## Question 1: Reverse a String
+Write a function to reverse a given string.
+
+**Example:**
+
+**Links:**
+- [Correct Code](https://github.com/your-repo/correct-reverse-string)
+- [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
+
+---
+
+## Question 2: Sum of Array Elements
+Write a function to calculate the sum of all elements in an array.
+
+**Example:**
+
