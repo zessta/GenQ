@@ -73,7 +73,15 @@ Create v2InteractiveStoryGame
 
 | First Header  | Second Header |
 | ------------- | ------------- |
-| AddManageWidgets  | Update AddManageWidgets  |
+| AddManageWidgets  | Create a testable code that creates the following application and can be used on coding platforms like hackerrank or coderbyte. Introduce some mistakes to it so that you can test the interviewee with the main concepts mentioned:-
+. **Customizable Countdown Timer**
+   **Description:** Create a customizable countdown timer that users can set for different events.
+   **Skills Tested:** DOM manipulation, time management, event handling.
+   **Features:**
+   - Allow users to input a countdown time.
+   - Display the remaining time in hours, minutes, and seconds.
+   - Play a sound or show an alert when the timer reaches zero.
+   - Allow multiple timers to run simultaneously.  |
 | BudgetPlanningApp  | Update BudgetPlanningApp  |
 | CollaborativeDrawingBoard  | Update CollaborativeDrawingBoard  |
 | Customizable Countdown Timer  | Create Customizable Countdown Timer  |
