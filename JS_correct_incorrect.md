@@ -13,7 +13,6 @@
 - [Correct Code](https://github.com/your-repo/correct-reverse-string)
 - [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
 
----
 
 ## Question 2: **Interactive Quiz App**
    **Description:** Develop an interactive quiz application that presents questions and tracks scores.
