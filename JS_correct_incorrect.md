@@ -45,8 +45,8 @@
 - [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
 
 ## Question 4: **Budget Planning App**
-   **Description:** Build an app to help users plan their monthly budget by categorizing expenses and incomes.
-   **Skills Tested:** Data management, DOM manipulation, event handling.
+   **Description:** Build an app to help users plan their monthly budget by categorizing expenses and incomes.  
+   **Skills Tested:** Data management, DOM manipulation, event handling.  
    **Features:**
    - Allow users to add, edit, and delete income and expenses.
    - Categorize income and expenses (e.g., rent, groceries, entertainment).
@@ -60,9 +60,9 @@
 
 
 ## Question 5: **Dynamic Form Builder**
-   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).
-   **Skills Tested:** DOM manipulation, data handling, event handling.
-   **Features:**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
    - Allow users to add, remove, and reorder form fields.
    - Support different field types (text input, checkbox, radio button, dropdown).
    - Display a preview of the form as fields are added.
