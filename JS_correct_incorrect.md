@@ -1,8 +1,7 @@
 # Coding Questions
 
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete :tada:
+- [ ] This is an unchecked box
+- [x] This is a checked box
 ## Question 1: Customizable Countdown Timer  
    **Description:** Create a customizable countdown timer that users can set for different events.  
    **Skills Tested:** DOM manipulation, time management, event handling.  
