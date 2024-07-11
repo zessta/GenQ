@@ -5,13 +5,13 @@
    **Skills Tested:** DOM manipulation, time management, event handling.  
    **Features:**  
    - Allow users to input a countdown time.
-   - Display the remaining time in hours, minutes, and seconds.
+   - Display the remaining time in hours, minutes, and seconds.h
    - Play a sound or show an alert when the timer reaches zero.
    - Allow multiple timers to run simultaneously.
 
 **Links:**
-- [Correct Code](https://github.com/your-repo/correct-reverse-string)
-- [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 
 
 ## Question 2: **Interactive Quiz App**
@@ -25,8 +25,8 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/your-repo/correct-reverse-string)
-- [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 
 
 
@@ -41,8 +41,8 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/your-repo/correct-reverse-string)
-- [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 
 ## Question 4: **Budget Planning App**
    **Description:** Build an app to help users plan their monthly budget by categorizing expenses and incomes.  
@@ -55,8 +55,8 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/your-repo/correct-reverse-string)
-- [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 
 
 ## Question 5: **Dynamic Form Builder**
@@ -70,5 +70,5 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/your-repo/correct-reverse-string)
-- [Incorrect Code](https://github.com/your-repo/incorrect-reverse-string)
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
