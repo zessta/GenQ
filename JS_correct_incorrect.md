@@ -1,7 +1,6 @@
 # Coding Questions
 
-- [ ] This is an unchecked box
-- [x] This is a checked box
+- [ ] Reviewed
 ## Question 1: Customizable Countdown Timer  
    **Description:** Create a customizable countdown timer that users can set for different events.  
    **Skills Tested:** DOM manipulation, time management, event handling.  
