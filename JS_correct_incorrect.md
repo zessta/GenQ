@@ -44,8 +44,8 @@
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
-
 - [ ] Reviewed
+      
 ## Question 4: **Budget Planning App**
    **Description:** Build an app to help users plan their monthly budget by categorizing expenses and incomes.  
    **Skills Tested:** Data management, DOM manipulation, event handling.  
@@ -74,8 +74,8 @@
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
 
-  - [ ] Reviewed
 ## Question 5: **Dynamic Form Builder**
    **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
    **Skills Tested:** DOM manipulation, data handling, event handling.  
@@ -89,9 +89,8 @@
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
-
-
-  - [ ] Reviewed
+- [ ] Reviewed
+      
 ## Question 5: **Dynamic Form Builder**
    **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
    **Skills Tested:** DOM manipulation, data handling, event handling.  
@@ -105,9 +104,8 @@
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
-
-
-  - [ ] Reviewed
+- [ ] Reviewed
+      
 ## Question 5: **Dynamic Form Builder**
    **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
    **Skills Tested:** DOM manipulation, data handling, event handling.  
