@@ -721,7 +721,7 @@ Question: Implement a component with nested checkboxes where checking a parent c
 
 
 
-## Question 55: **Implement a Priority Queue class in JavaScript that accepts a custom comparator function to determine the priority of elements. **
+## Question 55: **Implement a Priority Queue class in JavaScript that accepts a custom comparator function to determine the priority of elements.**
 Question: Create a function that fetches user data from the GitHub API and displays it on the page. The function should handle loading states and errors gracefully.
 Requirements:
 Enqueue elements with a priority
