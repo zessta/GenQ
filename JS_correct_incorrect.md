@@ -423,14 +423,14 @@
 
 
             
-## Question 29: **Interactive Map Application**
-   **Description:** Build an interactive map application with custom markers and routes.
-   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+## Question 29:  **Voice Command Application**
+   **Description:** Create an application that responds to voice commands to perform tasks.
+   **Skills Tested:** Web Speech API, DOM manipulation, event handling.
    **Features:**
-   - Display a map with the ability to add custom markers.
-   - Calculate and display routes between points.
-   - Fetch and display data for locations (e.g., weather, points of interest).
-   - Save and load map configurations.
+   - Recognize and process voice commands.
+   - Perform tasks based on commands (e.g., search, navigate, control media).
+   - Provide feedback and confirmation for commands.
+   - Support custom command configurations.
 
 
 **Links:**
@@ -440,14 +440,14 @@
 
 
             
-## Question 30: **Interactive Map Application**
-   **Description:** Build an interactive map application with custom markers and routes.
-   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+## Question 30: **Customizable Dashboard**
+   **Description:** Develop a customizable dashboard where users can add and arrange widgets.
+   **Skills Tested:** DOM manipulation, event handling, data handling.
    **Features:**
-   - Display a map with the ability to add custom markers.
-   - Calculate and display routes between points.
-   - Fetch and display data for locations (e.g., weather, points of interest).
-   - Save and load map configurations.
+   - Provide various widgets (e.g., weather, news, calendar).
+   - Allow users to add, remove, and rearrange widgets.
+   - Save and load dashboard configurations.
+   - Support different themes and layouts.
 
 
 **Links:**
@@ -457,15 +457,15 @@
 
 
             
-## Question 31: **Interactive Map Application**
-   **Description:** Build an interactive map application with custom markers and routes.
-   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+## Question 31: **Personal Finance Manager**
+   **Description:** Build a personal finance manager to track income, expenses, and investments.
+   **Skills Tested:** Data handling, DOM manipulation, data visualization.
    **Features:**
-   - Display a map with the ability to add custom markers.
-   - Calculate and display routes between points.
-   - Fetch and display data for locations (e.g., weather, points of interest).
-   - Save and load map configurations.
-
+   - Add, edit, and categorize financial transactions.
+   - Track income and expenses over time.
+   - Visualize financial data with charts.
+   - Provide budget planning and analysis tools.
+"""
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -474,14 +474,13 @@
 
 
             
-## Question 32: **Interactive Map Application**
-   **Description:** Build an interactive map application with custom markers and routes.
-   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+## Question 32: **Expense Tracker with Visualization**
+   **Description:** Develop an expense tracker that visualizes spending habits.
+   **Skills Tested:** Data handling, DOM manipulation, data visualization.
    **Features:**
-   - Display a map with the ability to add custom markers.
-   - Calculate and display routes between points.
-   - Fetch and display data for locations (e.g., weather, points of interest).
-   - Save and load map configurations.
+   - Add, edit, and delete expenses with categories.
+   - Display total expenses and breakdown by category.
+   - Visualize spending habits with charts (e.g., bar chart, pie chart).
 
 
 **Links:**
