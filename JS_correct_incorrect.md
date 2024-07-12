@@ -503,7 +503,7 @@ Question: Implement a recursive descent parser for a simple arithmetic expressio
 ## Question 34: **GraphQL Server with Node.js** 
 
 **Question:** 
-Implement a simple GraphQL server in Node.js that allows querying and mutating user data. Use the `apollo-server` library for the GraphQL server implementation. 
+Description: Implement a simple GraphQL server in Node.js that allows querying and mutating user data. Use the `apollo-server` library for the GraphQL server implementation. 
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -514,7 +514,7 @@ Implement a simple GraphQL server in Node.js that allows querying and mutating u
             
 ## Question 35: **Priority Queue** 
 **Question:** 
-Implement a priority queue in JavaScript. The priority queue should allow enqueueing items with a priority and dequeuing items in order of their priority (higher priority items are dequeued first). 
+Description: Implement a priority queue in JavaScript. The priority queue should allow enqueueing items with a priority and dequeuing items in order of their priority (higher priority items are dequeued first). 
 
 
 **Links:**
@@ -526,7 +526,7 @@ Implement a priority queue in JavaScript. The priority queue should allow enqueu
             
 ## Question 36: **WebSocket Server with Authentication** 
 **Question:** 
-Implement a WebSocket server in Node.js with authentication. Use the `ws` library for WebSocket communication. The server should authenticate clients using a token passed during the connection. 
+Description: Implement a WebSocket server in Node.js with authentication. Use the `ws` library for WebSocket communication. The server should authenticate clients using a token passed during the connection. 
 
 
 **Links:**
@@ -538,7 +538,7 @@ Implement a WebSocket server in Node.js with authentication. Use the `ws` librar
             
 ## Question 37: **Dynamic Module Loader** 
 **Question:** 
-Implement a dynamic module loader in JavaScript that can load JavaScript modules dynamically based on user input. Use the `import` function to achieve this. 
+Description: Implement a dynamic module loader in JavaScript that can load JavaScript modules dynamically based on user input. Use the `import` function to achieve this. 
 
 
 **Links:**
@@ -550,7 +550,7 @@ Implement a dynamic module loader in JavaScript that can load JavaScript modules
             
 ## Question 38: **Rate Limiter with Redis** 
 **Question:** 
-Implement a rate limiter using Redis in JavaScript. The rate limiter should allow a maximum of 100 requests per minute per user. Use the `ioredis` library for interacting with Redis. 
+Description: Implement a rate limiter using Redis in JavaScript. The rate limiter should allow a maximum of 100 requests per minute per user. Use the `ioredis` library for interacting with Redis. 
 
 
 **Links:**
@@ -562,7 +562,7 @@ Implement a rate limiter using Redis in JavaScript. The rate limiter should allo
             
 ## Question 39:**Transactional State Management** 
 **Question:** 
-Implement a transactional state management system in JavaScript that allows changes to state to be committed or rolled back. Use a stack to manage the transactions. 
+Description: Implement a transactional state management system in JavaScript that allows changes to state to be committed or rolled back. Use a stack to manage the transactions. 
 
 
 **Links:**
@@ -573,7 +573,7 @@ Implement a transactional state management system in JavaScript that allows chan
 
 ## Question 40: Middleware Pipeline 
 **Question:** 
-Create a middleware pipeline in JavaScript that allows chaining of multiple middleware functions to process a request and response object. The middleware should be executed in order, passing control to the next middleware in the chain. 
+Description: Create a middleware pipeline in JavaScript that allows chaining of multiple middleware functions to process a request and response object. The middleware should be executed in order, passing control to the next middleware in the chain. 
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -582,7 +582,7 @@ Create a middleware pipeline in JavaScript that allows chaining of multiple midd
 
 ## Question 41:Image Carousel with Lazy Loading 
 **Question:** 
-Implement an image carousel component with lazy loading for images. The carousel should allow users to navigate through images and load images only when they come into view. 
+Description: Implement an image carousel component with lazy loading for images. The carousel should allow users to navigate through images and load images only when they come into view. 
 
 
 **Links:**
@@ -591,7 +591,7 @@ Implement an image carousel component with lazy loading for images. The carousel
 - [ ] Reviewed
 
 ## Question 42:**Virtualized List Rendering**
-Question: Implement a virtualized list component that only renders visible items in a list to optimize performance for large datasets. Use vanilla JavaScript and implement scroll handling
+Description: Implement a virtualized list component that only renders visible items in a list to optimize performance for large datasets. Use vanilla JavaScript and implement scroll handling
 
 
 **Links:**
@@ -601,7 +601,7 @@ Question: Implement a virtualized list component that only renders visible items
 
 ## Question 43: **Dependency Injection** 
 **Question:** 
-Create a simple dependency injection system in JavaScript. It should allow defining dependencies and resolving them at runtime. 
+Description: Create a simple dependency injection system in JavaScript. It should allow defining dependencies and resolving them at runtime. 
 
 
 **Links:**
@@ -611,7 +611,7 @@ Create a simple dependency injection system in JavaScript. It should allow defin
       
 
 ## Question 44:**Custom Event Emitter**
-Question: Implement a custom event emitter class in JavaScript that allows subscribing to events, emitting events, and removing event listeners.
+Description: Implement a custom event emitter class in JavaScript that allows subscribing to events, emitting events, and removing event listeners.
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -620,7 +620,7 @@ Question: Implement a custom event emitter class in JavaScript that allows subsc
 
 
 ## Question 45:**Rate Limiter**
-Question: Implement a rate limiter that caps the number of requests to an API endpoint to N requests per minute with a rolling window.
+Description: Implement a rate limiter that caps the number of requests to an API endpoint to N requests per minute with a rolling window.
 
 
 
@@ -631,7 +631,7 @@ Question: Implement a rate limiter that caps the number of requests to an API en
 
 
 ## Question 46:**Fetch and Display Weather Data with Caching**
-Question: Create a function that fetches weather data from a weather API and displays it on the page. Implement caching so that if the same city is requested within 10 minutes, the cached data is used instead of making a new API request.
+Description: Create a function that fetches weather data from a weather API and displays it on the page. Implement caching so that if the same city is requested within 10 minutes, the cached data is used instead of making a new API request.
 
 
 **Links:**
@@ -641,7 +641,7 @@ Question: Create a function that fetches weather data from a weather API and dis
 
 
 ## Question 47:**Fetch and Display Weather Data with Caching**
-Question: Create a function that fetches weather data from a weather API and displays it on the page. Implement caching so that if the same city is requested within 10 minutes, the cached data is used instead of making a new API request.
+Description: Create a function that fetches weather data from a weather API and displays it on the page. Implement caching so that if the same city is requested within 10 minutes, the cached data is used instead of making a new API request.
 
 
 **Links:**
@@ -651,7 +651,7 @@ Question: Create a function that fetches weather data from a weather API and dis
 
 
 ## Question 48:**Dynamic Table with Sorting and Searching**
-Question: Create a dynamic table that can be sorted by clicking on the column headers and includes a search bar to filter the table rows based on the input.
+Description: Create a dynamic table that can be sorted by clicking on the column headers and includes a search bar to filter the table rows based on the input.
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -660,7 +660,7 @@ Question: Create a dynamic table that can be sorted by clicking on the column he
 
 
 ## Question 49: **Debounce Function Implementation**
-Question: Implement a debounce function that delays the execution of the input function until after a specified delay has passed since the last time the debounced function was invoked.
+Description: Implement a debounce function that delays the execution of the input function until after a specified delay has passed since the last time the debounced function was invoked.
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -668,7 +668,7 @@ Question: Implement a debounce function that delays the execution of the input f
 - [ ] Reviewed
 
 ## Question 50: **Fetch and Display API Data with Loading and Error Handling**
-Question: Create a function that fetches user data from the GitHub API and displays it on the page. The function should handle loading states and errors gracefully.
+Description: Create a function that fetches user data from the GitHub API and displays it on the page. The function should handle loading states and errors gracefully.
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -677,7 +677,7 @@ Question: Create a function that fetches user data from the GitHub API and displ
 
 
 ## Question 51: **Throttling Function**
-Question: Implement a throttling function that limits the number of times a given function can be called within a specified time frame (e.g., once every 100 milliseconds). 
+Description: Implement a throttling function that limits the number of times a given function can be called within a specified time frame (e.g., once every 100 milliseconds). 
 
 **Links**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -688,7 +688,7 @@ Question: Implement a throttling function that limits the number of times a give
 
 
 ## Question 52: **Dynamic Table Generator**
-Question: Create a form where users can input the number of rows and columns for a table, and upon submission, generate a table with cells filled in a specific pattern. 
+Description: Create a form where users can input the number of rows and columns for a table, and upon submission, generate a table with cells filled in a specific pattern. 
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -698,7 +698,7 @@ Question: Create a form where users can input the number of rows and columns for
 
 
 ## Question 53: **Paginated Widget**
-Question: Implement a paginated widget that displays a list of addresses. The widget should show 5 addresses per page with the ability to navigate to the previous and next pages.
+Description: Implement a paginated widget that displays a list of addresses. The widget should show 5 addresses per page with the ability to navigate to the previous and next pages.
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -710,7 +710,7 @@ Question: Implement a paginated widget that displays a list of addresses. The wi
 
 
 ## Question 54: **Nested Checkboxes**
-Question: Implement a component with nested checkboxes where checking a parent checkbox will automatically check all of its child checkboxes and vice versa. If any child checkbox is unchecked, the parent should also be unchecked
+Description: Implement a component with nested checkboxes where checking a parent checkbox will automatically check all of its child checkboxes and vice versa. If any child checkbox is unchecked, the parent should also be unchecked
 
 
 **Links:**
@@ -722,7 +722,7 @@ Question: Implement a component with nested checkboxes where checking a parent c
 
 
 ## Question 55: **Implement a Priority Queue class in JavaScript that accepts a custom comparator function to determine the priority of elements.**
-Question: Create a function that fetches user data from the GitHub API and displays it on the page. The function should handle loading states and errors gracefully.
+Description: Create a function that fetches user data from the GitHub API and displays it on the page. The function should handle loading states and errors gracefully.
 Requirements:
 Enqueue elements with a priority
 Dequeue elements in order of priority
@@ -737,7 +737,7 @@ Use a custom comparator for priority
 
 
 ## Question 56: **Fetch and Display API Data**
-Question: Create a function that fetches data from a public API (e.g., GitHub Users API) and displays it on the web page. The function should handle loading states and errors gracefully. 
+Description: Create a function that fetches data from a public API (e.g., GitHub Users API) and displays it on the web page. The function should handle loading states and errors gracefully. 
 Requirements:
 Fetch data from a public API
 Display the data
@@ -754,7 +754,7 @@ Handle errors
 
 
 ## Question 57: **To-Do List with Local Storage**
-Question: Create a simple To-Do List application that allows users to add, remove, and mark tasks as complete. Use Local Storage to persist the tasks. 
+Description: Create a simple To-Do List application that allows users to add, remove, and mark tasks as complete. Use Local Storage to persist the tasks. 
 Requirements:
 Add tasks
 Remove tasks
@@ -769,7 +769,7 @@ Persist tasks using Local Storage
 
 
 ## Question 58: **Currying Function**
-Question: Write a function curry that takes a function fn and returns a curried version of the function.
+Description: Write a function curry that takes a function fn and returns a curried version of the function.
 
 
 **Links:**
@@ -781,7 +781,7 @@ Question: Write a function curry that takes a function fn and returns a curried 
 
 
 ## Question 59: **Function Debounce** 
-Question: Implement a function debounce that returns a debounced version of the given function. The debounced function delays the execution until after wait milliseconds have elapsed since the last time it was invoked.
+Description: Implement a function debounce that returns a debounced version of the given function. The debounced function delays the execution until after wait milliseconds have elapsed since the last time it was invoked.
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -791,7 +791,7 @@ Question: Implement a function debounce that returns a debounced version of the 
 
 
 ## Question 60: **Custom Promise.all**
-Question: Write a function promiseAll that mimics the behavior of Promise.all. It should take an array of promises and return a single promise that resolves with an array of results once all input promises have resolved, or rejects if any promise rejects. 
+Description: Write a function promiseAll that mimics the behavior of Promise.all. It should take an array of promises and return a single promise that resolves with an array of results once all input promises have resolved, or rejects if any promise rejects. 
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -801,7 +801,7 @@ Question: Write a function promiseAll that mimics the behavior of Promise.all. I
 
 
 ## Question 61: **Deep Clone**
-Question: Write a function deepClone that performs a deep clone of a given object. The function should handle nested objects and arrays.
+Description: Write a function deepClone that performs a deep clone of a given object. The function should handle nested objects and arrays.
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -810,7 +810,7 @@ Question: Write a function deepClone that performs a deep clone of a given objec
 
 
 ## Question 62: **Memoization Function**
-Question: Write a function memoize that takes a function fn as an argument and returns a memoized version of fn. The memoized function should cache the results based on the arguments passed.
+Description: Write a function memoize that takes a function fn as an argument and returns a memoized version of fn. The memoized function should cache the results based on the arguments passed.
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
