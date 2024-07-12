@@ -74,3 +74,211 @@
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+
+
+  - [ ] Reviewed
+## Question 5: **Dynamic Form Builder**
+   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
+   **Skills Tested:** DOM manipulation, data handling, event handling.  
+   **Features:**  
+   - Allow users to add, remove, and reorder form fields.
+   - Support different field types (text input, checkbox, radio button, dropdown).
+   - Display a preview of the form as fields are added.
+   - Output the form data as a JSON object upon submission.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+  
