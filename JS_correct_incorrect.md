@@ -593,6 +593,7 @@ Implement an image carousel component with lazy loading for images. The carousel
 ## Question 42:**Virtualized List Rendering**
 Question: Implement a virtualized list component that only renders visible items in a list to optimize performance for large datasets. Use vanilla JavaScript and implement scroll handling
 
+
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
@@ -601,6 +602,7 @@ Question: Implement a virtualized list component that only renders visible items
 ## Question 43: **Dependency Injection** 
 **Question:** 
 Create a simple dependency injection system in JavaScript. It should allow defining dependencies and resolving them at runtime. 
+
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -619,6 +621,7 @@ Question: Implement a custom event emitter class in JavaScript that allows subsc
 
 ## Question 45:**Rate Limiter**
 Question: Implement a rate limiter that caps the number of requests to an API endpoint to N requests per minute with a rolling window.
+
 
 
 **Links:**
@@ -658,12 +661,16 @@ Question: Create a dynamic table that can be sorted by clicking on the column he
 
 ## Question 49: **Debounce Function Implementation**
 Question: Implement a debounce function that delays the execution of the input function until after a specified delay has passed since the last time the debounced function was invoked.
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
 
 ## Question 50: **Fetch and Display API Data with Loading and Error Handling**
 Question: Create a function that fetches user data from the GitHub API and displays it on the page. The function should handle loading states and errors gracefully.
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -671,6 +678,8 @@ Question: Create a function that fetches user data from the GitHub API and displ
 
 ## Question 51: **Throttling Function**
 Question: Implement a throttling function that limits the number of times a given function can be called within a specified time frame (e.g., once every 100 milliseconds). 
+
+**Links**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -680,6 +689,8 @@ Question: Implement a throttling function that limits the number of times a give
 
 ## Question 52: **Dynamic Table Generator**
 Question: Create a form where users can input the number of rows and columns for a table, and upon submission, generate a table with cells filled in a specific pattern. 
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -688,6 +699,8 @@ Question: Create a form where users can input the number of rows and columns for
 
 ## Question 53: **Paginated Widget**
 Question: Implement a paginated widget that displays a list of addresses. The widget should show 5 addresses per page with the ability to navigate to the previous and next pages.
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -698,6 +711,9 @@ Question: Implement a paginated widget that displays a list of addresses. The wi
 
 ## Question 54: **Nested Checkboxes**
 Question: Implement a component with nested checkboxes where checking a parent checkbox will automatically check all of its child checkboxes and vice versa. If any child checkbox is unchecked, the parent should also be unchecked
+
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -712,6 +728,7 @@ Enqueue elements with a priority
 Dequeue elements in order of priority
 Use a custom comparator for priority
 
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -720,12 +737,14 @@ Use a custom comparator for priority
 
 
 ## Question 56: **Fetch and Display API Data**
-Question: Create a function that fetches data from a public API (e.g., GitHub Users API) and displays it on the web page. The function should handle loading states and errors gracefully. Requirements:
-
+Question: Create a function that fetches data from a public API (e.g., GitHub Users API) and displays it on the web page. The function should handle loading states and errors gracefully. 
+Requirements:
 Fetch data from a public API
 Display the data
 Handle loading states
 Handle errors 
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -741,6 +760,8 @@ Add tasks
 Remove tasks
 Mark tasks as complete/incomplete
 Persist tasks using Local Storage 
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -749,6 +770,9 @@ Persist tasks using Local Storage
 
 ## Question 58: **Currying Function**
 Question: Write a function curry that takes a function fn and returns a curried version of the function.
+
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -758,6 +782,8 @@ Question: Write a function curry that takes a function fn and returns a curried 
 
 ## Question 59: **Function Debounce** 
 Question: Implement a function debounce that returns a debounced version of the given function. The debounced function delays the execution until after wait milliseconds have elapsed since the last time it was invoked.
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -766,15 +792,18 @@ Question: Implement a function debounce that returns a debounced version of the 
 
 ## Question 60: **Custom Promise.all**
 Question: Write a function promiseAll that mimics the behavior of Promise.all. It should take an array of promises and return a single promise that resolves with an array of results once all input promises have resolved, or rejects if any promise rejects. 
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
 
 
 
-
 ## Question 61: **Deep Clone**
 Question: Write a function deepClone that performs a deep clone of a given object. The function should handle nested objects and arrays.
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
@@ -782,6 +811,8 @@ Question: Write a function deepClone that performs a deep clone of a given objec
 
 ## Question 62: **Memoization Function**
 Question: Write a function memoize that takes a function fn as an argument and returns a memoized version of fn. The memoized function should cache the results based on the arguments passed.
+
+**Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
