@@ -571,7 +571,7 @@ Implement a transactional state management system in JavaScript that allows chan
 - [ ] Reviewed
 
 
-## Question 39: Middleware Pipeline 
+## Question 40: Middleware Pipeline 
 **Question:** 
 Create a middleware pipeline in JavaScript that allows chaining of multiple middleware functions to process a request and response object. The middleware should be executed in order, passing control to the next middleware in the chain. 
 
@@ -580,7 +580,7 @@ Create a middleware pipeline in JavaScript that allows chaining of multiple midd
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
 
-## Question 39:Image Carousel with Lazy Loading 
+## Question 41:Image Carousel with Lazy Loading 
 **Question:** 
 Implement an image carousel component with lazy loading for images. The carousel should allow users to navigate through images and load images only when they come into view. 
 
@@ -590,7 +590,7 @@ Implement an image carousel component with lazy loading for images. The carousel
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
 
-## Question 39:**Transactional State Management** 
+## Question 42:**Transactional State Management** 
 **Question:** 
 Implement a transactional state management system in JavaScript that allows changes to state to be committed or rolled back. Use a stack to manage the transactions. 
 
@@ -600,7 +600,7 @@ Implement a transactional state management system in JavaScript that allows chan
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
 
-## Question 39: **Dependency Injection** 
+## Question 43: **Dependency Injection** 
 **Question:** 
 Create a simple dependency injection system in JavaScript. It should allow defining dependencies and resolving them at runtime. 
 
@@ -609,7 +609,7 @@ Create a simple dependency injection system in JavaScript. It should allow defin
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
       
-## Question 39:**Transactional State Management** 
+## Question 44:**Transactional State Management** 
 **Question:** 
 Implement a transactional state management system in JavaScript that allows changes to state to be committed or rolled back. Use a stack to manage the transactions. 
 
@@ -619,7 +619,7 @@ Implement a transactional state management system in JavaScript that allows chan
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
 
-## Question 39:**Transactional State Management** 
+## Question 45:**Transactional State Management** 
 **Question:** 
 Implement a transactional state management system in JavaScript that allows changes to state to be committed or rolled back. Use a stack to manage the transactions. 
 
