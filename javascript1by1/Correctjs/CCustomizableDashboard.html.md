@@ -1,4 +1,4 @@
-```html
+
 <title>Customizable Dashboard</title> <style> body { font-family: Arial, sans-serif; } .dashboard { display: flex; flex-wrap: wrap; gap: 10px; } .widget { border: 1px solid #ccc; padding: 20px; background-color: #f9f9f9; width: 200px; height: 200px; position: relative; cursor: move; } .remove-btn { position: absolute; top: 5px; right: 5px; background-color: red; color: white; border: none; cursor: pointer; } .light { background-color: #ffffff; color: #000000; } .dark { background-color: #333333; color: #ffffff; } </style>
 Add Widget Light Theme Dark Theme
 <script>
@@ -89,4 +89,4 @@ Add Widget Light Theme Dark Theme
     loadDashboard();
 </script>
 
-```
+
