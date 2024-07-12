@@ -320,14 +320,15 @@
 
 
       
-## Question 22: **Dynamic Form Builder**
-   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
-   **Skills Tested:** DOM manipulation, data handling, event handling.  
-   **Features:**  
-   - Allow users to add, remove, and reorder form fields.
-   - Support different field types (text input, checkbox, radio button, dropdown).
-   - Display a preview of the form as fields are added.
-   - Output the form data as a JSON object upon submission.
+## Question 22: **Language Translation App**
+   **Description:** Build a language translation app using a translation API.
+   **Skills Tested:** API interaction, DOM manipulation, event handling.
+   **Features:**
+   - Input text to be translated.
+   - Select source and target languages.
+   - Display translated text.
+   - Support multiple translation services.
+
 
 
 **Links:**
@@ -337,14 +338,14 @@
 
 
             
-## Question 23: **Dynamic Form Builder**
-   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
-   **Skills Tested:** DOM manipulation, data handling, event handling.  
-   **Features:**  
-   - Allow users to add, remove, and reorder form fields.
-   - Support different field types (text input, checkbox, radio button, dropdown).
-   - Display a preview of the form as fields are added.
-   - Output the form data as a JSON object upon submission.
+## Question 23: **Interactive Storybook for Kids**
+   **Description:** Create an interactive storybook with animations and sound effects for kids.
+   **Skills Tested:** DOM manipulation, event handling, animations.
+   **Features:**
+   - Display pages of a story with text and images.
+   - Add interactive elements (e.g., clickable characters, sound effects).
+   - Animate transitions between pages.
+   - Provide narration for the story.
 
 
 **Links:**
@@ -354,14 +355,14 @@
 
 
             
-## Question 24: **Dynamic Form Builder**
-   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
-   **Skills Tested:** DOM manipulation, data handling, event handling.  
-   **Features:**  
-   - Allow users to add, remove, and reorder form fields.
-   - Support different field types (text input, checkbox, radio button, dropdown).
-   - Display a preview of the form as fields are added.
-   - Output the form data as a JSON object upon submission.
+## Question 24: **Smart Home Controller**
+   **Description:** Develop a smart home controller to manage and monitor smart devices.
+   **Skills Tested:** API interaction, real-time data handling, DOM manipulation.
+   **Features:**
+   - Connect to smart home devices (e.g., lights, thermostat, security cameras).
+   - Control devices (e.g., turn lights on/off, adjust thermostat).
+   - Display real-time status and data from devices.
+   - Implement schedules and automation rules.
 
 
 **Links:**
@@ -371,14 +372,14 @@
 
 
             
-## Question 25: **Dynamic Form Builder**
-   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
-   **Skills Tested:** DOM manipulation, data handling, event handling.  
-   **Features:**  
-   - Allow users to add, remove, and reorder form fields.
-   - Support different field types (text input, checkbox, radio button, dropdown).
-   - Display a preview of the form as fields are added.
-   - Output the form data as a JSON object upon submission.
+## Question 25: **Health and Wellness Tracker**
+   **Description:** Develop a health and wellness tracker to monitor daily habits and activities.
+   **Skills Tested:** Data handling, DOM manipulation, event handling.
+   **Features:**
+   - Track habits (e.g., water intake, sleep, exercise).
+   - Set and track wellness goals.
+   - Display progress and trends over time.
+   - Provide tips and suggestions based on data.
 
 
 **Links:**
@@ -389,15 +390,14 @@
 
 
             
-## Question 26: **Dynamic Form Builder**
-   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
-   **Skills Tested:** DOM manipulation, data handling, event handling.  
-   **Features:**  
-   - Allow users to add, remove, and reorder form fields.
-   - Support different field types (text input, checkbox, radio button, dropdown).
-   - Display a preview of the form as fields are added.
-   - Output the form data as a JSON object upon submission.
-
+## Question 26: **Virtual Classroom**
+   **Description:** Develop a virtual classroom platform for online learning and collaboration.
+   **Skills Tested:** WebRTC, WebSockets, DOM manipulation.
+   **Features:**
+   - Support video conferencing for live classes.
+   - Share screens and files during sessions.
+   - Provide a chat feature for discussions.
+   - Record and playback class sessions.
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
@@ -406,14 +406,14 @@
 
 
       
-## Question 27: **Dynamic Form Builder**
-   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
-   **Skills Tested:** DOM manipulation, data handling, event handling.  
-   **Features:**  
-   - Allow users to add, remove, and reorder form fields.
-   - Support different field types (text input, checkbox, radio button, dropdown).
-   - Display a preview of the form as fields are added.
-   - Output the form data as a JSON object upon submission.
+## Question 27: **Interactive Resume Builder**
+   **Description:** Create an interactive resume builder to help users create professional resumes.
+   **Skills Tested:** DOM manipulation, form handling, data management.
+   **Features:**
+   - Input personal details, work experience, education, and skills.
+   - Choose from different resume templates.
+   - Preview and download the resume as a PDF.
+   - Save and load resume data.
 
 
 **Links:**
@@ -423,14 +423,133 @@
 
 
             
-## Question 28: **Dynamic Form Builder**
-   **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
-   **Skills Tested:** DOM manipulation, data handling, event handling.  
-   **Features:**  
-   - Allow users to add, remove, and reorder form fields.
-   - Support different field types (text input, checkbox, radio button, dropdown).
-   - Display a preview of the form as fields are added.
-   - Output the form data as a JSON object upon submission.
+## Question 29: **Interactive Map Application**
+   **Description:** Build an interactive map application with custom markers and routes.
+   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+   **Features:**
+   - Display a map with the ability to add custom markers.
+   - Calculate and display routes between points.
+   - Fetch and display data for locations (e.g., weather, points of interest).
+   - Save and load map configurations.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+
+            
+## Question 30: **Interactive Map Application**
+   **Description:** Build an interactive map application with custom markers and routes.
+   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+   **Features:**
+   - Display a map with the ability to add custom markers.
+   - Calculate and display routes between points.
+   - Fetch and display data for locations (e.g., weather, points of interest).
+   - Save and load map configurations.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+
+            
+## Question 31: **Interactive Map Application**
+   **Description:** Build an interactive map application with custom markers and routes.
+   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+   **Features:**
+   - Display a map with the ability to add custom markers.
+   - Calculate and display routes between points.
+   - Fetch and display data for locations (e.g., weather, points of interest).
+   - Save and load map configurations.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+
+            
+## Question 32: **Interactive Map Application**
+   **Description:** Build an interactive map application with custom markers and routes.
+   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+   **Features:**
+   - Display a map with the ability to add custom markers.
+   - Calculate and display routes between points.
+   - Fetch and display data for locations (e.g., weather, points of interest).
+   - Save and load map configurations.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+
+            
+## Question 33: **Interactive Map Application**
+   **Description:** Build an interactive map application with custom markers and routes.
+   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+   **Features:**
+   - Display a map with the ability to add custom markers.
+   - Calculate and display routes between points.
+   - Fetch and display data for locations (e.g., weather, points of interest).
+   - Save and load map configurations.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+
+            
+## Question 34: **Interactive Map Application**
+   **Description:** Build an interactive map application with custom markers and routes.
+   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+   **Features:**
+   - Display a map with the ability to add custom markers.
+   - Calculate and display routes between points.
+   - Fetch and display data for locations (e.g., weather, points of interest).
+   - Save and load map configurations.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+
+            
+## Question 35: **Interactive Map Application**
+   **Description:** Build an interactive map application with custom markers and routes.
+   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+   **Features:**
+   - Display a map with the ability to add custom markers.
+   - Calculate and display routes between points.
+   - Fetch and display data for locations (e.g., weather, points of interest).
+   - Save and load map configurations.
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+
+            
+## Question 36: **Interactive Map Application**
+   **Description:** Build an interactive map application with custom markers and routes.
+   **Skills Tested:** Map APIs, DOM manipulation, event handling.
+   **Features:**
+   - Display a map with the ability to add custom markers.
+   - Calculate and display routes between points.
+   - Fetch and display data for locations (e.g., weather, points of interest).
+   - Save and load map configurations.
 
 
 **Links:**
