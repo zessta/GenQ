@@ -490,14 +490,31 @@
 
 
             
-## Question 33: **Interactive Map Application**
-   **Description:** Build an interactive map application with custom markers and routes.
-   **Skills Tested:** Map APIs, DOM manipulation, event handling.
-   **Features:**
-   - Display a map with the ability to add custom markers.
-   - Calculate and display routes between points.
-   - Fetch and display data for locations (e.g., weather, points of interest).
-   - Save and load map configurations.
+## Question 33: **Recursive Descent Parser**
+Question: Implement a recursive descent parser for a simple arithmetic expression evaluator. The parser should handle addition, subtraction, multiplication, and division.
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+
+            
+## Question 34: **GraphQL Server with Node.js** 
+
+**Question:** 
+Implement a simple GraphQL server in Node.js that allows querying and mutating user data. Use the `apollo-server` library for the GraphQL server implementation. 
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+
+            
+## Question 35: **Priority Queue** 
+**Question:** 
+Implement a priority queue in JavaScript. The priority queue should allow enqueueing items with a priority and dequeuing items in order of their priority (higher priority items are dequeued first). 
 
 
 **Links:**
@@ -507,14 +524,9 @@
 
 
             
-## Question 34: **Interactive Map Application**
-   **Description:** Build an interactive map application with custom markers and routes.
-   **Skills Tested:** Map APIs, DOM manipulation, event handling.
-   **Features:**
-   - Display a map with the ability to add custom markers.
-   - Calculate and display routes between points.
-   - Fetch and display data for locations (e.g., weather, points of interest).
-   - Save and load map configurations.
+## Question 36: **WebSocket Server with Authentication** 
+**Question:** 
+Implement a WebSocket server in Node.js with authentication. Use the `ws` library for WebSocket communication. The server should authenticate clients using a token passed during the connection. 
 
 
 **Links:**
@@ -524,14 +536,9 @@
 
 
             
-## Question 35: **Interactive Map Application**
-   **Description:** Build an interactive map application with custom markers and routes.
-   **Skills Tested:** Map APIs, DOM manipulation, event handling.
-   **Features:**
-   - Display a map with the ability to add custom markers.
-   - Calculate and display routes between points.
-   - Fetch and display data for locations (e.g., weather, points of interest).
-   - Save and load map configurations.
+## Question 37: **Dynamic Module Loader** 
+**Question:** 
+Implement a dynamic module loader in JavaScript that can load JavaScript modules dynamically based on user input. Use the `import` function to achieve this. 
 
 
 **Links:**
@@ -541,14 +548,9 @@
 
 
             
-## Question 36: **Interactive Map Application**
-   **Description:** Build an interactive map application with custom markers and routes.
-   **Skills Tested:** Map APIs, DOM manipulation, event handling.
-   **Features:**
-   - Display a map with the ability to add custom markers.
-   - Calculate and display routes between points.
-   - Fetch and display data for locations (e.g., weather, points of interest).
-   - Save and load map configurations.
+## Question 38: **Rate Limiter with Redis** 
+**Question:** 
+Implement a rate limiter using Redis in JavaScript. The rate limiter should allow a maximum of 100 requests per minute per user. Use the `ioredis` library for interacting with Redis. 
 
 
 **Links:**
@@ -556,3 +558,73 @@
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
 
+
+            
+## Question 39:**Transactional State Management** 
+**Question:** 
+Implement a transactional state management system in JavaScript that allows changes to state to be committed or rolled back. Use a stack to manage the transactions. 
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+
+## Question 39: Middleware Pipeline 
+**Question:** 
+Create a middleware pipeline in JavaScript that allows chaining of multiple middleware functions to process a request and response object. The middleware should be executed in order, passing control to the next middleware in the chain. 
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+## Question 39:Image Carousel with Lazy Loading 
+**Question:** 
+Implement an image carousel component with lazy loading for images. The carousel should allow users to navigate through images and load images only when they come into view. 
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+## Question 39:**Transactional State Management** 
+**Question:** 
+Implement a transactional state management system in JavaScript that allows changes to state to be committed or rolled back. Use a stack to manage the transactions. 
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+## Question 39: **Dependency Injection** 
+**Question:** 
+Create a simple dependency injection system in JavaScript. It should allow defining dependencies and resolving them at runtime. 
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+      
+## Question 39:**Transactional State Management** 
+**Question:** 
+Implement a transactional state management system in JavaScript that allows changes to state to be committed or rolled back. Use a stack to manage the transactions. 
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
+
+## Question 39:**Transactional State Management** 
+**Question:** 
+Implement a transactional state management system in JavaScript that allows changes to state to be committed or rolled back. Use a stack to manage the transactions. 
+
+
+**Links:**
+- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [ ] Reviewed
