@@ -10,7 +10,7 @@
    - Allow multiple timers to run simultaneously.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Customizable%20Countdown%20Timer.md)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correct%20Customizable%20Countdown%20Timer.md)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 - [ ] Reviewed
       
