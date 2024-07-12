@@ -14,7 +14,7 @@
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Customizable%20Countdown%20Timer.md)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 
-
+- [ ] Reviewed
 ## Question 2: **Interactive Quiz App**
    **Description:** Develop an interactive quiz application that presents questions and tracks scores.  
    **Skills Tested:** DOM manipulation, event handling, data handling.  
@@ -31,7 +31,7 @@
 
 
 
-
+- [ ] Reviewed
 ## Question 3: **Recipe Ingredient Calculator**
    **Description:** Create an ingredient calculator that adjusts ingredient quantities based on the number of servings.
    **Skills Tested:** DOM manipulation, event handling, arithmetic operations.
@@ -45,6 +45,7 @@
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 
+- [ ] Reviewed
 ## Question 4: **Budget Planning App**
    **Description:** Build an app to help users plan their monthly budget by categorizing expenses and incomes.  
    **Skills Tested:** Data management, DOM manipulation, event handling.  
@@ -59,7 +60,7 @@
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
 - [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
 
-
+- [ ] Reviewed
 ## Question 5: **Dynamic Form Builder**
    **Description:** Create a dynamic form builder where users can add different types of form fields (text, checkbox, radio, etc.).  
    **Skills Tested:** DOM manipulation, data handling, event handling.  
