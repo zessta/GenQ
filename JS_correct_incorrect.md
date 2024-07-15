@@ -10,7 +10,7 @@
    - Allow multiple timers to run simultaneously.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correct%20Customizable%20Countdown%20Timer.md)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html);
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -26,7 +26,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
-- [Incorrect Code](https://github.com/zessta/javascript1by1/incorrect-reverse-string)
+- [Incorrect Code](https://github.com/zessta/javascript1by1/Incorrectjs/IInteractiveQuizApp.html)
 - [ ] Reviewed
       
 ## Question 3: **Recipe Ingredient Calculator**
