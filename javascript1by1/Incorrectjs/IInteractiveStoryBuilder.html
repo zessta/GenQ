@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Story Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .story-node {
+            margin-bottom: 20px;
+        }
+        .choice {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Story Builder</h1>
+    <div id="story-container"></div>
+    <button id="save-story">Save Story</button>
+    <div id="saved-stories"></div>
+    <script>
+        // Initial story data
+        let storyData = {
+            id: 1,
+            content: "Once upon a time...",
+            choices: []
+        };
+
+
+        // Function to create a new story node
+        function createStoryNode(nodeData) {
+            const node = document.createElement('div');
+            node.classList.add('story-node');
+            const content = document.createElement('p');
+            content.textContent = nodeData.content;
+            node.appendChild(content);
+
+
+            const addChoiceButton = document.createElement('button');
+            addChoiceButton.textContent = 'Add Choice';
+            addChoiceButton.onclick = () => addChoice(nodeData);
+            node.appendChild(addChoiceButton);
+
+
+            nodeData.choices.forEach(choiceData => {
+                const choice = createChoiceNode(choiceData);
+                node.appendChild(choice);
+            });
+
+
+            return node;
+        }
+
+
+        // Function to create a new choice node
+        function createChoiceNode(choiceData) {
+            const choice = document.createElement('div');
+            choice.classList.add('choice');
+            const content = document.createElement('p');
+            content.textContent = choiceData.content;
+            choice.appendChild(content);
+
+
+            const addChoiceButton = document.createElement('button');
+            addChoiceButton.textContent = 'Add Choice';
+            addChoiceButton.onclick = () => addChoice(choiceData);
+            choice.appendChild(addChoiceButton);
+
+
+            return choice;
+        }
+
+
+        // Function to add a choice to a story node
+        function addChoice(parentData) {
+            const choiceContent = prompt('Enter choice content:');
+            if (choiceContent) {
+                const choiceData = {
+                    id: Date.now(),
+                    content: choiceContent,
+                    choices: []
+                };
+                parentData.choices.push(choiceData);
+                renderStory();
+            }
+        }
+
+
+        // Function to render the story
+        function renderStory() {
+            const storyContainer = document.getElementById('story-container');
+            storyContainer.innerHTML = '';
+            const storyNode = createStoryNode(storyData);
+            storyContainer.appendChild(storyNode);
+        }
+
+
+        // Function to save the story
+        function saveStory() {
+            const savedStories = document.getElementById('saved-stories');
+            const storyClone = JSON.parse(JSON.stringify(storyData));
+            const storyNode = createStoryNode(storyClone);
+            savedStories.appendChild(storyNode);
+        }
+
+
+        document.getElementById('save-story').addEventListener('click', saveStory);
+
+
+        // Initial render
+        renderStory();
+    </script>
+</body>
+</html>
