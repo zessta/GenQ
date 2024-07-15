@@ -25,7 +25,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IInteractiveQuizApp.html)
 - [ ] Reviewed
       
@@ -39,7 +39,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IInteractiveQuizApp.html)
 - [ ] Reviewed
       
@@ -54,7 +54,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -69,7 +69,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -84,7 +84,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -98,7 +98,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -112,7 +112,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -127,7 +127,7 @@
 """
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -142,7 +142,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -159,7 +159,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -174,7 +174,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -188,7 +188,7 @@
    - Add pagination controls to navigate through large datasets.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -202,7 +202,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -217,7 +217,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -232,7 +232,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -248,7 +248,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -263,7 +263,7 @@
    - Support multiple polls simultaneously.
      
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -279,7 +279,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -296,7 +296,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -313,7 +313,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -332,7 +332,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -349,7 +349,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -366,7 +366,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -383,7 +383,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -400,7 +400,7 @@
    - Record and playback class sessions.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -417,7 +417,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -434,7 +434,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -451,7 +451,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -468,7 +468,7 @@
 """
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -484,7 +484,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -494,7 +494,7 @@
 Question: Implement a recursive descent parser for a simple arithmetic expression evaluator. The parser should handle addition, subtraction, multiplication, and division.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -506,7 +506,7 @@ Question: Implement a recursive descent parser for a simple arithmetic expressio
 Description: Implement a simple GraphQL server in Node.js that allows querying and mutating user data. Use the `apollo-server` library for the GraphQL server implementation. 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -518,7 +518,7 @@ Description: Implement a priority queue in JavaScript. The priority queue should
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -530,7 +530,7 @@ Description: Implement a WebSocket server in Node.js with authentication. Use th
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -542,7 +542,7 @@ Description: Implement a dynamic module loader in JavaScript that can load JavaS
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -554,7 +554,7 @@ Description: Implement a rate limiter using Redis in JavaScript. The rate limite
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -566,7 +566,7 @@ Description: Implement a transactional state management system in JavaScript tha
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -576,7 +576,7 @@ Description: Implement a transactional state management system in JavaScript tha
 Description: Create a middleware pipeline in JavaScript that allows chaining of multiple middleware functions to process a request and response object. The middleware should be executed in order, passing control to the next middleware in the chain. 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -586,7 +586,7 @@ Description: Implement an image carousel component with lazy loading for images.
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -595,7 +595,7 @@ Description: Implement a virtualized list component that only renders visible it
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -605,7 +605,7 @@ Description: Create a simple dependency injection system in JavaScript. It shoul
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
       
@@ -614,7 +614,7 @@ Description: Create a simple dependency injection system in JavaScript. It shoul
 Description: Implement a custom event emitter class in JavaScript that allows subscribing to events, emitting events, and removing event listeners.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -625,7 +625,7 @@ Description: Implement a rate limiter that caps the number of requests to an API
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -635,7 +635,7 @@ Description: Create a function that fetches weather data from a weather API and 
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -645,7 +645,7 @@ Description: Create a function that fetches weather data from a weather API and 
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -654,7 +654,7 @@ Description: Create a function that fetches weather data from a weather API and 
 Description: Create a dynamic table that can be sorted by clicking on the column headers and includes a search bar to filter the table rows based on the input.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -663,7 +663,7 @@ Description: Create a dynamic table that can be sorted by clicking on the column
 Description: Implement a debounce function that delays the execution of the input function until after a specified delay has passed since the last time the debounced function was invoked.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -671,7 +671,7 @@ Description: Implement a debounce function that delays the execution of the inpu
 Description: Create a function that fetches user data from the GitHub API and displays it on the page. The function should handle loading states and errors gracefully.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -680,7 +680,7 @@ Description: Create a function that fetches user data from the GitHub API and di
 Description: Implement a throttling function that limits the number of times a given function can be called within a specified time frame (e.g., once every 100 milliseconds). 
 
 **Links**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -691,7 +691,7 @@ Description: Implement a throttling function that limits the number of times a g
 Description: Create a form where users can input the number of rows and columns for a table, and upon submission, generate a table with cells filled in a specific pattern. 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -701,7 +701,7 @@ Description: Create a form where users can input the number of rows and columns 
 Description: Implement a paginated widget that displays a list of addresses. The widget should show 5 addresses per page with the ability to navigate to the previous and next pages.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -714,7 +714,7 @@ Description: Implement a component with nested checkboxes where checking a paren
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -729,7 +729,7 @@ Dequeue elements in order of priority
 Use a custom comparator for priority
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -745,7 +745,7 @@ Handle loading states
 Handle errors 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -762,7 +762,7 @@ Mark tasks as complete/incomplete
 Persist tasks using Local Storage 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -773,7 +773,7 @@ Description: Write a function curry that takes a function fn and returns a curri
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -784,7 +784,7 @@ Description: Write a function curry that takes a function fn and returns a curri
 Description: Implement a function debounce that returns a debounced version of the given function. The debounced function delays the execution until after wait milliseconds have elapsed since the last time it was invoked.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -794,7 +794,7 @@ Description: Implement a function debounce that returns a debounced version of t
 Description: Write a function promiseAll that mimics the behavior of Promise.all. It should take an array of promises and return a single promise that resolves with an array of results once all input promises have resolved, or rejects if any promise rejects. 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -804,7 +804,7 @@ Description: Write a function promiseAll that mimics the behavior of Promise.all
 Description: Write a function deepClone that performs a deep clone of a given object. The function should handle nested objects and arrays.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
@@ -813,7 +813,7 @@ Description: Write a function deepClone that performs a deep clone of a given ob
 Description: Write a function memoize that takes a function fn as an argument and returns a memoized version of fn. The memoized function should cache the results based on the arguments passed.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
 - [ ] Reviewed
 
