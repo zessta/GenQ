@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Wellness Tracker</title>
+</head>
+<body>
+    <h1>Health and Wellness Tracker</h1>
+    
+    <div>
+        <h2>Track Your Habits</h2>
+        <label for="water-intake">Water Intake (cups):</label>
+        <input type="number" id="water-intake" value="0">
+        <br>
+        <label for="sleep-hours">Sleep (hours):</label>
+        <input type="number" id="sleep-hours" value="0">
+        <br>
+        <label for="exercise-minutes">Exercise (minutes):</label>
+        <input type="number" id="exercise-minutes" value="0">
+        <br>
+        <button id="track-button">Track</button>
+    </div>
+
+
+    <div>
+        <h2>Wellness Goals</h2>
+        <label for="water-goal">Water Intake Goal (cups):</label>
+        <input type="number" id="water-goal" value="8">
+        <br>
+        <label for="sleep-goal">Sleep Goal (hours):</label>
+        <input type="number" id="sleep-goal" value="8">
+        <br>
+        <label for="exercise-goal">Exercise Goal (minutes):</label>
+        <input type="number" id="exercise-goal" value="30">
+    </div>
+
+
+    <div>
+        <h2>Your Progress</h2>
+        <p id="progress-display">Track your habits to see progress.</p>
+    </div>
+
+
+    <div>
+        <h2>Tips and Suggestions</h2>
+        <p id="tips-display">Get tips based on your tracked data.</p>
+    </div>
+
+
+    <script>
+        document.getElementById('track-button').addEventListener('click', function() {
+            let waterIntake = parseInt(document.getElementById('water-intake').value);
+            let sleepHours = parseInt(document.getElementById('sleep-hours').value);
+            let exerciseMinutes = parseInt(document.getElementById('exercise-minutes').value);
+
+
+            let waterGoal = parseInt(document.getElementById('water-goal').value);
+            let sleepGoal = parseInt(document.getElementById('sleep-goal').value);
+            let exerciseGoal = parseInt(document.getElementById('exercise-goal').value);
+
+
+            let waterProgress = (waterIntake / waterGoal) * 100;
+            let sleepProgress = (sleepHours / sleepGoal) * 100;
+            let exerciseProgress = (exerciseMinutes / exerciseGoal) * 100;
+
+
+            let progressDisplay = `
+                Water Intake: ${waterProgress}%<br>
+                Sleep: ${sleepProgress}%<br>
+                Exercise: ${exerciseProgress}%
+            `;
+            document.getElementById('progress-display').innerHTML = progressDisplay;
+
+
+            let tips = "";
+            if (waterIntake < waterGoal) {
+                tips += "Drink more water. ";
+            }
+            if (sleepHours < sleepGoal) {
+                tips += "Try to get more sleep. ";
+            }
+            if (exerciseMinutes < exerciseGoal) {
+                tips += "Increase your exercise duration. ";
+            }
+            document.getElementById('tips-display').innerText = tips;
+        });
+    </script>
+</body>
+</html>
