@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Builder</title>
+    <style>
+        .form-field {
+            margin-bottom: 10px;
+        }
+        .form-preview {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1>Dynamic Form Builder</h1>
+
+
+<div>
+    <label for="field-type">Field Type:</label>
+    <select id="field-type">
+        <option value="text">Text Input</option>
+        <option value="checkbox">Checkbox</option>
+        <option value="radio">Radio Button</option>
+        <option value="dropdown">Dropdown</option>
+    </select>
+    <button id="add-field">Add Field</button>
+</div>
+
+
+<div id="form-preview" class="form-preview"></div>
+
+
+<button id="submit-form">Submit Form</button>
+
+
+<script>
+    document.getElementById('add-field').addEventListener('click', function() {
+        const fieldType = document.getElementById('field-type').value;
+        const formPreview = document.getElementById('form-preview');
+
+
+        let newField;
+        switch (fieldType) {
+            case 'text':
+                newField = document.createElement('input');
+                newField.type = 'text';
+                newField.placeholder = 'Enter text';
+                break;
+            case 'checkbox':
+                newField = document.createElement('input');
+                newField.type = 'checkbox';
+                break;
+            case 'radio':
+                newField = document.createElement('input');
+                newField.type = 'radio';
+                break;
+            case 'dropdown':
+                newField = document.createElement('select');
+                const option1 = document.createElement('option');
+                option1.text = 'Option 1';
+                newField.add(option1);
+                const option2 = document.createElement('option');
+                option2.text = 'Option 2';
+                newField.add(option2);
+                break;
+            default:
+                break;
+        }
+
+
+        const formField = document.createElement('div');
+        formField.className = 'form-field';
+        formField.appendChild(newField);
+
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.addEventListener('click', function() {
+            formPreview.removeChild(formField);
+        });
+        formField.appendChild(removeButton);
+
+
+        formPreview.appendChild(formField);
+    });
+
+
+    document.getElementById('submit-form').addEventListener('click', function() {
+        const fields = document.querySelectorAll('.form-field');
+        const formData = {};
+
+
+        fields.forEach((field, index) => {
+            const input = field.querySelector('input, select');
+            const fieldType = input.type || input.tagName.toLowerCase();
+
+
+            if (fieldType === 'text') {
+                formData[`field${index}`] = input.value;
+            } else if (fieldType === 'checkbox' || fieldType === 'radio') {
+                formData[`field${index}`] = input.checked;
+            } else if (fieldType === 'select') {
+                formData[`field${index}`] = input.value;
+            }
+        });
+
+
+        console.log(JSON.stringify(formData));
+        alert(JSON.stringify(formData));
+    });
+</script>
+
+
+</body>
+</html>
