@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist Manager</title>
+</head>
+<body>
+    <h1>Music Playlist Manager</h1>
+    <div>
+        <input type="text" id="songInput" placeholder="Add a song">
+        <button onclick="addSong()">Add Song</button>
+    </div>
+    <div>
+        <h2>Playlist</h2>
+        <ul id="playlist"></ul>
+    </div>
+    <div>
+        <button onclick="playSong()">Play</button>
+        <button onclick="pauseSong()">Pause</button>
+        <button onclick="skipSong()">Skip</button>
+    </div>
+    <div>
+        <h3>Now Playing:</h3>
+        <p id="nowPlaying">None</p>
+        <h3>Playlist Duration:</h3>
+        <p id="playlistDuration">0:00</p>
+    </div>
+    <script>
+        let playlist = [];
+        let currentSongIndex = 0;
+        let isPlaying = false;
+        let audio = new Audio();
+
+
+        function addSong() {
+            let songInput = document.getElementById('songInput').value;
+            if (songInput) {
+                playlist.push(songInput);
+                updatePlaylistUI();
+                document.getElementById('songInput').value = ''; // Clear input
+                savePlaylist();
+            }
+        }
+
+
+        function updatePlaylistUI() {
+            let playlistElement = document.getElementById('playlist');
+            playlistElement.innerHTML = '';
+            playlist.forEach((song, index) => {
+                let li = document.createElement('li');
+                li.textContent = song;
+                playlistElement.appendChild(li);
+            });
+            updatePlaylistDuration();
+        }
+
+
+        function playSong() {
+            if (playlist.length > 0 && !isPlaying) {
+                audio.src = playlist[currentSongIndex];
+                audio.play();
+                isPlaying = true;
+                document.getElementById('nowPlaying').textContent = playlist[currentSongIndex];
+            }
+        }
+
+
+        function pauseSong() {
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+            }
+        }
+
+
+        function skipSong() {
+            if (playlist.length > 0) {
+                currentSongIndex = (currentSongIndex + 1) % playlist.length;
+                playSong();
+            }
+        }
+
+
+        function updatePlaylistDuration() {
+            let totalDuration = playlist.length * 3; // Assume each song is 3 minutes
+            let minutes = Math.floor(totalDuration / 60);
+            let seconds = totalDuration % 60;
+            document.getElementById('playlistDuration').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+
+
+        function savePlaylist() {
+            localStorage.setItem('playlist', JSON.stringify(playlist));
+        }
+
+
+        function loadPlaylist() {
+            let savedPlaylist = localStorage.getItem('playlist');
+            if (savedPlaylist) {
+                playlist = JSON.parse(savedPlaylist);
+                updatePlaylistUI();
+            }
+        }
+
+
+        // Load playlist on page load
+        window.onload = loadPlaylist;
+    </script>
+</body>
+</html>
