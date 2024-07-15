@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Map Application</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>Interactive Map Application</h1>
+    <div id="map"></div>
+    <button id="addMarkerBtn">Add Marker</button>
+    <button id="calculateRouteBtn">Calculate Route</button>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([51.505, -0.09], 13);
+
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+
+        var markers = [];
+        var routes = [];
+
+
+        // Function to add a marker to the map
+        function addMarker(lat, lng) {
+            var marker = L.marker([lat, lng]).addTo(map);
+            markers.push(marker);
+        }
+
+
+        // Event listener for the 'Add Marker' button
+        document.getElementById('addMarkerBtn').addEventListener('click', function() {
+            // Hardcoded coordinates for the sake of simplicity
+            addMarker(51.5, -0.09);
+        });
+
+
+        // Function to calculate and display a route between markers
+        function calculateRoute() {
+            if (markers.length < 2) {
+                alert("At least two markers are needed to calculate a route");
+                return;
+            }
+            
+            var latlngs = markers.map(function(marker) {
+                return marker.getLatLng();
+            });
+
+
+            var route = L.polyline(latlngs, {color: 'blue'}).addTo(map);
+            routes.push(route);
+        }
+
+
+        // Event listener for the 'Calculate Route' button
+        document.getElementById('calculateRouteBtn').addEventListener('click', calculateRoute);
+
+
+        // Function to fetch and display location data (e.g., weather)
+        function fetchLocationData(lat, lng) {
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=YOUR_API_KEY`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Weather data:', data);
+                    alert(`Weather at (${lat}, ${lng}): ${data.weather[0].description}`);
+                })
+                .catch(error => console.error('Error fetching weather data:', error));
+        }
+
+
+        // Intentional mistake: Missing event listener to fetch data for specific markers
+        // This needs to be implemented by the interviewee
+    </script>
+</body>
+</html>
