@@ -2,112 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Quiz App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .choices {
-            list-style-type: none;
-            padding: 0;
-        }
-        .choices li {
-            margin-bottom: 10px;
-        }
-        .feedback {
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .score {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <div id="quiz-container">
-        <div id="question-container" class="question"></div>
-        <ul id="choices-container" class="choices"></ul>
-        <button id="next-button">Next</button>
-        <div id="feedback" class="feedback"></div>
-        <div id="score" class="score"></div>
+        <h1>Interactive Quiz</h1>
+        <div id="question-container">
+            <p id="question"></p>
+            <ul id="answers">
+                <!-- Answers will be dynamically inserted here -->
+            </ul>
+        </div>
+        <button id="next-button" onclick="nextQuestion()">Next</button>
+        <p id="score"></p>
     </div>
+
+
     <script>
         const questions = [
             {
                 question: "What is the capital of France?",
-                choices: ["Paris", "London", "Rome", "Berlin"],
-                correctAnswer: "Paris"
-            },
-            {
-                question: "What is 2 + 2?",
-                choices: ["3", "4", "5", "6"],
-                correctAnswer: "4"
+                answers: ["Berlin", "Madrid", "Paris", "Lisbon"],
+                correct: 2
             },
             {
                 question: "Which planet is known as the Red Planet?",
-                choices: ["Earth", "Mars", "Jupiter", "Saturn"],
-                correctAnswer: "Mars"
+                answers: ["Earth", "Mars", "Jupiter", "Saturn"],
+                correct: 1
+            },
+            {
+                question: "What is the largest ocean on Earth?",
+                answers: ["Atlantic", "Indian", "Arctic", "Pacific"],
+                correct: 3
             }
         ];
+
 
         let currentQuestionIndex = 0;
         let score = 0;
 
-        const questionContainer = document.getElementById('question-container');
-        const choicesContainer = document.getElementById('choices-container');
-        const nextButton = document.getElementById('next-button');
-        const feedbackContainer = document.getElementById('feedback');
-        const scoreContainer = document.getElementById('score');
 
         function loadQuestion() {
+            const questionElement = document.getElementById('question');
+            const answersElement = document.getElementById('answers');
             const currentQuestion = questions[currentQuestionIndex];
-            questionContainer.textContent = currentQuestion.question;
-            choicesContainer.innerHTML = '';
 
-            currentQuestion.choices.forEach(choice => {
+
+            questionElement.innerText = currentQuestion.question;
+            answersElement.innerHTML = '';
+
+
+            currentQuestion.answers.forEach((answer, index) => {
                 const li = document.createElement('li');
-                li.textContent = choice;
-                li.addEventListener('click', () => handleChoiceClick(choice));
-                choicesContainer.appendChild(li);
+                li.innerText = answer;
+                li.setAttribute('data-index', index);
+                li.addEventListener('click', checkAnswer);
+                answersElement.appendChild(li);
             });
         }
 
-        function handleChoiceClick(choice) {
+
+        function checkAnswer(event) {
+            const selectedAnswerIndex = parseInt(event.target.getAttribute('data-index'));
             const currentQuestion = questions[currentQuestionIndex];
-            if (choice === currentQuestion.correctAnswer) {
-                score += 1;
-                feedbackContainer.textContent = "Correct!";
+
+
+            if (selectedAnswerIndex === currentQuestion.correct) {
+                score++;
+                alert('Correct!');
             } else {
-                feedbackContainer.textContent = "Incorrect.";
+                alert('Incorrect!');
             }
+
+
+            document.getElementById('score').innerText = `Score: ${score}`;
         }
 
-        function showScore() {
-            questionContainer.style.display = 'none';
-            choicesContainer.style.display = 'none';
-            nextButton.style.display = 'none';
-            feedbackContainer.style.display = 'none';
-            scoreContainer.textContent = `Your score is: ${score}/${questions.length}`;
-        }
 
-        nextButton.addEventListener('click', () => {
-            currentQuestionIndex += 1;
-            if (currentQuestionIndex < questions.length) {
+        function nextQuestion() {
+            currentQuestionIndex++;
+
+
+            if (currentQuestionIndex >= questions.length) {
+                alert('Quiz finished!');
+                document.getElementById('next-button').disabled = true;
+            } else {
                 loadQuestion();
-                feedbackContainer.textContent = '';
-            } else {
-                showScore();
             }
-        });
-    </script>
-        </html>
+        }
+
 
         // Load the first question
-        loadQuestion();
+        window.onload = loadQuestion;
     </script>
 </body>
 </html>
