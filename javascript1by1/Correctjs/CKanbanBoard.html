@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .board {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .column {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .task {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kanban Board</h1>
+    <div>
+        <input type="text" id="taskInput" placeholder="New task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <div class="board">
+        <div class="column" id="todo">
+            <h2>To Do</h2>
+        </div>
+        <div class="column" id="in-progress">
+            <h2>In Progress</h2>
+        </div>
+        <div class="column" id="done">
+            <h2>Done</h2>
+        </div>
+    </div>
+
+    <script>
+        let taskIdCounter = 0;
+
+        // Function to add a new task
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskText = taskInput.value;
+            if (taskText === '') return;
+
+            const task = document.createElement('div');
+            task.className = 'task';
+            task.textContent = taskText;
+            task.draggable = true;
+            task.ondragstart = onDragStart;
+            task.ondblclick = editTask;
+
+            task.id = `task-${taskIdCounter++}`;
+            document.getElementById('todo').appendChild(task);
+            taskInput.value = '';
+            saveTasks();
+        }
+
+        // Function to handle drag start event
+        function onDragStart(event) {
+            event.dataTransfer.setData('text/plain', event.target.id);
+        }
+
+        // Function to handle drop event
+        function onDrop(event) {
+            event.preventDefault();
+            const id = event.dataTransfer.getData('text/plain');
+            const draggableElement = document.getElementById(id);
+            const dropzone = event.target.closest('.column');
+            if (dropzone) {
+                dropzone.appendChild(draggableElement);
+                saveTasks();
+            }
+        }
+
+        // Function to handle drag over event
+        function onDragOver(event) {
+            event.preventDefault();
+        }
+
+        // Function to edit a task
+        function editTask(event) {
+            const newText = prompt('Edit task:', event.target.textContent);
+            if (newText !== null) {
+                event.target.textContent = newText;
+                saveTasks();
+            }
+        }
+
+        // Function to save tasks to local storage
+        function saveTasks() {
+            const columns = document.querySelectorAll('.column');
+            const tasks = {};
+
+            columns.forEach(column => {
+                tasks[column.id] = [];
+                column.querySelectorAll('.task').forEach(task => {
+                    tasks[column.id].push({ id: task.id, text: task.textContent });
+                });
+            });
+
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        // Function to load tasks from local storage
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem('tasks'));
+            if (!tasks) return;
+
+            Object.keys(tasks).forEach(columnId => {
+                const column = document.getElementById(columnId);
+                tasks[columnId].forEach(taskData => {
+                    const task = document.createElement('div');
+                    task.className = 'task';
+                    task.textContent = taskData.text;
+                    task.draggable = true;
+                    task.ondragstart = onDragStart;
+                    task.ondblclick = editTask;
+                    task.id = taskData.id;
+                    column.appendChild(task);
+                });
+            });
+        }
+
+        // Event listeners for drag and drop
+        document.querySelectorAll('.column').forEach(column => {
+            column.ondrop = onDrop;
+            column.ondragover = onDragOver;
+        });
+
+        // Load tasks when the page loads
+        window.onload = loadTasks;
+    </script>
+</body>
+</html>
