@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Home Controller</title>
+    <style>
+        .device {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Smart Home Controller</h1>
+    <div id="devices"></div>
+
+
+    <script>
+        // Mock API interaction
+        const devices = [
+            { id: 1, name: 'Living Room Light', type: 'light', status: 'off' },
+            { id: 2, name: 'Thermostat', type: 'thermostat', temperature: 22 },
+            { id: 3, name: 'Security Camera', type: 'camera', status: 'on' }
+        ];
+
+
+        function fetchDevices() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => resolve(devices), 1000);
+            });
+        }
+
+
+        function updateDevice(deviceId, data) {
+            return new Promise((resolve, reject) => {
+                const device = devices.find(d => d.id === deviceId);
+                if (device) {
+                    Object.assign(device, data);
+                    setTimeout(() => resolve(device), 500);
+                } else {
+                    reject('Device not found');
+                }
+            });
+        }
+
+
+        // Real-time data handling
+        function pollDevices() {
+            fetchDevices().then(devices => {
+                const devicesDiv = document.getElementById('devices');
+                devicesDiv.innerHTML = '';
+                devices.forEach(device => {
+                    const deviceDiv = document.createElement('div');
+                    deviceDiv.className = 'device';
+                    deviceDiv.innerHTML = `
+                        <h2>${device.name}</h2>
+                        <p>Type: ${device.type}</p>
+                        <p>Status: ${device.status || ''}</p>
+                        <p>Temperature: ${device.temperature || ''}</p>
+                        <button onclick="toggleDevice(${device.id})">Toggle</button>
+                        <input type="number" value="${device.temperature || ''}" onchange="adjustTemperature(${device.id}, this.value)">
+                    `;
+                    devicesDiv.appendChild(deviceDiv);
+                });
+            });
+        }
+
+
+        function toggleDevice(deviceId) {
+            updateDevice(deviceId, { status: devices[deviceId - 1].status === 'on' ? 'off' : 'on' })
+                .then(pollDevices)
+                .catch(error => console.error(error));
+        }
+
+
+        function adjustTemperature(deviceId, temperature) {
+            updateDevice(deviceId, { temperature: parseInt(temperature) })
+                .then(pollDevices)
+                .catch(error => console.error(error));
+        }
+
+
+        // Initialize
+        pollDevices();
+        setInterval(pollDevices, 5000);
+    </script>
+</body>
+</html>
