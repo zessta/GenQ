@@ -26,7 +26,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/javascript1by1/correct-reverse-string)
-- [Incorrect Code](https://github.com/zessta/javascript1by1/Incorrectjs/IInteractiveQuizApp.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IInteractiveQuizApp.html)
 - [ ] Reviewed
       
 ## Question 3: **Recipe Ingredient Calculator**
