@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Automation Tool</title>
+</head>
+<body>
+    <h1>Task Automation Tool</h1>
+    <textarea id="scriptArea" rows="10" cols="50" placeholder="Write your script here..."></textarea>
+    <br>
+    <button id="runScript">Run Script</button>
+    <button id="saveScript">Save Script</button>
+    <button id="loadScript">Load Script</button>
+    <h3>Output:</h3>
+    <pre id="outputArea"></pre>
+    <h3>Error Messages:</h3>
+    <pre id="errorArea"></pre>
+
+
+    <script>
+        document.getElementById('runScript').addEventListener('click', function() {
+            let scriptContent = document.getElementById('scriptArea').value;
+            try {
+                let result = eval(scriptContent);
+                document.getElementById('outputArea').innerText = result;
+            } catch (error) {
+                document.getElementById('errorArea').innerText = error.message;
+            }
+        });
+
+
+        document.getElementById('saveScript').addEventListener('click', function() {
+            let scriptContent = document.getElementById('scriptArea').value;
+            localStorage.setItem('savedScript', scriptContent);
+            alert('Script saved!');
+        });
+
+
+        document.getElementById('loadScript').addEventListener('click', function() {
+            let savedScript = localStorage.getItem('savedScript');
+            document.getElementById('scriptArea').value = savedScript;
+            alert('Script loaded!');
+        });
+    </script>
+</body>
+</html>
