@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        #transactions {
+            margin-top: 20px;
+        }
+        .chart {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Manager</h1>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+                <option value="investment">Investment</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount">
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" id="category">
+        </div>
+        <button id="addTransaction">Add Transaction</button>
+
+
+        <div id="transactions">
+            <h2>Transactions</h2>
+            <ul id="transactionList"></ul>
+        </div>
+
+
+        <div class="chart">
+            <canvas id="financeChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const transactions = [];
+
+
+        document.getElementById('addTransaction').addEventListener('click', function() {
+            const type = document.getElementById('type').value;
+            const amount = parseFloat(document.getElementById('amount').value);
+            const category = document.getElementById('category').value;
+
+
+            if (isNaN(amount) || amount <= 0) {
+                alert('Please enter a valid amount');
+                return;
+            }
+
+
+            const transaction = { type, amount, category };
+            transactions.push(transaction);
+            renderTransactions();
+            updateChart();
+        });
+
+
+        function renderTransactions() {
+            const transactionList = document.getElementById('transactionList');
+            transactionList.innerHTML = '';
+
+
+            transactions.forEach((transaction, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${transaction.type}: $${transaction.amount} - ${transaction.category}`;
+                transactionList.appendChild(li);
+            });
+        }
+
+
+        function updateChart() {
+            const ctx = document.getElementById('financeChart').getContext('2d');
+
+
+            const income = transactions.filter(t => t.type === 'income').reduce((acc, t) => acc + t.amount, 0);
+            const expenses = transactions.filter(t => t.type === 'expense').reduce((acc, t) => acc + t.amount, 0);
+            const investments = transactions.filter(t => t.type === 'investment').reduce((acc, t) => acc + t.amount, 0);
+
+
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Income', 'Expenses', 'Investments'],
+                    datasets: [{
+                        label: 'Financial Data',
+                        data: [income, expenses, investments],
+                        backgroundColor: ['green', 'red', 'blue']
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
