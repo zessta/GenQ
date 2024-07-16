@@ -40,7 +40,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IInteractiveQuizApp.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IRecipeIngredientCalculator.html)
 - [ ] Reviewed
       
 ## Question 4: **Budget Planning App**
@@ -70,7 +70,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IDynamicFormBuilder.html)
 - [ ] Reviewed
 
 ## Question 6: **File Uploader with Preview**
@@ -85,7 +85,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IExpenseTracker.html)
 - [ ] Reviewed
       
 ## Question 7: **Weather Comparison App**
@@ -189,7 +189,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IInteractiveDataTable.html)
 - [ ] Reviewed
       
 ## Question 14: **Virtual Pet Game**
@@ -218,7 +218,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/ICustomizableCalendarApp.html)
 - [ ] Reviewed
       
 ## Question 16: **Fitness Tracker**
@@ -233,7 +233,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IFitnessTracker.html)
 - [ ] Reviewed
 
       
@@ -249,7 +249,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IInteractiveLearningPlatform.html)
 - [ ] Reviewed
 
       
@@ -264,7 +264,7 @@
      
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IIncorrectPollingApp.html)
 - [ ] Reviewed
 
       
@@ -384,7 +384,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IHealthAndWellnessTracker.html)
 - [ ] Reviewed
 
 
@@ -418,7 +418,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IInteractiveResumeBuilder.html)
 - [ ] Reviewed
 
 
@@ -452,7 +452,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/ICustomizableDashboard.html)
 - [ ] Reviewed
 
 
@@ -485,7 +485,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/ExpenseTrackerVisualization.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IExpenseTracker.html)
 - [ ] Reviewed
 
 
@@ -543,7 +543,7 @@ Description: Implement a dynamic module loader in JavaScript that can load JavaS
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IDynamicModuleLoader.js)
 - [ ] Reviewed
 
 
@@ -587,7 +587,7 @@ Description: Implement an image carousel component with lazy loading for images.
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IImageCarouselLazyLoading.js)
 - [ ] Reviewed
 
 ## Question 42:**Virtualized List Rendering**
@@ -606,7 +606,7 @@ Description: Create a simple dependency injection system in JavaScript. It shoul
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IDependencyInjection.js)
 - [ ] Reviewed
       
 
