@@ -85,7 +85,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CFileUploaderwithPreview.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IExpenseTracker.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IFileUploaderWithPreview.html)
 - [ ] Reviewed
       
 ## Question 7: **Weather Comparison App**
