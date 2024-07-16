@@ -11,7 +11,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/ICustomizableCountdownTimer.html)
 - [ ] Reviewed
       
 ## Question 2: **Interactive Quiz App**
