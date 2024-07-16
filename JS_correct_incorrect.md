@@ -113,7 +113,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/ICollaborativeDrawingBoard.html)
 - [ ] Reviewed
       
 ## Question 9: **Music Playlist Manager**
@@ -128,7 +128,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IMusicPlaylistManager.html)
 - [ ] Reviewed
 
 ## Question 10: **Task Management with Kanban Board**
@@ -143,7 +143,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CKanbanBoard.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IKanbanBoard.html)
 - [ ] Reviewed
       
 ## Question 11:**Stock Market Dashboard**
