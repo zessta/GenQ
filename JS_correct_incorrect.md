@@ -44,7 +44,7 @@
 - [ ] Reviewed
       
 ## Question 4: **Budget Planning App**
-   **Description:** Build an app to help users plan their monthly budget by categorizing expenses and incomes.  
+   **Description:** Build an app to help users plan their monthly budget by categorizing s and incomes.  
    **Skills Tested:** Data management, DOM manipulation, event handling.  
    **Features:**
    - Allow users to add, edit, and delete income and expenses.
@@ -55,7 +55,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IBudgetPlanning.html)
 - [ ] Reviewed
       
 ## Question 5: **Dynamic Form Builder**
@@ -485,7 +485,7 @@
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/ExpenseTrackerVisualization.html)
 - [ ] Reviewed
 
 
