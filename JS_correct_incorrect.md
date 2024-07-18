@@ -97,7 +97,7 @@
    - Visualize temperature, humidity, and other metrics in a comparative chart.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CWeatherComparisonApp.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IWeatherCompanionApp.html)
 - [ ] Reviewed
       
@@ -126,7 +126,7 @@
 """
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CMusicPlaylistManager)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IMusicPlaylistManager.html)
 - [ ] Reviewed
 
