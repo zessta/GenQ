@@ -246,7 +246,7 @@ go# Coding Questions
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CInteractiveLearningPlatform.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IInteractiveLearningPlatform.html)
 - [ ] Reviewed
 
