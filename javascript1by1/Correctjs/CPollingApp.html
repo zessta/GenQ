@@ -1,0 +1,155 @@
+//This code has both js and html and implementation of web socket.
+
+const http = require('http');
+const WebSocket = require('ws');
+const server = http.createServer();
+const wss = new WebSocket.Server({ server });
+
+let polls = {};
+
+wss.on('connection', function connection(ws) {
+    ws.on('message', function incoming(message) {
+        const data = JSON.parse(message);
+        switch (data.type) {
+            case 'createPoll':
+                const pollId = generateUniquePollId();
+                polls[pollId] = {
+                    question: data.question,
+                    options: data.options,
+                    votes: Array(data.options.length).fill(0)
+                };
+                ws.send(JSON.stringify({ type: 'pollCreated', pollId, question: data.question, options: data.options }));
+                break;
+            case 'vote':
+                if (polls[data.pollId]) {
+                    polls[data.pollId].votes[data.option]++;
+                    broadcast(JSON.stringify({
+                        type: 'updateResults',
+                        pollId: data.pollId,
+                        votes: polls[data.pollId].votes
+                    }));
+                }
+                break;
+            default:
+                console.log('Unknown message type:', data.type);
+        }
+    });
+});
+
+function generateUniquePollId() {
+    let pollId;
+    do {
+        pollId = Math.random().toString(36).substring(2, 15);
+    } while (polls[pollId]);
+    return pollId;
+}
+
+function broadcast(message) {
+    wss.clients.forEach(function each(client) {
+        if (client.readyState === WebSocket.OPEN) {
+            client.send(message);
+        }
+    });
+}
+
+server.listen(8080, function listening() {
+    console.log('Server listening on port 8080');
+});
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-time Polling App</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Real-time Polling App</h1>
+    <div id="polls"></div>
+    <script>
+        const ws = new WebSocket('ws://localhost:8080');
+
+        ws.onmessage = function (event) {
+            const data = JSON.parse(event.data);
+            switch (data.type) {
+                case 'pollCreated':
+                    addPoll(data.pollId, data.question, data.options);
+                    break;
+                case 'updateResults':
+                    updateChart(data.pollId, data.votes);
+                    break;
+                default:
+                    console.log('Unknown message type:', data.type);
+            }
+        };
+
+        function createPoll(question, options) {
+            ws.send(JSON.stringify({
+                type: 'createPoll',
+                question: question,
+                options: options
+            }));
+        }
+
+        function vote(pollId, option) {
+            ws.send(JSON.stringify({
+                type: 'vote',
+                pollId: pollId,
+                option: option
+            }));
+        }
+
+        function addPoll(pollId, question, options) {
+            const pollContainer = document.getElementById('polls');
+            const pollDiv = document.createElement('div');
+            pollDiv.id = pollId;
+            pollDiv.innerHTML = `
+                <h2>${question}</h2>
+                ${options.map((opt, index) => `
+                    <button onclick="vote('${pollId}', ${index})">${opt}</button>
+                `).join('')}
+                <canvas id="chart-${pollId}"></canvas>
+            `;
+            pollContainer.appendChild(pollDiv);
+            createChart(pollId, options);
+        }
+
+        function createChart(pollId, labels) {
+            const ctx = document.getElementById(`chart-${pollId}`).getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Votes',
+                        data: Array(labels.length).fill(0),
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            Chart.registry.addChart(chart);
+        }
+
+        function updateChart(pollId, votes) {
+            const chart = Chart.getChart(`chart-${pollId}`);
+            if (chart) {
+                chart.data.datasets[0].data = votes;
+                chart.update();
+            }
+        }
+
+        // Example usage
+        createPoll('What is your favorite color?', ['Red', 'Green', 'Blue']);
+    </script>
+</body>
+</html>
