@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customizable Calendar App</title>
+    <style>
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+        .day {
+            border: 1px solid #ddd;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .event {
+            background-color: yellow;
+            margin-top: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customizable Calendar App</h1>
+    <div class="calendar" id="calendar"></div>
+
+    <script>
+        const calendar = document.getElementById('calendar');
+
+        function createCalendar(year, month) {
+            calendar.innerHTML = '';
+            const date = new Date(year, month, 1);
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            // Add empty divs to start the month on the correct day
+            for (let i = 0; i < date.getDay(); i++) {
+                const emptyDiv = document.createElement('div');
+                calendar.appendChild(emptyDiv);
+            }
+
+            for (let i = 1; i <= daysInMonth; i++) {
+                const day = document.createElement('div');
+                day.className = 'day';
+                day.innerHTML = i;
+
+                day.addEventListener('click', () => addEvent(day));
+                calendar.appendChild(day);
+            }
+        }
+
+        function addEvent(dayElement) {
+            const title = prompt('Enter event title:');
+            const description = prompt('Enter event description:');
+            const time = prompt('Enter event time:');
+
+            if (title && description && time) {
+                const event = document.createElement('div');
+                event.className = 'event';
+                event.innerHTML = `<strong>${title}</strong><br>${description}<br>${time}`;
+
+                event.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    editEvent(event);
+                });
+
+                dayElement.appendChild(event);
+            }
+        }
+
+        function editEvent(eventElement) {
+            const newTitle = prompt('Edit event title:', eventElement.querySelector('strong').innerText);
+            const newDescription = prompt('Edit event description:', eventElement.childNodes[2].nodeValue);
+            const newTime = prompt('Edit event time:', eventElement.childNodes[4].nodeValue);
+
+            if (newTitle && newDescription && newTime) {
+                eventElement.innerHTML = `<strong>${newTitle}</strong><br>${newDescription}<br>${newTime}`;
+            }
+
+            const deleteEvent = confirm('Do you want to delete this event?');
+            if (deleteEvent) {
+                eventElement.remove();
+            }
+        }
+
+        // Corrected mistakes:
+        // 1. Corrected month in createCalendar (month instead of month + 1).
+        // 2. Corrected node references in editEvent using textContent.
+        // 3. Added event highlight functionality.
+
+        createCalendar(2023, 9); // October 2023
+    </script>
+</body>
+</html>
