@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        #quiz-container {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            max-width: 600px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #e0e0e0;
+            cursor: pointer;
+        }
+        li:hover {
+            background-color: #d0d0d0;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Interactive Quiz</h1>
+        <div id="question-container">
+            <p id="question"></p>
+            <ul id="answers">
+                <!-- Answers will be dynamically inserted here -->
+            </ul>
+        </div>
+        <button id="next-button" onclick="nextQuestion()">Next</button>
+        <p id="score">Score: 0</p>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                answers: ["Berlin", "Madrid", "Paris", "Lisbon"],
+                correct: 2
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                answers: ["Earth", "Mars", "Jupiter", "Saturn"],
+                correct: 1
+            },
+            {
+                question: "What is the largest ocean on Earth?",
+                answers: ["Atlantic", "Indian", "Arctic", "Pacific"],
+                correct: 3
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const questionElement = document.getElementById('question');
+            const answersElement = document.getElementById('answers');
+            const currentQuestion = questions[currentQuestionIndex];
+
+            questionElement.innerText = currentQuestion.question;
+            answersElement.innerHTML = '';
+
+            currentQuestion.answers.forEach((answer, index) => {
+                const li = document.createElement('li');
+                li.innerText = answer;
+                li.setAttribute('data-index', index);
+                li.addEventListener('click', checkAnswer);
+                answersElement.appendChild(li);
+            });
+        }
+
+        function checkAnswer(event) {
+            const selectedAnswerIndex = parseInt(event.target.getAttribute('data-index'));
+            const currentQuestion = questions[currentQuestionIndex];
+
+            if (selectedAnswerIndex === currentQuestion.correct) {
+                score++;
+                alert('Correct!');
+            } else {
+                alert('Incorrect!');
+            }
+
+            document.getElementById('score').innerText = `Score: ${score}`;
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex >= questions.length) {
+                alert('Quiz finished!');
+                document.getElementById('next-button').disabled = true;
+            } else {
+                loadQuestion();
+            }
+        }
+
+        // Load the first question
+        window.onload = loadQuestion;
+    </script>
+</body>
+</html>
