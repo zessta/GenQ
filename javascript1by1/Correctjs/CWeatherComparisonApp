@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Comparison App</title>
+    <style>
+        .city-weather {
+            border: 1px solid #000;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weather Comparison App</h1>
+    <div>
+        <input type="text" id="city1" placeholder="Enter city 1">
+        <input type="text" id="city2" placeholder="Enter city 2">
+        <button onclick="fetchWeather()">Compare Weather</button>
+    </div>
+    <div id="weather-data"></div>
+
+    <script>
+        const apiKey = 'your_api_key_here'; // Add your API key here
+
+        async function fetchWeather() {
+            const city1 = document.getElementById('city1').value;
+            const city2 = document.getElementById('city2').value;
+
+            if (!city1 || !city2) {
+                alert('Please enter both cities');
+                return;
+            }
+
+            const url1 = `http://api.openweathermap.org/data/2.5/weather?q=${city1}&appid=${apiKey}`;
+            const url2 = `http://api.openweathermap.org/data/2.5/weather?q=${city2}&appid=${apiKey}`;
+
+            try {
+                const [response1, response2] = await Promise.all([fetch(url1), fetch(url2)]);
+
+                if (!response1.ok) {
+                    throw new Error(`Failed to fetch weather data for ${city1}`);
+                }
+
+                if (!response2.ok) {
+                    throw new Error(`Failed to fetch weather data for ${city2}`);
+                }
+
+                const data1 = await response1.json();
+                const data2 = await response2.json();
+
+                displayWeather(data1, data2);
+            } catch (error) {
+                console.error(error);
+                alert(`Error: ${error.message}`);
+            }
+        }
+
+        function displayWeather(data1, data2) {
+            const weatherDataDiv = document.getElementById('weather-data');
+            weatherDataDiv.innerHTML = `
+                <div class="city-weather">
+                    <h2>${data1.name}</h2>
+                    <p>Temperature: ${(data1.main.temp - 273.15).toFixed(2)}°C</p> 
+                    <p>Humidity: ${data1.main.humidity}%</p>
+                </div>
+                <div class="city-weather">
+                    <h2>${data2.name}</h2>
+                    <p>Temperature: ${(data2.main.temp - 273.15).toFixed(2)}°C</p>
+                    <p>Humidity: ${data2.main.humidity}%</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
