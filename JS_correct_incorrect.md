@@ -261,7 +261,7 @@ go# Coding Questions
    - Support multiple polls simultaneously.
      
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CPollingApp.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IIncorrectPollingApp.html)
 - [ ] Reviewed
 
