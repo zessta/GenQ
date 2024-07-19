@@ -311,7 +311,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CTaskAutomationTool.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/ITaskAutomationWithScripting.html)
 - [ ] Reviewed
 
@@ -330,8 +330,8 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/ITranslationApp.htmll)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CLanguageLearningApp.html)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/ITranslationApp.html)
 - [ ] Reviewed
 
 
