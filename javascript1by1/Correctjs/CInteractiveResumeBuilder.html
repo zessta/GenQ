@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .form-container, .resume-container {
+            width: 45%;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .resume {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .resume h1, .resume h2, .resume p {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .resume h2 {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Resume Builder</h2>
+            <form id="resume-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="work-experience">Work Experience:</label>
+                <textarea id="work-experience" name="work-experience"></textarea>
+
+                <label for="education">Education:</label>
+                <textarea id="education" name="education"></textarea>
+
+                <label for="skills">Skills:</label>
+                <textarea id="skills" name="skills"></textarea>
+
+                <label for="template">Choose Template:</label>
+                <select id="template" name="template">
+                    <option value="template1">Template 1</option>
+                    <option value="template2">Template 2</option>
+                </select>
+
+                <button type="button" onclick="previewResume()">Preview Resume</button>
+                <button type="button" onclick="downloadResume()">Download as PDF</button>
+                <button type="button" onclick="saveResume()">Save Resume</button>
+                <button type="button" onclick="loadResume()">Load Resume</button>
+            </form>
+        </div>
+        <div class="resume-container">
+            <h2>Resume Preview</h2>
+            <div class="resume" id="resume-preview"></div>
+        </div>
+    </div>
+
+    <script>
+        function previewResume() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const workExperience = document.getElementById('work-experience').value;
+            const education = document.getElementById('education').value;
+            const skills = document.getElementById('skills').value;
+            const template = document.getElementById('template').value;
+
+            const resumePreview = document.getElementById('resume-preview');
+
+            // Clear previous content
+            resumePreview.innerHTML = '';
+
+            if (template === 'template1') {
+                resumePreview.innerHTML += `<h1>${name}</h1>`;
+                resumePreview.innerHTML += `<p>Email: ${email}</p>`;
+                resumePreview.innerHTML += `<p>Phone: ${phone}</p>`;
+                resumePreview.innerHTML += `<h2>Work Experience</h2><p>${workExperience}</p>`;
+                resumePreview.innerHTML += `<h2>Education</h2><p>${education}</p>`;
+                resumePreview.innerHTML += `<h2>Skills</h2><p>${skills}</p>`;
+            } else if (template === 'template2') {
+                resumePreview.innerHTML += `<h1>${name}</h1>`;
+                resumePreview.innerHTML += `<h2>Contact</h2><p>Email: ${email}</p><p>Phone: ${phone}</p>`;
+                resumePreview.innerHTML += `<h2>Experience</h2><p>${workExperience}</p>`;
+                resumePreview.innerHTML += `<h2>Academic Background</h2><p>${education}</p>`;
+                resumePreview.innerHTML += `<h2>Capabilities</h2><p>${skills}</p>`;
+            }
+        }
+
+        function downloadResume() {
+            const resumeContent = document.getElementById('resume-preview').innerHTML;
+            const blob = new Blob([resumeContent], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'resume.pdf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        function saveResume() {
+            const resumeData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                workExperience: document.getElementById('work-experience').value,
+                education: document.getElementById('education').value,
+                skills: document.getElementById('skills').value,
+                template: document.getElementById('template').value,
+            };
+            localStorage.setItem('resumeData', JSON.stringify(resumeData));
+            alert('Resume saved successfully!');
+        }
+
+        function loadResume() {
+            const resumeData = JSON.parse(localStorage.getItem('resumeData'));
+            if (resumeData) {
+                document.getElementById('name').value = resumeData.name;
+                document.getElementById('email').value = resumeData.email;
+                document.getElementById('phone').value = resumeData.phone;
+                document.getElementById('work-experience').value = resumeData.workExperience;
+                document.getElementById('education').value = resumeData.education;
+                document.getElementById('skills').value = resumeData.skills;
+                document.getElementById('template').value = resumeData.template;
+                previewResume();
+            } else {
+                alert('No resume data found!');
+            }
+        }
+    </script>
+</body>
+</html>
