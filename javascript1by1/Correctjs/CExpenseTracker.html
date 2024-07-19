@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #343a40;
+        }
+        .form-control, .btn {
+            margin-bottom: 10px;
+        }
+        #expense-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #expense-list li {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .chart-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Expense Tracker</h1>
+        <form id="expense-form" class="mb-4">
+            <div class="mb-3">
+                <input type="text" id="description" class="form-control" placeholder="Description" required>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="amount" class="form-control" placeholder="Amount" required>
+            </div>
+            <div class="mb-3">
+                <select id="category" class="form-control">
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Entertainment">Entertainment</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Add Expense</button>
+        </form>
+        
+        <h2>Total Expenses: <span id="total-expenses">0</span></h2>
+        <h3>Breakdown by Category</h3>
+        <ul id="expense-list"></ul>
+        
+        <div class="chart-container">
+            <canvas id="expense-chart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script>
+        let expenses = [];
+        let categories = { 'Food': 0, 'Transport': 0, 'Entertainment': 0 };
+        let expenseChart;
+
+        document.getElementById('expense-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let description = document.getElementById('description').value;
+            let amount = parseInt(document.getElementById('amount').value);
+            let category = document.getElementById('category').value;
+            
+            expenses.push({ description, amount, category });
+            categories[category] += amount;
+            
+            updateExpenses();
+            updateChart();
+
+            // Reset the form fields
+            document.getElementById('description').value = '';
+            document.getElementById('amount').value = '';
+        });
+
+        function updateExpenses() {
+            let totalExpenses = 0;
+            let expenseList = document.getElementById('expense-list');
+            expenseList.innerHTML = '';
+            
+            expenses.forEach(function(expense) {
+                totalExpenses += expense.amount;
+                let li = document.createElement('li');
+                li.textContent = `${expense.description} - $${expense.amount} (${expense.category})`;
+                expenseList.appendChild(li);
+            });
+            
+            document.getElementById('total-expenses').textContent = totalExpenses;
+        }
+
+        function updateChart() {
+            let ctx = document.getElementById('expense-chart').getContext('2d');
+            
+            if (expenseChart) {
+                expenseChart.destroy();
+            }
+            
+            expenseChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(categories),
+                    datasets: [{
+                        label: 'Expenses by Category',
+                        data: Object.values(categories),
+                        backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56'],
+                    }],
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
