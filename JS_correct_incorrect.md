@@ -504,8 +504,8 @@ Question: Implement a recursive descent parser for a simple arithmetic expressio
 Description: Implement a simple GraphQL server in Node.js that allows querying and mutating user data. Use the `apollo-server` library for the GraphQL server implementation. 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
-- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/CCustomizableCountdownTimer.html)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CGraphQLServerWithNodejs.js)
+- [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IGraphQLServerWithNodejs.js)
 - [ ] Reviewed
 
 
