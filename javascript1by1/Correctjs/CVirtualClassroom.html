@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Classroom</title>
+    <style>
+        #video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        video {
+            width: 100%;
+            border: 1px solid black;
+        }
+        #chat {
+            border: 1px solid gray;
+            height: 300px;
+            overflow-y: scroll;
+            margin-top: 10px;
+        }
+        #chat input {
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Virtual Classroom</h1>
+    <div id="video-grid"></div>
+    <button id="share-screen">Share Screen</button>
+    <button id="start-record">Start Recording</button>
+    <button id="stop-record">Stop Recording</button>
+    <div id="chat">
+        <div id="messages"></div>
+        <input id="message-input" type="text" placeholder="Type a message">
+        <button id="send-message">Send</button>
+    </div>
+    <script>
+        const videoGrid = document.getElementById('video-grid');
+        const shareScreenButton = document.getElementById('share-screen');
+        const startRecordButton = document.getElementById('start-record');
+        const stopRecordButton = document.getElementById('stop-record');
+        const messageInput = document.getElementById('message-input');
+        const sendMessageButton = document.getElementById('send-message');
+        const messages = document.getElementById('messages');
+
+        let localStream;
+        let screenStream;
+        let mediaRecorder;
+        let recordedChunks = [];
+
+        async function startVideo() {
+            try {
+                localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                const videoElement = document.createElement('video');
+                videoElement.srcObject = localStream;
+                videoElement.muted = true;
+                videoElement.play();
+                videoGrid.appendChild(videoElement);
+            } catch (error) {
+                console.error('Error accessing media devices.', error);
+            }
+        }
+
+        shareScreenButton.addEventListener('click', async () => {
+            try {
+                screenStream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+                const screenVideoElement = document.createElement('video');
+                screenVideoElement.srcObject = screenStream;
+                screenVideoElement.play();
+                videoGrid.appendChild(screenVideoElement);
+            } catch (error) {
+                console.error('Error accessing display media.', error);
+            }
+        });
+
+        startRecordButton.addEventListener('click', () => {
+            if (localStream) {
+                mediaRecorder = new MediaRecorder(localStream);
+                mediaRecorder.ondataavailable = (event) => {
+                    if (event.data.size > 0) {
+                        recordedChunks.push(event.data);
+                    }
+                };
+                mediaRecorder.start();
+            }
+        });
+
+        stopRecordButton.addEventListener('click', () => {
+            if (mediaRecorder) {
+                mediaRecorder.stop();
+                mediaRecorder.onstop = () => {
+                    const blob = new Blob(recordedChunks, { type: 'video/webm' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = 'recorded-class.webm';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    recordedChunks = []; // Clear the recorded chunks
+                };
+            }
+        });
+
+        sendMessageButton.addEventListener('click', () => {
+            const message = messageInput.value.trim();
+            if (message) {
+                const messageElement = document.createElement('div');
+                messageElement.innerText = message;
+                messages.appendChild(messageElement);
+                messageInput.value = '';
+                messages.scrollTop = messages.scrollHeight; // Auto-scroll to the bottom
+            }
+        });
+
+        startVideo();
+    </script>
+</body>
+</html>
