@@ -294,7 +294,7 @@ go# Coding Questions
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CRecipeIngredientCal.html)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CMovieRec.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IRecipeNutritionCalculator.html)
 - [ ] Reviewed
 
