@@ -482,7 +482,7 @@
 
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CExpenseTracker.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IExpenseTracker.html)
 - [ ] Reviewed
 
@@ -492,7 +492,7 @@
 Question: Implement a recursive descent parser for a simple arithmetic expression evaluator. The parser should handle addition, subtraction, multiplication, and division.
 
 **Links:**
-- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CCustomizableCountdownTimer.html)
+- [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CRecursiveDescentParser.js)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IRecursiveDescentParser.js)
 - [ ] Reviewed
 
