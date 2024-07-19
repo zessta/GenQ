@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+</head>
+<body>
+    <h1>Movie Recommendation System</h1>
+    <div>
+        <input type="text" id="movieTitle" placeholder="Enter movie title">
+        <button id="fetchMovie">Fetch Movie</button>
+    </div>
+    <div id="movieDetails"></div>
+    <div>
+        <h2>Rate This Movie</h2>
+        <select id="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button id="submitRating">Submit Rating</button>
+    </div>
+    <div>
+        <h2>Recommended Movies</h2>
+        <div id="recommendations"></div>
+    </div>
+
+    <script>
+        document.getElementById('fetchMovie').addEventListener('click', async () => {
+            const title = document.getElementById('movieTitle').value;
+            const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=YOUR_API_KEY&query=${title}`);
+            const data = await response.json();
+            if (data.results.length > 0) {
+                const movie = data.results[0];
+                document.getElementById('movieDetails').innerHTML = `
+                    <h3>${movie.title}</h3>
+                    <p>${movie.overview}</p>
+                    <p>Release Date: ${movie.release_date}</p>
+                    <button onclick="showTrailer(${movie.id})">Show Trailer</button>
+                `;
+            } else {
+                document.getElementById('movieDetails').innerHTML = 'No movie found.';
+            }
+        });
+
+        document.getElementById('submitRating').addEventListener('click', () => {
+            const rating = document.getElementById('rating').value;
+            const recommendations = getRecommendations(rating);
+            displayRecommendations(recommendations);
+        });
+
+        function getRecommendations(rating) {
+            // Dummy recommendation logic
+            return ['Movie A', 'Movie B', 'Movie C'];
+        }
+
+        function displayRecommendations(recommendations) {
+            const recommendationsDiv = document.getElementById('recommendations');
+            recommendationsDiv.innerHTML = '';
+            recommendations.forEach(movie => {
+                const movieDiv = document.createElement('div');
+                movieDiv.textContent = movie;
+                recommendationsDiv.appendChild(movieDiv);
+            });
+        }
+
+        function showTrailer(movieId) {
+            fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=YOUR_API_KEY`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.results.length > 0) {
+                        const trailer = data.results[0];
+                        document.getElementById('movieDetails').innerHTML += `
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/${trailer.key}" frameborder="0" allowfullscreen></iframe>
+                        `;
+                    } else {
+                        document.getElementById('movieDetails').innerHTML += 'No trailer available.';
+                    }
+                });
+        }
+    </script>
+</body>
+</html>
