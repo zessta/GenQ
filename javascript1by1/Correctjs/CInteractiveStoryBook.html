@@ -1,0 +1,106 @@
+//this code can be made interesting using images and some mp3
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Storybook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .page {
+            display: none;
+            transition: opacity 1s;
+        }
+        .page.active {
+            display: block;
+            opacity: 1;
+        }
+        .image {
+            width: 300px;
+            height: 200px;
+        }
+        .clickable {
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="storybook">
+        <div class="page" id="page1">
+            <h1>Page 1</h1>
+            <p>Once upon a time, there was a <span class="clickable" id="character1">little bear</span>.</p>
+            <img src="bear.jpg" alt="Little Bear" class="image">
+            <button onclick="nextPage()">Next</button>        
+        </div>
+        <div class="page" id="page2">
+            <h1>Page 2</h1>
+            <p>The little bear loved to play in the <span class="clickable" id="character2">forest</span>.</p>
+            <img src="forest.jpg" alt="Forest" class="image"> 
+            <button onclick="nextPage()">Next</button>        
+        </div>
+        <div class="page" id="page3">
+            <h1>Page 3</h1>
+            <p>One day, the bear met a <span class="clickable" id="character3">friendly fox</span>.</p>
+            <img src="fox.jpg" alt="Friendly Fox" class="image">
+            <button onclick="nextPage()">Next</button>        
+        </div>
+    </div>
+    <audio id="narration" src="narration.mp3"></audio>        
+    <script>
+        const pages = document.querySelectorAll('.page');     
+        let currentPageIndex = 0;
+
+        function showPage(index) {
+            pages.forEach((page, idx) => {
+                if (idx === index) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+        }
+
+        function nextPage() {
+            if (currentPageIndex < pages.length - 1) {        
+                currentPageIndex++;
+                showPage(currentPageIndex);
+                playNarration();
+            }
+        }
+
+        function playNarration() {
+            const narration = document.getElementById('narration');
+            narration.play().catch(error => console.error('Error playing narration:', error));
+        }
+
+        document.getElementById('character1').addEventListener('click', () => {
+            alert('The little bear says hello!');
+            playSoundEffect('bear.mp3');
+        });
+
+        document.getElementById('character2').addEventListener('click', () => {
+            alert('The forest is full of wonders!');
+            playSoundEffect('forest.mp3');
+        });
+
+        document.getElementById('character3').addEventListener('click', () => {
+            alert('The friendly fox greets you!');
+            playSoundEffect('fox.mp3');
+        });
+
+        function playSoundEffect(soundFile) {
+            const audio = new Audio(soundFile);
+            audio.play().catch(error => console.error('Error playing sound effect:', error));
+        }
+
+        // Initialize the first page
+        showPage(currentPageIndex);
+    </script>
+</body>
+</html>
