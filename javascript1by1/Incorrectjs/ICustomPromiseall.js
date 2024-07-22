@@ -1,0 +1,11 @@
+function promiseAll(promises) { 
+ // Implement the function 
+} 
+const promise1 = Promise.resolve(3); 
+const promise2 = 42; 
+const promise3 = new Promise((resolve, reject) => { 
+ setTimeout(resolve, 100, 'foo'); 
+}); 
+promiseAll([promise1, promise2, promise3]).then((results) => { 
+ console.log(results); // [3, 42, "foo"] 
+}); 
