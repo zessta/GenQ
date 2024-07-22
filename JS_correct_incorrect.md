@@ -23,7 +23,6 @@
    - Track and display the user's score at the end of the quiz.
    - Show feedback for correct and incorrect answers.
 
-
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CInteractiveQuizApp.html)
 - [Incorrect Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Incorrectjs/IInteractiveQuizApp.html)
@@ -36,7 +35,6 @@
    - Input recipe ingredients with quantities for a default number of servings.
    - Allow users to adjust the number of servings.
    - Automatically update ingredient quantities based on the new serving size.
-
 
 **Links:**
 - [Correct Code](https://github.com/zessta/GenQ/blob/master/javascript1by1/Correctjs/CRecipeIngredientCal.html)
