@@ -1,91 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        input, select, button {
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #28a745;
-            color: #fff;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        #expense-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        #expense-list li {
-            background-color: #fafafa;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        .chart-container {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Expense Tracker</h1>
-        <form id="expense-form">
-            <input type="text" id="description" placeholder="Description" required>
-            <input type="number" id="amount" placeholder="Amount" required>
-            <select id="category">
-                <option value="Food">Food</option>
-                <option value="Transport">Transport</option>
-                <option value="Entertainment">Entertainment</option>
-            </select>
-            <button type="submit">Add Expense</button>
-        </form>
-        
-        <h2>Total Expenses: <span id="total-expenses">0</span></h2>
-        <h3>Breakdown by Category</h3>
-        <ul id="expense-list"></ul>
-        
-        <div class="chart-container">
-            <canvas id="expense-chart" width="400" height="200"></canvas>
-        </div>
-    </div>
+    <h1>Expense Tracker</h1>
+    <form id="expense-form">
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="number" id="amount" placeholder="Amount" required>
+        <select id="category">
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Entertainment">Entertainment</option>
+        </select>
+        <button type="submit">Add Expense</button>
+    </form>
+    
+    <h2>Total Expenses: <span id="total-expenses">0</span></h2>
+    <h3>Breakdown by Category</h3>
+    <ul id="expense-list"></ul>
+    
+    <canvas id="expense-chart" width="400" height="200"></canvas>
 
     <script>
         let expenses = [];
         let categories = { 'Food': 0, 'Transport': 0, 'Entertainment': 0 };
-        let expenseChart;
+        let chart;
 
         document.getElementById('expense-form').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -100,11 +41,11 @@
             updateExpenses();
             updateChart();
 
-            // Reset the form fields
+            // Reset the input fields
             document.getElementById('description').value = '';
             document.getElementById('amount').value = '';
         });
-
+        
         function updateExpenses() {
             let totalExpenses = 0;
             let expenseList = document.getElementById('expense-list');
@@ -119,32 +60,24 @@
             
             document.getElementById('total-expenses').textContent = totalExpenses;
         }
-
+        
         function updateChart() {
             let ctx = document.getElementById('expense-chart').getContext('2d');
             
-            if (expenseChart) {
-                expenseChart.destroy();
+            if (chart) {
+                chart.destroy();
             }
             
-            expenseChart = new Chart(ctx, {
+            chart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: Object.keys(categories),
+                    labels: ['Food', 'Transport', 'Entertainment'],
                     datasets: [{
                         label: 'Expenses by Category',
                         data: Object.values(categories),
-                        backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56'],
+                        backgroundColor: ['red', 'blue', 'green'],
                     }],
                 },
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
             });
         }
     </script>
