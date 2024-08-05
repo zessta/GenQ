@@ -1,8 +1,6 @@
 Java Question to create:-
 senior developer level
 
-Sure! Here's a list of Java coding interview topics, classified by difficulty level:
-
 ### Easy
 
 1. **Basic Syntax and Data Types**
