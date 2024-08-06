@@ -248,3 +248,259 @@ class Trie {
 The code provided is actually correct and inserts words into the Trie as expected. No changes are needed.
 
 These questions cover debugging scenarios for advanced data structures in Java, which are commonly encountered in job interviews.
+
+
+
+
+
+
+
+
+
+### Networking
+
+#### 1. Sockets and ServerSocket
+
+**Question:**
+You have been given a simple Java server-client application using `ServerSocket` and `Socket`. The server should accept connections from multiple clients and respond with a welcome message. However, the current implementation only accepts one client and then stops.
+
+```java
+// Server.java
+import java.io.*;
+import java.net.*;
+
+public class Server {
+    public static void main(String[] args) {
+        try (ServerSocket serverSocket = new ServerSocket(12345)) {
+            System.out.println("Server is listening on port 12345");
+            Socket socket = serverSocket.accept();
+            System.out.println("New client connected");
+
+            OutputStream output = socket.getOutputStream();
+            PrintWriter writer = new PrintWriter(output, true);
+            writer.println("Welcome to the server!");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+}
+
+// Client.java
+import java.io.*;
+import java.net.*;
+
+public class Client {
+    public static void main(String[] args) {
+        String hostname = "localhost";
+        int port = 12345;
+
+        try (Socket socket = new Socket(hostname, port)) {
+            InputStream input = socket.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+            String message = reader.readLine();
+            System.out.println("Server: " + message);
+        } catch (UnknownHostException ex) {
+            System.out.println("Server not found: " + ex.getMessage());
+        } catch (IOException ex) {
+            System.out.println("I/O error: " + ex.getMessage());
+        }
+    }
+}
+```
+
+**Task:**
+Refactor the `Server.java` code so that it can handle multiple clients concurrently.
+
+**Answer:**
+The server needs to handle each client connection in a separate thread.
+
+```java
+// Server.java
+import java.io.*;
+import java.net.*;
+
+public class Server {
+    public static void main(String[] args) {
+        try (ServerSocket serverSocket = new ServerSocket(12345)) {
+            System.out.println("Server is listening on port 12345");
+            while (true) {
+                Socket socket = serverSocket.accept();
+                System.out.println("New client connected");
+                new ClientHandler(socket).start();
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+}
+
+class ClientHandler extends Thread {
+    private Socket socket;
+
+    public ClientHandler(Socket socket) {
+        this.socket = socket;
+    }
+
+    public void run() {
+        try {
+            OutputStream output = socket.getOutputStream();
+            PrintWriter writer = new PrintWriter(output, true);
+            writer.println("Welcome to the server!");
+            socket.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+}
+```
+
+#### 2. HTTP Communication
+
+**Question:**
+The following Java code is intended to send a GET request to a specified URL and print the response. However, it throws an exception and fails to print the response.
+
+```java
+import java.io.*;
+import java.net.*;
+
+public class HttpGetExample {
+    public static void main(String[] args) {
+        String urlString = "http://www.example.com";
+
+        try {
+            URL url = new URL(urlString);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String inputLine;
+            StringBuffer content = new StringBuffer();
+            while ((inputLine = in.readLine()) != null) {
+                content.append(inputLine);
+            }
+            in.close();
+            connection.disconnect();
+
+            System.out.println(content.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+**Task:**
+Identify and fix the issue so that the code successfully sends a GET request and prints the response.
+
+**Answer:**
+The issue is that the `HttpURLConnection` object needs to connect to the URL before trying to read the response.
+
+```java
+import java.io.*;
+import java.net.*;
+
+public class HttpGetExample {
+    public static void main(String[] args) {
+        String urlString = "http://www.example.com";
+
+        try {
+            URL url = new URL(urlString);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.connect();  // Added this line
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            String inputLine;
+            StringBuffer content = new StringBuffer();
+            while ((inputLine = in.readLine()) != null) {
+                content.append(inputLine);
+            }
+            in.close();
+            connection.disconnect();
+
+            System.out.println(content.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+#### 3. RESTful Services
+
+**Question:**
+You are given a simple RESTful web service implemented using Spring Boot. The service is supposed to return a list of users in JSON format. However, when you run the service and hit the endpoint, you get a `404 Not Found` error.
+
+```java
+// UserController.java
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.Arrays;
+import java.util.List;
+
+@RestController
+public class UserController {
+
+    @GetMapping("/users")
+    public List<String> getUsers() {
+        return Arrays.asList("User1", "User2", "User3");
+    }
+}
+
+// DemoApplication.java
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+```
+
+**Task:**
+Identify and fix the issue so that the `/users` endpoint returns the list of users.
+
+**Answer:**
+The `UserController` class must be in a package that is scanned by Spring Boot. Ensure that the `UserController` class is in a sub-package of the main application class package.
+
+```java
+// UserController.java
+package com.example.demo.controller;  // Changed the package to be a sub-package of the main application package
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.Arrays;
+import java.util.List;
+
+@RestController
+public class UserController {
+
+    @GetMapping("/users")
+    public List<String> getUsers() {
+        return Arrays.asList("User1", "User2", "User3");
+    }
+}
+
+// DemoApplication.java
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+```
+
+By moving the `UserController` class to a sub-package of the main application package, Spring Boot will scan and register the controller, allowing the `/users` endpoint to work correctly.
