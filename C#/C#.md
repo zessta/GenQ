@@ -991,3 +991,155 @@ Make sure you handle specific exceptions and log them appropriately. Use the `ca
 
 These questions should test the interviewee's understanding of asynchronous programming in C# and their ability to debug common issues that might arise in a real-world scenario.
 
+### 4. **File I/O**
+
+#### Question 1: Reading from and Writing to Files
+
+**Problem Statement:**
+
+You are given the following C# code that attempts to read from a file called `input.txt` and write its content to another file called `output.txt`. However, the code contains a few mistakes. Identify and fix the errors.
+
+```csharp
+using System;
+using System.IO;
+
+class FileIOExample
+{
+    static void Main()
+    {
+        try
+        {
+            string inputFilePath = "input.txt";
+            string outputFilePath = "output.txt";
+
+            // Reading from input.txt
+            using (StreamReader sr = new StreamReader(inputFilePath))
+            {
+                string content = sr.ReadToEnd();
+            }
+
+            // Writing to output.txt
+            using (StreamWriter sw = new StreamWriter(outputFilePath))
+            {
+                sw.Write(content);
+                sw.Close();
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("An error occurred: " + e.Message);
+        }
+    }
+}
+```
+
+**Tasks:**
+
+1. Identify and correct the mistakes in the code.
+2. Ensure that the file handles are properly managed.
+3. Ensure the code handles potential exceptions correctly.
+
+**Expected Output:**
+
+The content of `input.txt` should be copied to `output.txt` without any errors.
+
+#### Question 2: Use of FileStream, StreamReader, StreamWriter
+
+**Problem Statement:**
+
+The following code is supposed to read from a binary file `data.bin` and write its content to a text file `data.txt`. However, there are several mistakes in the code. Identify and fix them.
+
+```csharp
+using System;
+using System.IO;
+
+class BinaryToTextExample
+{
+    static void Main()
+    {
+        try
+        {
+            string binaryFilePath = "data.bin";
+            string textFilePath = "data.txt";
+
+            using (FileStream fs = new FileStream(binaryFilePath, FileMode.Open))
+            using (StreamReader sr = new StreamReader(fs))
+            {
+                string content = sr.ReadToEnd();
+            }
+
+            using (StreamWriter sw = new StreamWriter(textFilePath))
+            {
+                sw.Write(content);
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("An error occurred: " + e.Message);
+        }
+    }
+}
+```
+
+**Tasks:**
+
+1. Identify and correct the mistakes in the code.
+2. Ensure that binary data is properly read and converted to text.
+3. Ensure the code handles potential exceptions correctly.
+
+**Expected Output:**
+
+The content of `data.bin` should be converted and written to `data.txt` correctly.
+
+#### Question 3: Understanding of Binary and Text File Operations
+
+**Problem Statement:**
+
+The following code is intended to read integers from a binary file `numbers.bin`, increment each integer by 1, and write the updated integers back to the same file. Identify and fix the errors in the code.
+
+```csharp
+using System;
+using System.IO;
+
+class BinaryFileOperations
+{
+    static void Main()
+    {
+        string filePath = "numbers.bin";
+
+        try
+        {
+            using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.ReadWrite))
+            {
+                using (BinaryReader br = new BinaryReader(fs))
+                using (BinaryWriter bw = new BinaryWriter(fs))
+                {
+                    while (br.BaseStream.Position != br.BaseStream.Length)
+                    {
+                        int number = br.ReadInt32();
+                        number += 1;
+                        bw.Write(number);
+                    }
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("An error occurred: " + e.Message);
+        }
+    }
+}
+```
+
+**Tasks:**
+
+1. Identify and correct the mistakes in the code.
+2. Ensure that the file is properly opened for reading and writing.
+3. Ensure that the integers are correctly incremented and written back to the file.
+4. Ensure the code handles potential exceptions correctly.
+
+**Expected Output:**
+
+The integers in `numbers.bin` should be incremented by 1 and written back to the file correctly without any data corruption.
+
+These questions should help evaluate the candidate's understanding and debugging skills in C# file I/O operations.
