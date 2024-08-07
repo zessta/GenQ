@@ -1265,3 +1265,137 @@ foreach (var emp in result)
 
 These questions should help assess the candidate's ability to write and debug advanced LINQ queries using both query and method syntax, as well as their understanding of joins and aggregate functions.
 Done
+
+
+### 2. Reflection and Metadata
+
+#### Using Reflection to Inspect Assemblies, Modules, and Types
+
+**Question:**
+You have a method that inspects all types in an assembly and prints the names of all public properties. However, the code doesn't seem to be working correctly. Identify and fix the issue.
+
+```csharp
+using System;
+using System.Reflection;
+
+public class ReflectionExample
+{
+    public static void InspectAssembly(string assemblyPath)
+    {
+        Assembly assembly = Assembly.LoadFrom(assemblyPath);
+        foreach (Module module in assembly.GetModules())
+        {
+            foreach (Type type in module.GetTypes())
+            {
+                Console.WriteLine($"Type: {type.Name}");
+                foreach (PropertyInfo property in type.GetProperties())
+                {
+                    if (property.IsPublic)
+                    {
+                        Console.WriteLine($"  Property: {property.Name}");
+                    }
+                }
+            }
+        }
+    }
+
+    public static void Main(string[] args)
+    {
+        InspectAssembly("path/to/your/assembly.dll");
+    }
+}
+```
+
+**Hint:**
+- Check the method used to determine if the property is public.
+- Ensure the correct property binding flags are being used.
+
+---
+
+#### Creating and Invoking Objects Dynamically
+
+**Question:**
+You are using reflection to create an instance of a class and invoke a method dynamically. However, the method invocation is failing. Identify and fix the issue.
+
+```csharp
+using System;
+using System.Reflection;
+
+public class DynamicInvocationExample
+{
+    public class SampleClass
+    {
+        public void PrintMessage(string message)
+        {
+            Console.WriteLine(message);
+        }
+    }
+
+    public static void Main(string[] args)
+    {
+        Type type = typeof(SampleClass);
+        object instance = Activator.CreateInstance(type);
+
+        MethodInfo methodInfo = type.GetMethod("PrintMessage");
+        methodInfo.Invoke(instance, new object[] { "Hello, World!" });
+    }
+}
+```
+
+**Hint:**
+- Check if the method name is correct.
+- Ensure the method parameters match what is expected.
+
+---
+
+#### Custom Attributes and Reading Metadata
+
+**Question:**
+You have defined a custom attribute and are trying to read its value using reflection. However, the code isn't working as expected. Identify and fix the issue. 
+
+```csharp
+using System;
+using System.Reflection;
+
+[AttributeUsage(AttributeTargets.Class)]
+public class InfoAttribute : Attribute
+{
+    public string Info { get; }
+
+    public InfoAttribute(string info)
+    {
+        Info = info;
+    }
+}
+
+[Info("This is a sample class.")]
+public class SampleClass
+{
+}
+
+public class AttributeExample
+{
+    public static void Main(string[] args)
+    {
+        Type type = typeof(SampleClass);
+        object[] attributes = type.GetCustomAttributes(typeof(InfoAttribute), false);
+
+        foreach (object attribute in attributes)
+        {
+            var infoAttribute = attribute as InfoAttribute;
+            if (infoAttribute != null)
+            {
+                Console.WriteLine($"Info: {infoAttribute.Info}");
+            }
+        }
+    }
+}
+```
+
+**Hint:**
+- Verify the method used to retrieve custom attributes.
+- Ensure that the attribute is being applied correctly and retrieved with the correct binding flags.
+
+---
+
+These questions should help in assessing the candidate's ability to debug and understand issues related to reflection and metadata in C#.
