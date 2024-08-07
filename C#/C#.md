@@ -2587,3 +2587,172 @@ using (var context = new MyDbContext())
 This way, only the necessary data is retrieved, reducing the amount of data loaded into memory and potentially speeding up the query.
 
 These questions should help interviewees demonstrate their debugging skills and understanding of Entity Framework and ORM concepts.
+
+Sure, here are some C# debugging questions based on the topics mentioned:
+
+### 3. **Asynchronous Programming**
+
+**Question 1: Use of async and await Keywords**
+
+**Problem Statement:**
+You have a method `FetchDataAsync` that is supposed to fetch data from a remote server asynchronously. However, it seems to be running synchronously and blocking the UI thread. Identify and fix the issue.
+
+```csharp
+public class DataFetcher
+{
+    public async Task<string> FetchDataAsync()
+    {
+        using (HttpClient client = new HttpClient())
+        {
+            var response = client.GetStringAsync("https://example.com/data").Result; // This line is problematic
+            return response;
+        }
+    }
+}
+
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        DataFetcher fetcher = new DataFetcher();
+        string data = await fetcher.FetchDataAsync();
+        Console.WriteLine(data);
+    }
+}
+```
+
+**Expected Fix:**
+Identify that `.Result` is blocking and replace it with `await`.
+
+```csharp
+public class DataFetcher
+{
+    public async Task<string> FetchDataAsync()
+    {
+        using (HttpClient client = new HttpClient())
+        {
+            var response = await client.GetStringAsync("https://example.com/data");
+            return response;
+        }
+    }
+}
+```
+
+**Question 2: Understanding of Task and Task<T>**
+
+**Problem Statement:**
+The `CalculateSumAsync` method is intended to compute the sum of an array of integers asynchronously and return the result. However, it is not returning any value. Identify and fix the issue.
+
+```csharp
+public class Calculator
+{
+    public async Task CalculateSumAsync(int[] numbers)
+    {
+        int sum = 0;
+        foreach (int number in numbers)
+        {
+            sum += number;
+        }
+        await Task.CompletedTask; // This line is problematic
+    }
+}
+
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        Calculator calculator = new Calculator();
+        int[] numbers = { 1, 2, 3, 4, 5 };
+        int result = await calculator.CalculateSumAsync(numbers);
+        Console.WriteLine(result); // This line will cause a compilation error
+    }
+}
+```
+
+**Expected Fix:**
+The `CalculateSumAsync` method should return `Task<int>` and the result should be returned properly.
+
+```csharp
+public class Calculator
+{
+    public async Task<int> CalculateSumAsync(int[] numbers)
+    {
+        int sum = 0;
+        foreach (int number in numbers)
+        {
+            sum += number;
+        }
+        return await Task.FromResult(sum);
+    }
+}
+```
+
+**Question 3: Handling Asynchronous Exceptions**
+
+**Problem Statement:**
+The `DownloadFileAsync` method is intended to download a file from a given URL. However, if an exception occurs, it is not handled correctly and the program crashes. Identify and fix the issue.
+
+```csharp
+public class FileDownloader
+{
+    public async Task DownloadFileAsync(string url)
+    {
+        using (HttpClient client = new HttpClient())
+        {
+            var response = await client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+            var content = await response.Content.ReadAsByteArrayAsync();
+            File.WriteAllBytes("downloadedFile", content);
+        }
+    }
+}
+
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        FileDownloader downloader = new FileDownloader();
+        await downloader.DownloadFileAsync("https://example.com/file");
+        Console.WriteLine("File downloaded successfully");
+    }
+}
+```
+
+**Expected Fix:**
+Wrap the asynchronous call in a try-catch block to handle exceptions.
+
+```csharp
+public class FileDownloader
+{
+    public async Task DownloadFileAsync(string url)
+    {
+        try
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                var response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                var content = await response.Content.ReadAsByteArrayAsync();
+                File.WriteAllBytes("downloadedFile", content);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+    }
+}
+
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        FileDownloader downloader = new FileDownloader();
+        await downloader.DownloadFileAsync("https://example.com/file");
+        Console.WriteLine("File downloaded successfully");
+    }
+}
+```
+
+These questions should help interviewees demonstrate their understanding and debugging skills in asynchronous programming in C#.
+Done
