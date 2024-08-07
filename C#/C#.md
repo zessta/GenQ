@@ -1143,3 +1143,125 @@ class BinaryFileOperations
 The integers in `numbers.bin` should be incremented by 1 and written back to the file correctly without any data corruption.
 
 These questions should help evaluate the candidate's understanding and debugging skills in C# file I/O operations.
+
+### **Advanced LINQ**
+
+#### **Question 1: Complex LINQ Queries**
+**Scenario:**
+You are given a list of `Order` objects and a list of `Customer` objects. Each `Order` has a `CustomerId` and an `OrderDate`, and each `Customer` has a `CustomerId` and a `Name`. You need to find the names of customers who have placed orders in the last month, sorted by the order date.
+
+**Code:**
+```csharp
+var customers = new List<Customer>
+{
+    new Customer { CustomerId = 1, Name = "Alice" },
+    new Customer { CustomerId = 2, Name = "Bob" },
+    // More customers...
+};
+
+var orders = new List<Order>
+{
+    new Order { OrderId = 1, CustomerId = 1, OrderDate = DateTime.Now.AddDays(-10) },
+    new Order { OrderId = 2, CustomerId = 2, OrderDate = DateTime.Now.AddDays(-40) },
+    // More orders...
+};
+
+var result = from order in orders
+             where order.OrderDate > DateTime.Now.AddMonths(-1)
+             join customer in customers on order.CustomerId equals customer.CustomerId
+             orderby order.OrderDate
+             select customer.Name;
+
+foreach (var name in result)
+{
+    Console.WriteLine(name);
+}
+```
+
+**Issue:** The query seems correct, but the output is not as expected. Debug and fix the code.
+
+#### **Question 2: Use of Join, Group Join, and Aggregate Functions**
+**Scenario:**
+You have a list of `Product` objects and a list of `OrderDetail` objects. Each `OrderDetail` has a `ProductId`, `Quantity`, and `UnitPrice`. You need to find the total sales amount (Quantity * UnitPrice) for each product and display the product name and total sales amount, sorted by total sales amount in descending order.
+
+**Code:**
+```csharp
+var products = new List<Product>
+{
+    new Product { ProductId = 1, Name = "Laptop" },
+    new Product { ProductId = 2, Name = "Phone" },
+    // More products...
+};
+
+var orderDetails = new List<OrderDetail>
+{
+    new OrderDetail { OrderDetailId = 1, ProductId = 1, Quantity = 2, UnitPrice = 1000 },
+    new OrderDetail { OrderDetailId = 2, ProductId = 2, Quantity = 5, UnitPrice = 500 },
+    // More order details...
+};
+
+var result = from product in products
+             join orderDetail in orderDetails on product.ProductId equals orderDetail.ProductId into productOrders
+             let totalSales = productOrders.Sum(od => od.Quantity * od.UnitPrice)
+             orderby totalSales descending
+             select new { product.Name, TotalSales = totalSales };
+
+foreach (var item in result)
+{
+    Console.WriteLine($"Product: {item.Name}, Total Sales: {item.TotalSales}");
+}
+```
+
+**Issue:** The query does not compile. Debug and fix the code.
+
+#### **Question 3: Query Syntax vs. Method Syntax**
+**Scenario:**
+You have a list of `Employee` objects. Each `Employee` has an `EmployeeId`, `Name`, and `Department`. You need to find all employees in the "IT" department and sort them by their `EmployeeId`.
+
+**Code (Query Syntax):**
+```csharp
+var employees = new List<Employee>
+{
+    new Employee { EmployeeId = 1, Name = "John", Department = "HR" },
+    new Employee { EmployeeId = 2, Name = "Jane", Department = "IT" },
+    new Employee { EmployeeId = 3, Name = "Mark", Department = "IT" },
+    // More employees...
+};
+
+var result = from employee in employees
+             where employee.Department == "IT"
+             orderby employee.EmployeeId
+             select employee;
+
+foreach (var emp in result)
+{
+    Console.WriteLine($"EmployeeId: {emp.EmployeeId}, Name: {emp.Name}");
+}
+```
+
+**Code (Method Syntax):**
+```csharp
+var employees = new List<Employee>
+{
+    new Employee { EmployeeId = 1, Name = "John", Department = "HR" },
+    new Employee { EmployeeId = 2, Name = "Jane", Department = "IT" },
+    new Employee { EmployeeId = 3, Name = "Mark", Department = "IT" },
+    // More employees...
+};
+
+var result = employees.Where(e => e.Department == "IT")
+                      .OrderBy(e => e.EmployeeId)
+                      .Select(e => e);
+
+foreach (var emp in result)
+{
+    Console.WriteLine($"EmployeeId: {emp.EmployeeId}, Name: {emp.Name}");
+}
+```
+
+**Issue:** The method syntax version of the query does not produce the same results as the query syntax version. Debug and fix the code.
+
+---
+
+These questions should help assess the candidate's ability to write and debug advanced LINQ queries using both query and method syntax, as well as their understanding of joins and aggregate functions.
+Done
