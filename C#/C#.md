@@ -1399,3 +1399,856 @@ public class AttributeExample
 ---
 
 These questions should help in assessing the candidate's ability to debug and understand issues related to reflection and metadata in C#.
+
+Certainly! Below are some C# coding debugging questions for the given topics. These questions are designed to test the interviewee's ability to work with reflection and metadata, and they include some common mistakes that developers might make.
+
+### 2. **Reflection and Metadata**
+
+#### Using reflection to inspect assemblies, modules, and types
+
+**Question:**
+You are given a C# application that uses reflection to list all the types in a given assembly. However, it seems to be throwing an exception when the assembly is loaded. Identify and fix the issue in the code below:
+
+```csharp
+using System;
+using System.Reflection;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string assemblyPath = "path_to_some_assembly.dll";
+        ListTypesInAssembly(assemblyPath);
+    }
+
+    static void ListTypesInAssembly(string assemblyPath)
+    {
+        try
+        {
+            Assembly assembly = Assembly.LoadFrom(assemblyPath);
+            foreach (var type in assembly.GetTypes())
+            {
+                Console.WriteLine(type.FullName);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}
+```
+
+**Hint:** Check if the path to the assembly is correct and if the assembly is accessible. Also, ensure that all required dependencies are present.
+
+---
+
+#### Creating and invoking objects dynamically
+
+**Question:**
+The following code attempts to dynamically create an instance of a class and invoke one of its methods using reflection. However, it fails with an exception. Identify and fix the issue:
+
+```csharp
+using System;
+using System.Reflection;
+
+class SampleClass
+{
+    public void SayHello()
+    {
+        Console.WriteLine("Hello, world!");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string className = "SampleClass";
+        InvokeMethodDynamically(className, "SayHello");
+    }
+
+    static void InvokeMethodDynamically(string className, string methodName)
+    {
+        try
+        {
+            Type type = Type.GetType(className);
+            object instance = Activator.CreateInstance(type);
+            MethodInfo method = type.GetMethod(methodName);
+            method.Invoke(instance, null);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}
+```
+
+**Hint:** Ensure that the `Type.GetType` method can find the type correctly. The class might need to be fully qualified with its namespace.
+
+---
+
+#### Custom attributes and reading metadata
+
+**Question:**
+The following code defines a custom attribute and applies it to a class. It then attempts to read this attribute using reflection, but it fails to retrieve the attribute. Identify and fix the issue:
+
+```csharp
+using System;
+
+[AttributeUsage(AttributeTargets.Class)]
+public class MyCustomAttribute : Attribute
+{
+    public string Description { get; }
+
+    public MyCustomAttribute(string description)
+    {
+        Description = description;
+    }
+}
+
+[MyCustomAttribute("This is a sample class.")]
+public class SampleClass
+{
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ReadCustomAttribute(typeof(SampleClass));
+    }
+
+    static void ReadCustomAttribute(Type type)
+    {
+        try
+        {
+            var attribute = (MyCustomAttribute)Attribute.GetCustomAttribute(type, typeof(MyCustomAttribute));
+            if (attribute != null)
+            {
+                Console.WriteLine($"Description: {attribute.Description}");
+            }
+            else
+            {
+                Console.WriteLine("Attribute not found.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}
+```
+
+**Hint:** Ensure that the custom attribute can be correctly retrieved using `Attribute.GetCustomAttribute`. Check if the attribute is correctly applied and if the type is correctly passed to the method.
+
+---
+
+These questions should help interviewees demonstrate their skills in using reflection and metadata in C#. They also address some common mistakes that developers might encounter, making them suitable for debugging exercises on a platform like Coderbyte.
+
+
+### 3. Design Patterns
+
+#### Singleton Pattern
+**Question:**
+You are given the following implementation of a Singleton pattern. However, it has some issues. Identify and fix the problems.
+
+```csharp
+public class Singleton
+{
+    private static Singleton instance;
+
+    private Singleton() { }
+
+    public static Singleton GetInstance()
+    {
+        if (instance == null)
+        {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+}
+```
+
+**Common Mistake:**
+- Thread safety is not ensured in the current Singleton implementation.
+
+**Expected Answer:**
+```csharp
+public class Singleton
+{
+    private static Singleton instance;
+    private static readonly object lockObj = new object();
+
+    private Singleton() { }
+
+    public static Singleton GetInstance()
+    {
+        if (instance == null)
+        {
+            lock (lockObj)
+            {
+                if (instance == null)
+                {
+                    instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+}
+```
+
+#### Factory Pattern
+**Question:**
+The following Factory pattern implementation has a couple of issues. Identify and fix the problems.
+
+```csharp
+public interface IProduct
+{
+    void DoWork();
+}
+
+public class ConcreteProductA : IProduct
+{
+    public void DoWork()
+    {
+        Console.WriteLine("Product A doing work.");
+    }
+}
+
+public class ConcreteProductB : IProduct
+{
+    public void DoWork()
+    {
+        Console.WriteLine("Product B doing work.");
+    }
+}
+
+public class ProductFactory
+{
+    public IProduct CreateProduct(string type)
+    {
+        if (type == "A")
+        {
+            return new ConcreteProductA();
+        }
+        else if (type == "B")
+        {
+            return new ConcreteProductB();
+        }
+        else
+        {
+            throw new ArgumentException("Invalid type");
+        }
+    }
+}
+```
+
+**Common Mistake:**
+- The factory method should be static for ease of use.
+- Throwing a general `ArgumentException` without specifying the parameter name.
+
+**Expected Answer:**
+```csharp
+public class ProductFactory
+{
+    public static IProduct CreateProduct(string type)
+    {
+        if (type == "A")
+        {
+            return new ConcreteProductA();
+        }
+        else if (type == "B")
+        {
+            return new ConcreteProductB();
+        }
+        else
+        {
+            throw new ArgumentException("Invalid type", nameof(type));
+        }
+    }
+}
+```
+
+#### Observer Pattern
+**Question:**
+The following Observer pattern implementation has an issue when removing observers. Identify and fix the problem.
+
+```csharp
+public interface IObserver
+{
+    void Update();
+}
+
+public class ConcreteObserver : IObserver
+{
+    public void Update()
+    {
+        Console.WriteLine("Observer updated.");
+    }
+}
+
+public class Subject
+{
+    private List<IObserver> observers = new List<IObserver>();
+
+    public void Attach(IObserver observer)
+    {
+        observers.Add(observer);
+    }
+
+    public void Detach(IObserver observer)
+    {
+        observers.Remove(observer);
+    }
+
+    public void Notify()
+    {
+        foreach (var observer in observers)
+        {
+            observer.Update();
+        }
+    }
+}
+```
+
+**Common Mistake:**
+- Modifying a collection while iterating over it can cause runtime exceptions.
+
+**Expected Answer:**
+```csharp
+public class Subject
+{
+    private List<IObserver> observers = new List<IObserver>();
+
+    public void Attach(IObserver observer)
+    {
+        observers.Add(observer);
+    }
+
+    public void Detach(IObserver observer)
+    {
+        observers.Remove(observer);
+    }
+
+    public void Notify()
+    {
+        // Create a copy of the list to avoid modifying it during iteration
+        var observersCopy = new List<IObserver>(observers);
+
+        foreach (var observer in observersCopy)
+        {
+            observer.Update();
+        }
+    }
+}
+```
+
+#### Strategy Pattern
+**Question:**
+The following Strategy pattern implementation has an issue with changing strategies. Identify and fix the problem.
+
+```csharp
+public interface IStrategy
+{
+    void Execute();
+}
+
+public class ConcreteStrategyA : IStrategy
+{
+    public void Execute()
+    {
+        Console.WriteLine("Strategy A execution.");
+    }
+}
+
+public class ConcreteStrategyB : IStrategy
+{
+    public void Execute()
+    {
+        Console.WriteLine("Strategy B execution.");
+    }
+}
+
+public class Context
+{
+    private IStrategy strategy;
+
+    public Context(IStrategy strategy)
+    {
+        this.strategy = strategy;
+    }
+
+    public void SetStrategy(IStrategy strategy)
+    {
+        this.strategy = strategy;
+    }
+
+    public void ExecuteStrategy()
+    {
+        strategy.Execute();
+    }
+}
+```
+
+**Common Mistake:**
+- Forgetting to check if the strategy is null before executing it.
+
+**Expected Answer:**
+```csharp
+public class Context
+{
+    private IStrategy strategy;
+
+    public Context(IStrategy strategy)
+    {
+        this.strategy = strategy ?? throw new ArgumentNullException(nameof(strategy));
+    }
+
+    public void SetStrategy(IStrategy strategy)
+    {
+        this.strategy = strategy ?? throw new ArgumentNullException(nameof(strategy));
+    }
+
+    public void ExecuteStrategy()
+    {
+        if (strategy == null)
+        {
+            throw new InvalidOperationException("Strategy has not been set.");
+        }
+        strategy.Execute();
+    }
+}
+```
+
+#### Dependency Injection
+**Question:**
+The following code demonstrates a simple Dependency Injection implementation. Identify and fix the issue related to the lifetime of the injected dependency.    
+
+```csharp
+public interface IService
+{
+    void Serve();
+}
+
+public class Service : IService
+{
+    public void Serve()
+    {
+        Console.WriteLine("Service Called");
+    }
+}
+
+public class Client
+{
+    private IService _service;
+
+    public Client(IService service)
+    {
+        _service = service;
+    }
+
+    public void Start()
+    {
+        _service.Serve();
+    }
+}
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        IService service = new Service();
+        Client client = new Client(service);
+        client.Start();
+    }
+}
+```
+
+**Common Mistake:**
+- Manually managing the lifetime of the service can lead to issues in larger applications. Using a DI container can manage this more effectively.
+
+**Expected Answer:**
+```csharp
+// Using Microsoft.Extensions.DependencyInjection
+using Microsoft.Extensions.DependencyInjection;
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        // Setup DI
+        var serviceProvider = new ServiceCollection()
+            .AddSingleton<IService, Service>()
+            .AddTransient<Client>()
+            .BuildServiceProvider();
+
+        // Resolve Client and start
+        var client = serviceProvider.GetService<Client>();
+        client.Start();
+    }
+}
+```
+
+### Understanding SOLID Principles
+
+**Question:**
+The following code violates several SOLID principles. Identify and refactor the code to adhere to SOLID principles.
+
+```csharp
+public class Invoice
+{
+    public void CalculateTotal()
+    {
+        // Calculate total
+    }
+
+    public void PrintInvoice()
+    {
+        // Print invoice
+    }
+
+    public void SaveToFile()
+    {
+        // Save invoice to file
+    }
+}
+```
+
+**Common Mistake:**
+- Violates Single Responsibility Principle (SRP) by having multiple responsibilities.
+
+**Expected Answer:**
+```csharp
+public class Invoice
+{
+    public void CalculateTotal()
+    {
+        // Calculate total
+    }
+}
+
+public class InvoicePrinter
+{
+    public void PrintInvoice(Invoice invoice)
+    {
+        // Print invoice
+    }
+}
+
+public class InvoiceSaver
+{
+    public void SaveToFile(Invoice invoice)
+    {
+        // Save invoice to file
+    }
+}
+```
+
+
+### 1. Creating and Managing Threads
+
+**Question:**
+You are given a piece of code that creates multiple threads to process a list of integers. However, the output is not as expected. Debug and fix the code.
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Threading;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+        List<Thread> threads = new List<Thread>();
+
+        foreach (int number in numbers)
+        {
+            Thread thread = new Thread(() => ProcessNumber(number));
+            threads.Add(thread);
+            thread.Start();
+        }
+
+        foreach (Thread thread in threads)
+        {
+            thread.Join();
+        }
+    }
+
+    static void ProcessNumber(int number)
+    {
+        Console.WriteLine($"Processing number: {number}");
+    }
+}
+```
+
+**Common Mistake:**
+The lambda expression captures the loop variable `number`, which leads to unexpected behavior.
+
+**Expected Fix:**
+You need to create a local copy of the loop variable inside the loop.
+
+```csharp
+foreach (int number in numbers)
+{
+    int localNumber = number;
+    Thread thread = new Thread(() => ProcessNumber(localNumber));
+    threads.Add(thread);
+    thread.Start();
+}
+```
+
+### 2. Use of ThreadPool and Task Parallel Library (TPL)
+
+**Question:**
+You are given a code snippet that uses the Task Parallel Library to perform parallel processing. However, it seems that not all tasks are being awaited properly. Debug and fix the code.
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+class Program
+{
+    static async Task Main()
+    {
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+        List<Task> tasks = new List<Task>();
+
+        foreach (int number in numbers)
+        {
+            Task task = Task.Run(() => ProcessNumber(number));
+            tasks.Add(task);
+        }
+
+        // Some tasks are not awaited properly
+        await Task.WhenAll(tasks);
+    }
+
+    static void ProcessNumber(int number)
+    {
+        Console.WriteLine($"Processing number: {number}");
+    }
+}
+```
+
+**Common Mistake:**
+The code might not handle exceptions properly, which can cause some tasks to fail silently.
+
+**Expected Fix:**
+Add exception handling to ensure all tasks are awaited properly.
+
+```csharp
+static async Task Main()
+{
+    List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+    List<Task> tasks = new List<Task>();
+
+    foreach (int number in numbers)
+    {
+        Task task = Task.Run(() => ProcessNumber(number));
+        tasks.Add(task);
+    }
+
+    try
+    {
+        await Task.WhenAll(tasks);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error: {ex.Message}");
+    }
+}
+```
+
+### 3. Synchronization Primitives (lock, Mutex, Semaphore)
+
+**Question:**
+You are given a code snippet that uses a `lock` statement to synchronize access to a shared resource. However, the code throws an exception due to improper synchronization. Debug and fix the code.
+
+```csharp
+using System;
+using System.Threading;
+
+class Program
+{
+    private static int sharedResource = 0;
+    private static object lockObject = new object();
+
+    static void Main()
+    {
+        Thread thread1 = new Thread(IncrementResource);
+        Thread thread2 = new Thread(IncrementResource);
+
+        thread1.Start();
+        thread2.Start();
+
+        thread1.Join();
+        thread2.Join();
+
+        Console.WriteLine($"Final value of shared resource: {sharedResource}");
+    }
+
+    static void IncrementResource()
+    {
+        for (int i = 0; i < 1000; i++)
+        {
+            lock (lockObject)
+            {
+                sharedResource++;
+            }
+        }
+    }
+}
+```
+
+**Common Mistake:**
+The code might be correct in terms of synchronization, but there could be an issue with the `lockObject` being null or not correctly initialized.
+
+**Expected Fix:**
+Ensure `lockObject` is properly initialized and not null.
+
+```csharp
+private static object lockObject = new object();  // Ensure this is properly initialized
+```
+
+### 4. Use of Mutex
+
+**Question:**
+You are given a code snippet that uses a `Mutex` to synchronize access to a shared resource. However, the code does not release the mutex properly, causing a deadlock. Debug and fix the code.
+
+```csharp
+using System;
+using System.Threading;
+
+class Program
+{
+    private static int sharedResource = 0;
+    private static Mutex mutex = new Mutex();
+
+    static void Main()
+    {
+        Thread thread1 = new Thread(IncrementResource);
+        Thread thread2 = new Thread(IncrementResource);
+
+        thread1.Start();
+        thread2.Start();
+
+        thread1.Join();
+        thread2.Join();
+
+        Console.WriteLine($"Final value of shared resource: {sharedResource}");
+    }
+
+    static void IncrementResource()
+    {
+        for (int i = 0; i < 1000; i++)
+        {
+            mutex.WaitOne();
+            sharedResource++;
+            // Missing mutex.ReleaseMutex();
+        }
+    }
+}
+```
+
+**Common Mistake:**
+Failing to release the `Mutex` properly can cause deadlocks.
+
+**Expected Fix:**
+Ensure the `Mutex` is always released, even if an exception occurs.
+
+```csharp
+static void IncrementResource()
+{
+    for (int i = 0; i < 1000; i++)
+    {
+        mutex.WaitOne();
+        try
+        {
+            sharedResource++;
+        }
+        finally
+        {
+            mutex.ReleaseMutex();
+        }
+    }
+}
+```
+
+### 5. Use of Semaphore
+
+**Question:**
+You are given a code snippet that uses a `Semaphore` to limit access to a shared resource. However, the code throws a `SemaphoreFullException`. Debug and fix the code.
+
+```csharp
+using System;
+using System.Threading;
+
+class Program
+{
+    private static int sharedResource = 0;
+    private static Semaphore semaphore = new Semaphore(1, 1);
+
+    static void Main()
+    {
+        Thread thread1 = new Thread(IncrementResource);
+        Thread thread2 = new Thread(IncrementResource);
+
+        thread1.Start();
+        thread2.Start();
+
+        thread1.Join();
+        thread2.Join();
+
+        Console.WriteLine($"Final value of shared resource: {sharedResource}");
+    }
+
+    static void IncrementResource()
+    {
+        for (int i = 0; i < 1000; i++)
+        {
+            semaphore.WaitOne();
+            sharedResource++;
+            semaphore.Release();  // Throws SemaphoreFullException
+        }
+    }
+}
+```
+
+**Common Mistake:**
+Releasing the semaphore more times than it was acquired.
+
+**Expected Fix:**
+Ensure the initial count and the maximum count of the semaphore are properly set.
+
+```csharp
+private static Semaphore semaphore = new Semaphore(1, 1); // Initial count and maximum count should be the same
+```
+
+Or ensure you do not release the semaphore more times than it was acquired.
+
+```csharp
+static void IncrementResource()
+{
+    for (int i = 0; i < 1000; i++)
+    {
+        semaphore.WaitOne();
+        try
+        {
+            sharedResource++;
+        }
+        finally
+        {
+            semaphore.Release();
+        }
+    }
+}
+```
+
+These questions cover various aspects of multithreading and parallel programming in C#, focusing on common mistakes and how to fix them.
