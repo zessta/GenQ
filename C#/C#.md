@@ -866,9 +866,7 @@ public class Program
 **Common Mistake:**
 The issue might be that the `Balance` property does not have a `protected` setter, or the abstract methods are not properly overridden in the `SavingsAccount` class.
 
-These questions should help interviewees demonstrate their understanding and debugging skills in C# related to OOP concepts.
 
-Sure! Here are some C# debugging questions based on asynchronous programming. These questions focus on common mistakes and challenges that developers might encounter in a professional setting.
 
 ### Question 1: Misuse of async and await Keywords
 
@@ -989,7 +987,7 @@ public class Program
 #### Hint:
 Make sure you handle specific exceptions and log them appropriately. Use the `catch` block to handle `IOException` and other relevant exceptions.
 
-These questions should test the interviewee's understanding of asynchronous programming in C# and their ability to debug common issues that might arise in a real-world scenario.
+
 
 ### 4. **File I/O**
 
@@ -1263,8 +1261,6 @@ foreach (var emp in result)
 
 ---
 
-These questions should help assess the candidate's ability to write and debug advanced LINQ queries using both query and method syntax, as well as their understanding of joins and aggregate functions.
-Done
 
 
 ### 2. Reflection and Metadata
@@ -2481,10 +2477,7 @@ public class Program
 
 ---
 
-These questions are designed to test the candidate's ability to identify and fix common issues related to advanced .NET features, dynamic types, memory management, and interoperability with unmanaged code.
-Done
-PS C:\Users\prave\OneDrive\Documents\GitHub\ZecodeQuestions\LLMNotebooks> & c:/Users/prave/OneDrive/Documents/GitHub/ZecodeQuestions/LLMNotebooks/pyenv/Scripts/python.exe c:/Users/prave/OneDrive/Documents/GitHub/ZecodeQuestions/LLMNotebooks/chatgpt-for-zessta-internal.py
-Sure! Here are some C# debugging questions based on the topics you specified for Entity Framework and ORM:
+
 
 ### 6. **Entity Framework and ORM**
 
@@ -2588,7 +2581,7 @@ This way, only the necessary data is retrieved, reducing the amount of data load
 
 These questions should help interviewees demonstrate their debugging skills and understanding of Entity Framework and ORM concepts.
 
-Sure, here are some C# debugging questions based on the topics mentioned:
+
 
 ### 3. **Asynchronous Programming**
 
