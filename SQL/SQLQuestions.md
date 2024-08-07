@@ -1,4 +1,4 @@
-Certainly! Here are some SQL debugging questions focused on advanced window functions like LEAD, LAG, FIRST_VALUE, and LAST_VALUE. These questions are designed to test the interviewee's ability to identify and correct common mistakes.
+
 
 ### Question 1: LAG Function Debugging
 You have a table `sales` with the following columns: `sale_id`, `product_id`, `sale_date`, and `amount`. You need to find the amount of the previous sale for each product. The query written by a senior developer is as follows:
@@ -287,7 +287,7 @@ Result:
 These operations allow you to dynamically reshape your data to fit your analysis needs.
 --------------------------------------------------------------------------------------------------------------
 
-Sure! Below are some SQL questions focused on recursive queries using Common Table Expressions (CTEs) to traverse hierarchical data, along with common mistakes that senior developers/architects might make. These questions are designed to be debugging exercises:
+
 
 ### Question 1: Basic Hierarchical Traversal
 
@@ -413,10 +413,8 @@ WHERE Path LIKE '%->' || DepartmentID || '->%';
 2. Incorrect path concatenation logic.
 3. Incorrect cycle detection condition.
 
-These questions can be used to evaluate the interviewee's ability to debug and understand recursive CTEs in SQL, as well as their understanding of hierarchical data traversal and common pitfalls.
---------------------------------------------------------------------------------------------------------------
 
-Sure! Here are some SQL debugging questions focused on the topics of PIVOT and UNPIVOT, designed to test the interviewee's ability to transform rows into columns and vice versa. Each question introduces common mistakes that even senior developers might make.
+
 
 ### Question 1: Debugging a PIVOT Operation
 
@@ -561,10 +559,7 @@ PIVOT (
 ON pvtAmount.EmployeeID = pvtCount.EmployeeID;
 ```
 
-These questions should help assess candidates' skills in debugging and correctly implementing PIVOT and UNPIVOT operations in SQL.
---------------------------------------------------------------------------------------------------------------
 
-Certainly! Here are some SQL questions focused on Transactions and Concurrency Control. These questions are designed to test the interviewee's ability to debug and understand common mistakes made by senior developers or architects.
 
 ### Question 1: Implementing Transactions
 **Scenario:** You are working on a financial application where money is transferred between accounts. The transaction should ensure that the total amount of money remains consistent.
@@ -745,11 +740,6 @@ COMMIT TRANSACTION;
 -- enabling you to roll back to this point if an error occurs in the inner transaction.
 ```
 
-These questions should help interviewees demonstrate their knowledge of transactions and concurrency control while also testing their debugging skills.
---------------------------------------------------------------------------------------------------------------
-
-Sure, here are some SQL debugging questions related to stored procedures and functions, which can be used to evaluate a candidate's ability to create and use them effectively while recognizing common mistakes:
-
 ### Question 1: Debugging a Stored Procedure
 **Scenario:**
 You have a stored procedure that is supposed to calculate the total sales for a given product in a specific month. However, the procedure is not returning the correct results. The code is as follows:
@@ -864,10 +854,7 @@ END
 **Task:**
 Identify and fix the mistake in the function to handle cases where there are no ratings.
 
-These questions will help interviewees demonstrate their ability to debug and correct common issues in stored procedures and functions, reflecting real-world scenarios they might encounter on the job.
---------------------------------------------------------------------------------------------------------------
 
-Sure, here are some SQL coding debugging questions related to triggers that can be used in an interview setting. These questions include common mistakes that senior developers or architects might make, which the interviewees will need to identify and correct.
 
 ### Question 1: Basic Trigger for Audit Log
 
@@ -1006,10 +993,7 @@ END;
 #### Task:
 Identify and correct the mistakes in the trigger.
 
-These questions cover a range of common issues such as syntax errors, logic errors, and misunderstanding of trigger behavior, which are typical mistakes even experienced developers might make.
---------------------------------------------------------------------------------------------------------------
 
-Sure, here are some SQL debugging questions on Advanced Indexing and Query Optimization that can be used in an interview setting. These questions are designed to test a candidate's ability to identify and fix common mistakes related to indexing and query optimization.
 
 ### Question 1: Advanced Indexing Techniques
 
@@ -1162,10 +1146,7 @@ CREATE INDEX idx_product_sale_date ON Sales(ProductID, SaleDate);
 ```
 This index can support queries filtering by `ProductID` and `SaleDate` without overloading the table with multiple indexes.
 
-By focusing on the most critical queries and reducing the number of indexes, you can improve the overall performance of both read and write operations.
---------------------------------------------------------------------------------------------------------------
 
-Sure, here are some SQL debugging questions focused on advanced indexing and query optimization. These questions are designed to test a candidate's ability to identify and fix common mistakes that could occur in a real-world scenario.
 
 ### Question 1: Advanced Indexing Techniques
 **Scenario:**
@@ -1337,10 +1318,7 @@ Not indexing the `CustomerID` column in both tables.
 CREATE INDEX idx_orders_customerid ON Orders (CustomerID);
 ```
 
-These questions and solutions should help interviewees demonstrate their ability to optimize SQL queries and use advanced indexing techniques effectively.
---------------------------------------------------------------------------------------------------------------
 
-Sure! Here are some SQL questions focused on data warehousing concepts, particularly on star and snowflake schemas, and writing queries for data warehousing scenarios. These questions are designed to test a candidate's ability to debug and understand common mistakes made by experienced developers and architects. 
 
 ### Question 1: Debugging a Star Schema Query
 
@@ -1497,10 +1475,6 @@ GROUP BY
 **Expected Output:**
 - Each row should contain a `store_name`, `month`, and `avg_sales` for that store and month in 2022.
 
-These questions should provide a good mix of debugging and query writing tasks related to data warehousing concepts and schemas.
---------------------------------------------------------------------------------------------------------------
-
-Sure, here are some SQL questions related to the topics of user roles and permissions, and SQL injection prevention techniques. These questions include common mistakes that senior developers/architects might make, which the interviewees would need to debug.
 
 ### Question 1: Implement User Roles and Permissions
 
@@ -1647,5 +1621,4 @@ EXEC sp_executesql @sql
 
 ---
 
-These questions are designed to test the interviewee's understanding of user roles and permissions, as well as their ability to identify and mitigate SQL injection vulnerabilities.
---------------------------------------------------------------------------------------------------------------
+
