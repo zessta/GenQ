@@ -482,4 +482,390 @@ public static void PrintValue(Dictionary<string, int> dictionary, string key)
 
 These questions should help interviewees demonstrate their debugging skills and understanding of collections and generics in C#.
 
+Certainly! Here are some C# coding debugging questions for each of the specified topics related to exception handling. These questions are designed to test the interviewee's ability to handle exceptions correctly, identify common mistakes, and implement custom exceptions.
+
+### 1. Use of try-catch blocks
+
+**Question:**
+You have the following code snippet intended to handle potential exceptions when reading a file. However, it contains some common mistakes. Identify and fix the issues.
+
+```csharp
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        ReadFile("nonexistentfile.txt");
+    }
+
+    static void ReadFile(string filePath)
+    {
+        try
+        {
+            string content = File.ReadAllText(filePath);
+            Console.WriteLine(content);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("An error occurred: " + ex.Message);
+        }
+    }
+}
+```
+
+**Common Mistakes to Address:**
+1. Catching a general `Exception` without handling specific exceptions.
+2. Not using `finally` to perform cleanup if necessary.
+
+**Expected Answer:**
+```csharp
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        ReadFile("nonexistentfile.txt");
+    }
+
+    static void ReadFile(string filePath)
+    {
+        try
+        {
+            string content = File.ReadAllText(filePath);
+            Console.WriteLine(content);
+        }
+        catch (FileNotFoundException ex)
+        {
+            Console.WriteLine("File not found: " + ex.Message);
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            Console.WriteLine("Access denied: " + ex.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("An unexpected error occurred: " + ex.Message);
+        }
+        finally
+        {
+            // Perform any cleanup if necessary
+            Console.WriteLine("Finished attempting to read file.");
+        }
+    }
+}
+```
+
+### 2. Throwing exceptions
+
+**Question:**
+The following method is supposed to throw an exception if the input value is negative. Identify and fix the issue in the code.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            ValidateNumber(-5);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
+        }
+    }
+
+    static void ValidateNumber(int number)
+    {
+        if (number < 0)
+        {
+            throw new Exception("Negative numbers are not allowed.");
+        }
+
+        Console.WriteLine("Number is valid.");
+    }
+}
+```
+
+**Common Mistakes to Address:**
+1. Throwing a general `Exception` instead of a more specific exception type.
+2. Providing a meaningful and specific error message.
+
+**Expected Answer:**
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            ValidateNumber(-5);
+        }
+        catch (ArgumentOutOfRangeException ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
+        }
+    }
+
+    static void ValidateNumber(int number)
+    {
+        if (number < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(number), "Negative numbers are not allowed.");
+        }
+
+        Console.WriteLine("Number is valid.");
+    }
+}
+```
+
+### 3. Creating custom exceptions
+
+**Question:**
+You have a custom exception class and a method that should throw this exception when a certain condition is met. However, the implementation has some issues. Identify and fix them.
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            CheckValue(0);
+        }
+        catch (CustomException ex)
+        {
+            Console.WriteLine("Custom error: " + ex.Message);
+        }
+    }
+
+    static void CheckValue(int value)
+    {
+        if (value == 0)
+        {
+            throw new CustomException("Value cannot be zero.");
+        }
+
+        Console.WriteLine("Value is valid.");
+    }
+}
+
+public class CustomException : Exception
+{
+    public CustomException(string message) : base(message)
+    {
+    }
+}
+```
+
+**Common Mistakes to Address:**
+1. Ensuring the custom exception is properly defined.
+2. Making sure the custom exception is thrown and caught correctly.
+
+**Expected Answer:**
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            CheckValue(0);
+        }
+        catch (CustomException ex)
+        {
+            Console.WriteLine("Custom error: " + ex.Message);
+        }
+    }
+
+    static void CheckValue(int value)
+    {
+        if (value == 0)
+        {
+            throw new CustomException("Value cannot be zero.");
+        }
+
+        Console.WriteLine("Value is valid.");
+    }
+}
+
+public class CustomException : Exception
+{
+    public CustomException(string message) : base(message)
+    {
+    }
+
+    // Optional: Override ToString() for more detailed error information
+    public override string ToString()
+    {
+        return $"CustomException: {Message}";
+    }
+}
+```
+### 1. Classes and Objects
+
+**Question:**
+You have the following C# code to create a `Person` class and instantiate an object. However, the code is throwing a compile-time error. Identify and fix the issue.
+
+```csharp
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public void DisplayInfo()
+    {
+        Console.WriteLine($"Name: {Name}, Age: {Age}");
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Person person = new Person();
+        person.Name = "John Doe";
+        person.Age = 30;
+        person.DisplayInfo();
+    }
+}
+```
+
+**Common Mistake:**
+The issue is that the `DisplayInfo` method is not accessible because it is not marked as `public` in the `Person` class.
+
+### 2. Inheritance, Polymorphism, Encapsulation, and Abstraction
+
+**Question:**
+The following code is supposed to demonstrate inheritance and polymorphism. However, the output is not as expected. Identify and fix the issue.
+
+```csharp
+public class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Some generic animal sound");
+    }
+}
+
+public class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Bark");
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Animal myDog = new Dog();
+        myDog.MakeSound(); // Expected output: "Bark"
+    }
+}
+```
+
+**Common Mistake:**
+The issue is that the `MakeSound` method in the `Dog` class is not marked as `override` to override the method in the `Animal` class.
+
+### 3. Interfaces and Abstract Classes
+
+**Question:**
+The following code is intended to use an interface to define a contract for different types of vehicles. However, the code is not compiling. Identify and fix the issue.
+
+```csharp
+public interface IVehicle
+{
+    void StartEngine();
+}
+
+public class Car : IVehicle
+{
+    public void StartEngine()
+    {
+        Console.WriteLine("Car engine started");
+    }
+}
+
+public class Bike : IVehicle
+{
+    public void StartEngine()
+    {
+        Console.WriteLine("Bike engine started");
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        IVehicle myCar = new Car();
+        myCar.StartEngine(); // Expected output: "Car engine started"
+
+        IVehicle myBike = new Bike();
+        myBike.StartEngine(); // Expected output: "Bike engine started"
+    }
+}
+```
+
+**Common Mistake:**
+The code might not compile if the `IVehicle` interface or the `StartEngine` methods are not properly defined or if there is a typo in the implementation.       
+
+### 4. Abstract Classes
+
+**Question:**
+The following code uses an abstract class to define a template for different types of accounts. However, the code is throwing a compile-time error. Identify and fix the issue.
+
+```csharp
+public abstract class Account
+{
+    public decimal Balance { get; protected set; }
+
+    public abstract void Deposit(decimal amount);
+    public abstract void Withdraw(decimal amount);
+}
+
+public class SavingsAccount : Account
+{
+    public override void Deposit(decimal amount)
+    {
+        Balance += amount;
+    }
+
+    public override void Withdraw(decimal amount)
+    {
+        Balance -= amount;
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Account myAccount = new SavingsAccount();
+        myAccount.Deposit(100);
+        myAccount.Withdraw(50);
+        Console.WriteLine($"Balance: {myAccount.Balance}"); // Expected output: "Balance: 50"
+    }
+}
+```
+
+**Common Mistake:**
+The issue might be that the `Balance` property does not have a `protected` setter, or the abstract methods are not properly overridden in the `SavingsAccount` class.
+
+These questions should help interviewees demonstrate their understanding and debugging skills in C# related to OOP concepts.
+
 
