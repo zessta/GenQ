@@ -333,4 +333,153 @@ These questions are designed to test the candidate's ability to debug common mis
 
    **Answer**: The method `SumPositives` is correct. No changes are needed. The correct output is `9`.
 
-These questions will challenge interviewees to debug common issues related to control flow and loops in C#.
+### Topic: Working with Arrays and Lists
+
+**Question 1: Array Indexing Error**
+
+```csharp
+public class ArrayIndexing
+{
+    public static int FindMax(int[] numbers)
+    {
+        int max = numbers[0];
+        for (int i = 1; i <= numbers.Length; i++)
+        {
+            if (numbers[i] > max)
+            {
+                max = numbers[i];
+            }
+        }
+        return max;
+    }
+
+    public static void Main(string[] args)
+    {
+        int[] numbers = { 3, 5, 7, 2, 8 };
+        Console.WriteLine("The maximum number is: " + FindMax(numbers));
+    }
+}
+```
+
+**Question:**
+The above code is intended to find the maximum number in an array. However, it throws an `IndexOutOfRangeException`. Identify and fix the issue.
+
+**Answer:**
+The loop condition should be `i < numbers.Length` instead of `i <= numbers.Length`.
+
+```csharp
+for (int i = 1; i < numbers.Length; i++)
+```
+
+---
+
+**Question 2: List Initialization and Null Reference**
+
+```csharp
+public class ListExample
+{
+    public static void AddItemToList(List<string> items, string newItem)
+    {
+        items.Add(newItem);
+    }
+
+    public static void Main(string[] args)
+    {
+        List<string> items = null;
+        AddItemToList(items, "Hello");
+        Console.WriteLine(string.Join(", ", items));
+    }
+}
+```
+
+**Question:**
+The code above is intended to add a new item to a list and then print the list. However, it throws a `NullReferenceException`. Identify and fix the issue.      
+
+**Answer:**
+The list `items` should be initialized before adding items to it.
+
+```csharp
+List<string> items = new List<string>();
+```
+
+### Topic: Basic Understanding of Generics (List<T>, Dictionary<TKey, TValue>)
+
+**Question 3: Generic List Type Mismatch**
+
+```csharp
+public class GenericListExample
+{
+    public static void AddNumbers(List<int> numbers)
+    {
+        numbers.Add(10);
+        numbers.Add(20);
+    }
+
+    public static void Main(string[] args)
+    {
+        List<string> numbers = new List<string>();
+        AddNumbers(numbers);
+        Console.WriteLine(string.Join(", ", numbers));
+    }
+}
+```
+
+**Question:**
+The code above is intended to add integers to a list and then print the list. However, it throws a compile-time error. Identify and fix the issue.
+
+**Answer:**
+The `AddNumbers` method expects a `List<int>`, but a `List<string>` is passed. Change the list type to `List<int>`.
+
+```csharp
+List<int> numbers = new List<int>();
+```
+
+---
+
+**Question 4: Dictionary Key Not Found**
+
+```csharp
+public class DictionaryExample
+{
+    public static void PrintValue(Dictionary<string, int> dictionary, string key)
+    {
+        Console.WriteLine("The value for the key '{0}' is: {1}", key, dictionary[key]);
+    }
+
+    public static void Main(string[] args)
+    {
+        Dictionary<string, int> dictionary = new Dictionary<string, int>
+        {
+            { "one", 1 },
+            { "two", 2 },
+            { "three", 3 }
+        };
+
+        PrintValue(dictionary, "four");
+    }
+}
+```
+
+**Question:**
+The code above is intended to print the value for a given key from a dictionary. However, it throws a `KeyNotFoundException`. Identify and fix the issue.       
+
+**Answer:**
+Before accessing the dictionary, check if the key exists.
+
+```csharp
+public static void PrintValue(Dictionary<string, int> dictionary, string key)
+{
+    if (dictionary.ContainsKey(key))
+    {
+        Console.WriteLine("The value for the key '{0}' is: {1}", key, dictionary[key]);
+    }
+    else
+    {
+        Console.WriteLine("The key '{0}' was not found in the dictionary.", key);
+    }
+}
+```
+
+These questions should help interviewees demonstrate their debugging skills and understanding of collections and generics in C#.
+
+
