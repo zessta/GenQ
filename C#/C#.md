@@ -2252,3 +2252,338 @@ static void IncrementResource()
 ```
 
 These questions cover various aspects of multithreading and parallel programming in C#, focusing on common mistakes and how to fix them.
+
+### 5. Advanced .NET Features
+
+#### Working with Dynamic Types
+
+**Question:**
+
+You have been provided with the following code that uses dynamic types to manipulate a list of objects. However, there are runtime errors when accessing properties of the dynamic objects. Identify and fix the issues in the code.
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+    public static void Main()
+    {
+        List<dynamic> items = new List<dynamic>
+        {
+            new { Name = "Item1", Price = 10 },
+            new { Name = "Item2", Price = 20 },
+            new { Name = "Item3", Price = 30 }
+        };
+
+        foreach (var item in items)
+        {
+            Console.WriteLine($"Name: {item.name}, Price: {item.Price}");
+        }
+    }
+}
+```
+
+**Hint:**
+- Pay attention to case sensitivity in dynamic type property access.
+
+#### Understanding and Implementing Memory Management Concepts
+
+**Question:**
+
+The following code is intended to manage resources correctly, but it suffers from memory leaks and improper disposal of resources. Identify and fix the issues related to memory management.
+
+```csharp
+using System;
+using System.IO;
+
+public class ResourceManager
+{
+    private FileStream _fileStream;
+
+    public ResourceManager(string filePath)
+    {
+        _fileStream = new FileStream(filePath, FileMode.OpenOrCreate);
+    }
+
+    public void WriteData(string data)
+    {
+        using (StreamWriter writer = new StreamWriter(_fileStream))
+        {
+            writer.WriteLine(data);
+        }
+    }
+
+    ~ResourceManager()
+    {
+        // Finalizer
+        _fileStream.Close();
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        ResourceManager manager = new ResourceManager("example.txt");
+        manager.WriteData("Hello, World!");
+    }
+}
+```
+
+**Hint:**
+- Consider the correct use of the `IDisposable` interface and the `using` statement for resource management.
+
+#### Interoperability with Unmanaged Code (P/Invoke, COM Interop)
+
+**Question:**
+
+The following code attempts to call an unmanaged function from a DLL using P/Invoke, but it throws a runtime error. Identify and fix the issues in the code.    
+
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+public class Program
+{
+    [DllImport("user32.dll", CharSet = CharSet.Auto)]
+    public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
+
+    public static void Main()
+    {
+        ShowMessage("Hello, World!", "MyApp");
+    }
+
+    public static void ShowMessage(string message, string title)
+    {
+        MessageBox(0, message, title, 0);
+    }
+}
+```
+
+**Hint:**
+- Ensure that the `DllImport` attribute and method signature match the unmanaged function's requirements.
+
+---
+
+These questions are designed to test the candidate's ability to identify and fix common issues related to advanced .NET features, dynamic types, memory management, and interoperability with unmanaged code.
+
+### 5. Advanced .NET Features
+
+#### Working with Dynamic Types
+
+**Question:**
+
+You have been provided with the following code that uses dynamic types to manipulate a list of objects. However, there are runtime errors when accessing properties of the dynamic objects. Identify and fix the issues in the code.
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+    public static void Main()
+    {
+        List<dynamic> items = new List<dynamic>
+        {
+            new { Name = "Item1", Price = 10 },
+            new { Name = "Item2", Price = 20 },
+            new { Name = "Item3", Price = 30 }
+        };
+
+        foreach (var item in items)
+        {
+            Console.WriteLine($"Name: {item.name}, Price: {item.Price}");
+        }
+    }
+}
+```
+
+**Hint:**
+- Pay attention to case sensitivity in dynamic type property access.
+
+#### Understanding and Implementing Memory Management Concepts
+
+**Question:**
+
+The following code is intended to manage resources correctly, but it suffers from memory leaks and improper disposal of resources. Identify and fix the issues related to memory management.
+
+```csharp
+using System;
+using System.IO;
+
+public class ResourceManager
+{
+    private FileStream _fileStream;
+
+    public ResourceManager(string filePath)
+    {
+        _fileStream = new FileStream(filePath, FileMode.OpenOrCreate);
+    }
+
+    public void WriteData(string data)
+    {
+        using (StreamWriter writer = new StreamWriter(_fileStream))
+        {
+            writer.WriteLine(data);
+        }
+    }
+
+    ~ResourceManager()
+    {
+        // Finalizer
+        _fileStream.Close();
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        ResourceManager manager = new ResourceManager("example.txt");
+        manager.WriteData("Hello, World!");
+    }
+}
+```
+
+**Hint:**
+- Consider the correct use of the `IDisposable` interface and the `using` statement for resource management.
+
+#### Interoperability with Unmanaged Code (P/Invoke, COM Interop)
+
+**Question:**
+
+The following code attempts to call an unmanaged function from a DLL using P/Invoke, but it throws a runtime error. Identify and fix the issues in the code.    
+
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+public class Program
+{
+    [DllImport("user32.dll", CharSet = CharSet.Auto)]
+    public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
+
+    public static void Main()
+    {
+        ShowMessage("Hello, World!", "MyApp");
+    }
+
+    public static void ShowMessage(string message, string title)
+    {
+        MessageBox(0, message, title, 0);
+    }
+}
+```
+
+**Hint:**
+- Ensure that the `DllImport` attribute and method signature match the unmanaged function's requirements.
+
+---
+
+These questions are designed to test the candidate's ability to identify and fix common issues related to advanced .NET features, dynamic types, memory management, and interoperability with unmanaged code.
+Done
+PS C:\Users\prave\OneDrive\Documents\GitHub\ZecodeQuestions\LLMNotebooks> & c:/Users/prave/OneDrive/Documents/GitHub/ZecodeQuestions/LLMNotebooks/pyenv/Scripts/python.exe c:/Users/prave/OneDrive/Documents/GitHub/ZecodeQuestions/LLMNotebooks/chatgpt-for-zessta-internal.py
+Sure! Here are some C# debugging questions based on the topics you specified for Entity Framework and ORM:
+
+### 6. **Entity Framework and ORM**
+
+#### Advanced Querying with Entity Framework
+
+**Question 1:**
+You have the following LINQ query using Entity Framework to retrieve a list of active users who have placed at least one order. However, the query is not returning any results even though you have active users with orders in the database. Identify and fix the issue.
+
+```csharp
+using (var context = new MyDbContext())
+{
+    var activeUsersWithOrders = context.Users
+        .Where(u => u.IsActive)
+        .Include(u => u.Orders)
+        .Where(o => o.Orders.Any())
+        .ToList();
+}
+```
+
+**Common Mistake:**
+The problem lies in the placement of the `Any()` condition. The `Include` method should not be used in the `Where` clause in this manner.
+
+**Corrected Code:**
+```csharp
+using (var context = new MyDbContext())
+{
+    var activeUsersWithOrders = context.Users
+        .Where(u => u.IsActive && u.Orders.Any())
+        .Include(u => u.Orders)
+        .ToList();
+}
+```
+
+#### Understanding Code First, Database First, and Model First Approaches
+
+**Question 2:**
+You are working on a project that uses the Code First approach in Entity Framework. You add a new property `DateOfBirth` to the `User` class but the database is not updated with this new column after running the application. What could be the possible reasons and how do you fix it?
+
+**Common Mistake:**
+One possible reason is that the migrations have not been applied or generated.
+
+**Corrected Steps:**
+1. Add the new property to the `User` class:
+```csharp
+public class User
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public bool IsActive { get; set; }
+    public DateTime DateOfBirth { get; set; } // New property
+}
+```
+
+2. Generate a new migration:
+```bash
+Add-Migration AddDateOfBirthToUser
+```
+
+3. Apply the migration:
+```bash
+Update-Database
+```
+
+#### Performance Tuning and Optimization
+
+**Question 3:**
+You notice that a particular query using Entity Framework is running very slowly. The query retrieves a list of products and includes their associated categories and reviews. Identify the performance issue and suggest an optimization.
+
+```csharp
+using (var context = new MyDbContext())
+{
+    var products = context.Products
+        .Include(p => p.Categories)
+        .Include(p => p.Reviews)
+        .ToList();
+}
+```
+
+**Common Mistake:**
+Including multiple related entities can cause multiple joins and large amounts of data to be loaded, leading to performance issues.
+
+**Optimized Code:**
+One approach to optimize this is to use projection and only select the necessary fields:
+
+```csharp
+using (var context = new MyDbContext())
+{
+    var products = context.Products
+        .Select(p => new
+        {
+            p.Id,
+            p.Name,
+            Categories = p.Categories.Select(c => new { c.Id, c.Name }).ToList(),
+            Reviews = p.Reviews.Select(r => new { r.Id, r.Comment, r.Rating }).ToList()
+        })
+        .ToList();
+}
+```
+
+This way, only the necessary data is retrieved, reducing the amount of data loaded into memory and potentially speeding up the query.
+
+These questions should help interviewees demonstrate their debugging skills and understanding of Entity Framework and ORM concepts.
