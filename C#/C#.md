@@ -121,3 +121,216 @@ public class Circle
 ```
 
 These questions are designed to test the candidate's ability to debug common mistakes related to basic syntax and data types in C#.
+
+
+
+### Topic: Use of if-else, switch-case, loops (for, while, do-while)
+
+1. **If-Else and Loops**
+   ```csharp
+   public class DebugIfElseLoops
+   {
+       public static int CalculateSum(int[] numbers)
+       {
+           int sum = 0;
+           for (int i = 0; i <= numbers.Length; i++)
+           {
+               if (numbers[i] > 0)
+               {
+                   sum += numbers[i];
+               }
+               else if (numbers[i] < 0)
+               {
+                   sum -= numbers[i];
+               }
+               else
+               {
+                   sum += 0;
+               }
+           }
+           return sum;
+       }
+
+       public static void Main(string[] args)
+       {
+           int[] numbers = { 1, 2, -3, 4, 0, 5 };
+           int result = CalculateSum(numbers);
+           Console.WriteLine("Sum: " + result);
+       }
+   }
+   ```
+
+   **Question**: Identify and fix the issues in the `CalculateSum` method. What will be the correct output for the provided array?
+
+   **Answer**: The loop condition `i <= numbers.Length` should be `i < numbers.Length` to avoid an `IndexOutOfRangeException`. The correct output should be `15`.
+
+2. **Switch-Case**
+   ```csharp
+   public class DebugSwitchCase
+   {
+       public static string GetDayName(int day)
+       {
+           string dayName;
+           switch (day)
+           {
+               case 1:
+                   dayName = "Monday";
+                   break;
+               case 2:
+                   dayName = "Tuesday";
+                   break;
+               case 3:
+                   dayName = "Wednesday";
+                   break;
+               case 4:
+                   dayName = "Thursday";
+                   break;
+               case 5:
+                   dayName = "Friday";
+                   break;
+               case 6:
+                   dayName = "Saturday";
+                   break;
+               case 7:
+                   dayName = "Sunday";
+                   break;
+               default:
+                   dayName = "Invalid day";
+           }
+           return dayName;
+       }
+
+       public static void Main(string[] args)
+       {
+           Console.WriteLine(GetDayName(5));  // Expected output: "Friday"
+           Console.WriteLine(GetDayName(8));  // Expected output: "Invalid day"
+       }
+   }
+   ```
+
+   **Question**: Identify and fix the issues in the `GetDayName` method. What will be the correct output for the provided inputs?
+
+   **Answer**: The method `GetDayName` is correct. No changes are needed. The correct outputs are "Friday" and "Invalid day".
+
+3. **While and Do-While Loops**
+   ```csharp
+   public class DebugWhileDoWhile
+   {
+       public static int CountDown(int start)
+       {
+           int counter = 0;
+           while (start >= 0)
+           {
+               Console.WriteLine(start);
+               start--;
+               counter++;
+           }
+           do
+           {
+               Console.WriteLine(start);
+               start--;
+               counter++;
+           } while (start > 0);
+
+           return counter;
+       }
+
+       public static void Main(string[] args)
+       {
+           int count = CountDown(3);
+           Console.WriteLine("Counter: " + count);
+       }
+   }
+   ```
+
+   **Question**: Identify and fix the issues in the `CountDown` method. What will be the correct output for the provided input?
+
+   **Answer**: The `do-while` loop should not run if `start` is already less than or equal to zero after the `while` loop. The correct implementation would be: 
+   ```csharp
+   public static int CountDown(int start)
+   {
+       int counter = 0;
+       while (start >= 0)
+       {
+           Console.WriteLine(start);
+           start--;
+           counter++;
+       }
+       // Removing the do-while loop
+       return counter;
+   }
+   ```
+   The correct output is:
+   ```
+   3
+   2
+   1
+   0
+   Counter: 4
+   ```
+
+### Topic: Understanding of break and continue statements
+
+4. **Break Statement**
+   ```csharp
+   public class DebugBreak
+   {
+       public static int FindFirstNegative(int[] numbers)
+       {
+           int firstNegative = 0;
+           for (int i = 0; i < numbers.Length; i++)
+           {
+               if (numbers[i] < 0)
+               {
+                   firstNegative = numbers[i];
+                   break;
+               }
+           }
+           return firstNegative;
+       }
+
+       public static void Main(string[] args)
+       {
+           int[] numbers = { 1, 2, 3, -4, 5, -6 };
+           int result = FindFirstNegative(numbers);
+           Console.WriteLine("First Negative Number: " + result);
+       }
+   }
+   ```
+
+   **Question**: Identify and fix the issues in the `FindFirstNegative` method. What will be the correct output for the provided array?
+
+   **Answer**: The variable `firstNegative` should be initialized to a value that indicates no negative number was found (e.g., `int firstNegative = int.MinValue;`). The correct output is `-4`.
+
+5. **Continue Statement**
+   ```csharp
+   public class DebugContinue
+   {
+       public static int SumPositives(int[] numbers)
+       {
+           int sum = 0;
+           for (int i = 0; i < numbers.Length; i++)
+           {
+               if (numbers[i] < 0)
+               {
+                   continue;
+               }
+               sum += numbers[i];
+           }
+           return sum;
+       }
+
+       public static void Main(string[] args)
+       {
+           int[] numbers = { 1, -2, 3, -4, 5, -6 };
+           int result = SumPositives(numbers);
+           Console.WriteLine("Sum of Positives: " + result);
+       }
+   }
+   ```
+
+   **Question**: Identify and fix the issues in the `SumPositives` method. What will be the correct output for the provided array?
+
+   **Answer**: The method `SumPositives` is correct. No changes are needed. The correct output is `9`.
+
+These questions will challenge interviewees to debug common issues related to control flow and loops in C#.
