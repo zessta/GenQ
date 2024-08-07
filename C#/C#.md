@@ -2755,4 +2755,166 @@ public class Program
 ```
 
 These questions should help interviewees demonstrate their understanding and debugging skills in asynchronous programming in C#.
-Done
+
+
+### Question 1: Incorrect Use of `async` and `await`
+
+**Problem Statement:**
+
+The following code is supposed to fetch data from an API asynchronously. However, it doesn't work as expected. Can you identify and fix the issues with the `async` and `await` keywords?
+
+```csharp
+public class DataFetcher
+{
+    public async Task<string> FetchDataAsync()
+    {
+        HttpClient client = new HttpClient();
+        var response = client.GetStringAsync("https://api.example.com/data");
+        return response.Result;
+    }
+}
+
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        DataFetcher fetcher = new DataFetcher();
+        string data = await fetcher.FetchDataAsync();
+        Console.WriteLine(data);
+    }
+}
+```
+
+### Question 2: Understanding `Task` and `Task<T>`
+
+**Problem Statement:**
+
+The following code snippet is intended to run two asynchronous tasks in parallel and then return the combined result. However, it doesn't work as expected. Please identify and fix the issues.
+
+```csharp
+public class ParallelTasks
+{
+    public async Task<string> RunTasksAsync()
+    {
+        Task<string> task1 = Task.Run(() => "Task 1 completed.");
+        Task<string> task2 = Task.Run(() => "Task 2 completed.");
+
+        string result1 = await task1;
+        string result2 = await task2;
+
+        return result1 + " " + result2;
+    }
+}
+
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        ParallelTasks tasks = new ParallelTasks();
+        string result = await tasks.RunTasksAsync();
+        Console.WriteLine(result);
+    }
+}
+```
+
+### Question 3: Handling Asynchronous Exceptions
+
+**Problem Statement:**
+
+The following code is supposed to handle exceptions thrown in an asynchronous method. However, it doesn't seem to catch the exception as expected. Identify and fix the issues related to exception handling.
+
+```csharp
+public class ExceptionHandling
+{
+    public async Task<string> GetDataAsync()
+    {
+        try
+        {
+            await Task.Run(() => { throw new InvalidOperationException("Something went wrong!"); });
+            return "Data fetched successfully.";
+        }
+        catch (Exception ex)
+        {
+            return $"Error: {ex.Message}";
+        }
+    }
+}
+
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        ExceptionHandling handler = new ExceptionHandling();
+        string result = await handler.GetDataAsync();
+        Console.WriteLine(result);
+    }
+}
+```
+
+### Question 4: Deadlock Scenario
+
+**Problem Statement:**
+
+The following code is intended to fetch data asynchronously and return it. However, it causes a deadlock when called from the UI thread. Identify and fix the issues.
+
+```csharp
+public class DeadlockExample
+{
+    public async Task<string> GetDataAsync()
+    {
+        await Task.Delay(1000); // Simulate some async work
+        return "Data fetched";
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        DeadlockExample example = new DeadlockExample();
+        string data = example.GetDataAsync().Result; // This line causes a deadlock
+        Console.WriteLine(data);
+    }
+}
+```
+
+### Question 5: Mixing Synchronous and Asynchronous Code
+
+**Problem Statement:**
+
+The following code mixes synchronous and asynchronous methods. Identify the issues and refactor the code to use asynchronous programming correctly.
+
+```csharp
+public class MixedSyncAsync
+{
+    public async Task<string> GetDataAsync()
+    {
+        string data = await FetchDataAsync();
+        return ProcessData(data); // This method is synchronous
+    }
+
+    private async Task<string> FetchDataAsync()
+    {
+        await Task.Delay(1000); // Simulate fetching data
+        return "Fetched data";
+    }
+
+    private string ProcessData(string data)
+    {
+        // Simulate data processing
+        return data.ToUpper();
+    }
+}
+
+public class Program
+{
+    public static async Task Main(string[] args)
+    {
+        MixedSyncAsync example = new MixedSyncAsync();
+        string result = await example.GetDataAsync();
+        Console.WriteLine(result);
+    }
+}
+```
+
+These questions should help interviewees demonstrate their debugging skills and understanding of asynchronous programming in C#.
