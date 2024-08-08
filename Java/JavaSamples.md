@@ -251,12 +251,6 @@ These questions cover debugging scenarios for advanced data structures in Java, 
 
 
 
-
-
-
-
-
-
 ### Networking
 
 #### 1. Sockets and ServerSocket
@@ -764,8 +758,6 @@ The code is actually correct and should compile and run as expected. It should p
 Hello from A
 ```
 
-Feel free to use and modify these questions for your interviews.
---------------------------------------------------------------------------------------------------------------
 
 Sure! Here are some Java coding/debugging questions based on the Collections Framework that can be used to evaluate a candidate's skills in a platform like Coderbyte:
 
