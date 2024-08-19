@@ -815,3 +815,361 @@ public void DownloadData(string url)
     // Simulate downloading data
     Thread.Sleep(1000);
 }
+
+Here are 10 C# coding debugging questions focused on **Threading (Concurrent Connections)**, similar to the provided example:
+
+---
+
+### 1. **Fixing Task Execution with async/await:**
+   **Question:** Analyze and fix the following code to properly handle concurrent connections using `Task` and `async/await`.
+
+   ```csharp
+   public void ProcessData(List<string> urls)
+   {
+       foreach (var url in urls)
+       {
+           Task.Run(() => DownloadData(url));
+       }
+   }
+
+   public void DownloadData(string url)
+   {
+       // Simulate downloading data
+       Thread.Sleep(1000);
+   }
+   ```
+
+   **Answer:** Convert `DownloadData` to an async method using `await` and `Task.Delay` to simulate the delay.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       var tasks = urls.Select(url => DownloadDataAsync(url)).ToList();
+       await Task.WhenAll(tasks);
+   }
+
+   public async Task DownloadDataAsync(string url)
+   {
+       // Simulate downloading data
+       await Task.Delay(1000);
+   }
+   ```
+
+---
+
+### 2. **Avoiding Deadlocks with Task.Wait:**
+   **Question:** The following code may cause a deadlock when using `Task.Wait()`. Identify the issue and provide a fix.
+
+   ```csharp
+   public void ProcessData(List<string> urls)
+   {
+       foreach (var url in urls)
+       {
+           var task = DownloadDataAsync(url);
+           task.Wait();
+       }
+   }
+
+   public async Task DownloadDataAsync(string url)
+   {
+       await Task.Delay(1000);
+   }
+   ```
+
+   **Answer:** Avoid using `task.Wait()` in an async context. Use `await` instead to prevent deadlocks.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       foreach (var url in urls)
+       {
+           await DownloadDataAsync(url);
+       }
+   }
+   ```
+
+---
+
+### 3. **Improper Synchronization Context:**
+   **Question:** The following code runs `DownloadData` concurrently but produces race conditions. Debug the issue and implement a proper synchronization mechanism.
+
+   ```csharp
+   private int counter = 0;
+
+   public void ProcessData(List<string> urls)
+   {
+       foreach (var url in urls)
+       {
+           Task.Run(() => DownloadData(url));
+       }
+   }
+
+   public void DownloadData(string url)
+   {
+       counter++;
+   }
+   ```
+
+   **Answer:** Use proper locking mechanisms to avoid race conditions.
+
+   ```csharp
+   private readonly object _lock = new object();
+
+   public void DownloadData(string url)
+   {
+       lock (_lock)
+       {
+           counter++;
+       }
+   }
+   ```
+
+---
+
+### 4. **Handling Exceptions in Parallel Execution:**
+   **Question:** The following code does not handle exceptions occurring in concurrent tasks. Debug and provide a fix to handle exceptions properly.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       var tasks = urls.Select(url => Task.Run(() => DownloadData(url))).ToArray();
+       await Task.WhenAll(tasks);
+   }
+
+   public void DownloadData(string url)
+   {
+       // Simulate exception
+       throw new Exception("Download error");
+   }
+   ```
+
+   **Answer:** Use `try-catch` to handle exceptions within each task, and wrap `Task.WhenAll` in a `try-catch` block to handle aggregated exceptions.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       var tasks = urls.Select(async url =>
+       {
+           try
+           {
+               await Task.Run(() => DownloadData(url));
+           }
+           catch (Exception ex)
+           {
+               Console.WriteLine($"Error downloading {url}: {ex.Message}");
+           }
+       }).ToArray();
+
+       try
+       {
+           await Task.WhenAll(tasks);
+       }
+       catch (Exception ex)
+       {
+           Console.WriteLine($"General error: {ex.Message}");
+       }
+   }
+   ```
+
+---
+
+### 5. **Improper Use of Task.Result:**
+   **Question:** The following code uses `Task.Result`, which can cause deadlocks in certain environments. Debug and provide a safer alternative.
+
+   ```csharp
+   public void ProcessData(List<string> urls)
+   {
+       foreach (var url in urls)
+       {
+           var data = DownloadDataAsync(url).Result;
+           Console.WriteLine(data);
+       }
+   }
+
+   public async Task<string> DownloadDataAsync(string url)
+   {
+       await Task.Delay(1000);
+       return $"Downloaded data from {url}";
+   }
+   ```
+
+   **Answer:** Replace `Task.Result` with `await` to prevent deadlocks.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       foreach (var url in urls)
+       {
+           var data = await DownloadDataAsync(url);
+           Console.WriteLine(data);
+       }
+   }
+   ```
+
+---
+
+### 6. **Fixing Inefficient Task Creation:**
+   **Question:** The following code creates too many concurrent tasks, causing performance issues. Debug and limit the number of concurrent connections.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       var tasks = urls.Select(url => Task.Run(() => DownloadData(url))).ToList();
+       await Task.WhenAll(tasks);
+   }
+
+   public void DownloadData(string url)
+   {
+       Thread.Sleep(1000);
+   }
+   ```
+
+   **Answer:** Use `SemaphoreSlim` to limit the number of concurrent tasks.
+
+   ```csharp
+   private SemaphoreSlim semaphore = new SemaphoreSlim(5);
+
+   public async Task ProcessData(List<string> urls)
+   {
+       var tasks = urls.Select(async url =>
+       {
+           await semaphore.WaitAsync();
+           try
+           {
+               await Task.Run(() => DownloadData(url));
+           }
+           finally
+           {
+               semaphore.Release();
+           }
+       }).ToList();
+
+       await Task.WhenAll(tasks);
+   }
+   ```
+
+---
+
+### 7. **Using CancellationToken for Graceful Termination:**
+   **Question:** Add support for cancellation in the following code using `CancellationToken`.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       var tasks = urls.Select(url => Task.Run(() => DownloadData(url))).ToArray();
+       await Task.WhenAll(tasks);
+   }
+
+   public void DownloadData(string url)
+   {
+       Thread.Sleep(1000);
+   }
+   ```
+
+   **Answer:** Use `CancellationToken` to allow graceful cancellation of tasks.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls, CancellationToken token)
+   {
+       var tasks = urls.Select(async url =>
+       {
+           token.ThrowIfCancellationRequested();
+           await Task.Run(() => DownloadData(url), token);
+       }).ToArray();
+
+       await Task.WhenAll(tasks);
+   }
+   ```
+
+---
+
+### 8. **Fixing Continuation with async/await:**
+   **Question:** The following code uses a continuation that does not run after all tasks have completed. Debug and ensure that the continuation runs correctly.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       var tasks = urls.Select(url => DownloadDataAsync(url)).ToList();
+       Task.WhenAll(tasks).ContinueWith(t => Console.WriteLine("All downloads complete"));
+   }
+
+   public async Task DownloadDataAsync(string url)
+   {
+       await Task.Delay(1000);
+   }
+   ```
+
+   **Answer:** Use `await Task.WhenAll()` instead of `ContinueWith()` to ensure the continuation runs after task completion.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       var tasks = urls.Select(url => DownloadDataAsync(url)).ToList();
+       await Task.WhenAll(tasks);
+       Console.WriteLine("All downloads complete");
+   }
+   ```
+
+---
+
+### 9. **Improper Parallel Execution with Task.WhenAll:**
+   **Question:** The following code executes tasks sequentially rather than in parallel due to improper `await` placement. Debug and fix the issue.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       foreach (var url in urls)
+       {
+           await DownloadDataAsync(url);
+       }
+   }
+
+   public async Task DownloadDataAsync(string url)
+   {
+       await Task.Delay(1000);
+   }
+   ```
+
+   **Answer:** Use `Task.WhenAll()` to run the tasks in parallel rather than sequentially.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       var tasks = urls.Select(url => DownloadDataAsync(url)).ToArray();
+       await Task.WhenAll(tasks);
+   }
+   ```
+
+---
+
+### 10. **Avoiding Blocking with Task.Run():**
+   **Question:** The following code blocks the main thread, causing performance issues. Identify the problem and refactor the code to avoid blocking.
+
+   ```csharp
+   public void ProcessData(List<string> urls)
+   {
+       foreach (var url in urls)
+       {
+           Task.Run(() => DownloadData(url)).Wait();
+       }
+   }
+
+   public void DownloadData(string url)
+   {
+       Thread.Sleep(1000);
+   }
+   ```
+
+   **Answer:** Refactor to use `async/await` to avoid blocking the main thread.
+
+   ```csharp
+   public async Task ProcessData(List<string> urls)
+   {
+       var tasks = urls.Select(url => Task.Run(() => DownloadData(url))).ToList();
+       await Task.WhenAll(tasks);
+   }
+   ```
+
+---
+
+These questions challenge the candidate's ability to debug threading and concurrent connections in C#, focusing on async/await, task management, synchronization, and performance considerations.
