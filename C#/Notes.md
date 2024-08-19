@@ -1,3 +1,6 @@
+**Questions as per Revanth advice**
+
+```csharp
 ###Scope of addition###
 
 
@@ -8,7 +11,7 @@
 -Delegates(Types of Delegates)
 -Entity Framework - Navigational properties, use them instead of joins
 -MSDN Doc
-
+```
 
 Here are 10 similar C# coding/debugging questions with answers focused on practical real-world scenarios:
 
