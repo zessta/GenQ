@@ -795,3 +795,23 @@ Here are 10 coding debugging questions based on **Design Patterns**, similar to 
 ---
 
 These questions challenge the candidate's understanding of design patterns in C# and their ability to debug and refactor real-world pattern implementations.
+
+Threading (Concurrent Connections):
+
+Analyze and fix the following code to handle concurrent connections properly using Task and async/await:
+
+csharp
+Copy code
+public void ProcessData(List<string> urls)
+{
+    foreach (var url in urls)
+    {
+        Task.Run(() => DownloadData(url));
+    }
+}
+
+public void DownloadData(string url)
+{
+    // Simulate downloading data
+    Thread.Sleep(1000);
+}
