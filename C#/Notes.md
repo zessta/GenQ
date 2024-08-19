@@ -13,8 +13,6 @@
 -MSDN Doc
 ```
 
-Here are 10 similar C# coding/debugging questions with answers focused on practical real-world scenarios:
-
 ---
 
 ### 1. **Garbage Collection – Memory Leak:**
